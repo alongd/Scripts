@@ -1,0 +1,1437 @@
+units(length='cm', time='s', quantity='mol', act_energy='kcal/mol')
+
+ideal_gas(name='gas',
+          elements="H C O N Ne Ar",
+          species="""Ar          Ne          CH4(1)      O2(2)
+                     N2(3)       H(4)        O(5)        OH(6)
+                     H2(7)       H2O(8)      HO2(9)      CO(12)
+                     CO2(13)     HCO(14)     CH2(17)     CH3(18)
+                     CH2O(19)    C2H2(22)    CH2(S)(24)  CH3O(26)
+                     C2H3(28)    C2H4(29)    C2H5(31)    CH2OH(32)
+                     CH3O2(39)""",
+          reactions='all',
+          transport='Mix',
+          initial_state=state(temperature=300.0, pressure=OneAtm))
+
+#-------------------------------------------------------------------------------
+# Species data
+#-------------------------------------------------------------------------------
+
+species(name=u'Ar',
+        atoms='Ar:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 2.50000000E+00,  0.00000000E+00,  0.00000000E+00,
+                       0.00000000E+00,  0.00000000E+00, -7.45375000E+02,
+                       4.37967000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 2.50000000E+00,  0.00000000E+00,  0.00000000E+00,
+                       0.00000000E+00,  0.00000000E+00, -7.45375000E+02,
+                       4.37967000E+00])),
+        transport=gas_transport(geom='atom',
+                                diam=3.33,
+                                well_depth=136.501))
+
+species(name=u'Ne',
+        atoms='Ne:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 2.50000000E+00,  0.00000000E+00,  0.00000000E+00,
+                       0.00000000E+00,  0.00000000E+00, -7.45375000E+02,
+                       3.35532000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 2.50000000E+00,  0.00000000E+00,  0.00000000E+00,
+                       0.00000000E+00,  0.00000000E+00, -7.45375000E+02,
+                       3.35532000E+00])),
+        transport=gas_transport(geom='atom',
+                                diam=3.758,
+                                well_depth=148.6))
+
+species(name=u'CH4(1)',
+        atoms='H:4 C:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 5.14911000E+00, -1.36622000E-02,  4.91454000E-05,
+                      -4.84247000E-08,  1.66603000E-11, -1.02466000E+04,
+                      -4.63849000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 1.65326000E+00,  1.00263000E-02, -3.31661000E-06,
+                       5.36483000E-10, -3.14697000E-14, -1.00096000E+04,
+                       9.90506000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.746,
+                                well_depth=141.4,
+                                polar=2.6,
+                                rot_relax=13.0))
+
+species(name=u'O2(2)',
+        atoms='O:2',
+        thermo=(NASA([100.00, 1102.91],
+                     [ 3.53812249E+00, -1.19772188E-03,  5.21765724E-06,
+                      -4.73156676E-09,  1.37952124E-12, -1.03915420E+03,
+                       4.66497974E+00]),
+                NASA([1102.91, 5000.00],
+                     [ 3.14647736E+00,  1.73416982E-03, -8.25509634E-07,
+                       1.63877591E-10, -1.18046379E-14, -1.04469349E+03,
+                       6.17604591E+00])),
+        transport=gas_transport(geom='linear',
+                                diam=3.458,
+                                well_depth=107.4,
+                                polar=1.6,
+                                rot_relax=3.8))
+
+species(name=u'N2(3)',
+        atoms='N:2',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 3.53101000E+00, -1.23661000E-04, -5.02999000E-07,
+                       2.43531000E-09, -1.40881000E-12, -1.04698000E+03,
+                       2.96747000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 2.95258000E+00,  1.39690000E-03, -4.92632000E-07,
+                       7.86010000E-11, -4.60755000E-15, -9.23949000E+02,
+                       5.87189000E+00])),
+        transport=gas_transport(geom='linear',
+                                diam=3.621,
+                                well_depth=97.53,
+                                polar=1.76,
+                                rot_relax=4.0))
+
+species(name=u'H(4)',
+        atoms='H:1',
+        thermo=(NASA([100.00, 4950.76],
+                     [ 2.50000000E+00, -1.06332631E-12,  1.30802314E-15,
+                      -5.21436096E-19,  6.38303448E-23,  2.54727081E+04,
+                      -4.54534057E-01]),
+                NASA([4950.76, 5000.00],
+                     [ 2.77499054E+00, -2.12693169E-04,  6.15680832E-08,
+                      -7.90364645E-12,  3.79566382E-16,  2.51887990E+04,
+                      -2.23280545E+00])),
+        transport=gas_transport(geom='atom',
+                                diam=2.05,
+                                well_depth=145.0))
+
+species(name=u'O(5)',
+        atoms='O:1',
+        thermo=(NASA([100.00, 4950.76],
+                     [ 2.50000000E+00, -1.06332631E-12,  1.30802314E-15,
+                      -5.21436096E-19,  6.38303448E-23,  2.92468504E+04,
+                       5.13119646E+00]),
+                NASA([4950.76, 5000.00],
+                     [ 2.77499054E+00, -2.12693169E-04,  6.15680832E-08,
+                      -7.90364645E-12,  3.79566382E-16,  2.89629412E+04,
+                       3.35292507E+00])),
+        transport=gas_transport(geom='atom',
+                                diam=2.75,
+                                well_depth=80.0))
+
+species(name=u'OH(6)',
+        atoms='H:1 O:1',
+        thermo=(NASA([100.00, 1014.14],
+                     [ 3.48525518E+00,  1.30494525E-03, -4.54558111E-06,
+                       5.40750456E-09, -1.95652180E-12,  3.41245653E+03,
+                       2.00460390E+00]),
+                NASA([1014.14, 5000.00],
+                     [ 2.90837240E+00,  9.69342565E-04, -1.87376029E-07,
+                       3.90417384E-12,  1.35186154E-15,  3.66373102E+03,
+                       5.45780083E+00])),
+        transport=gas_transport(geom='linear',
+                                diam=2.75,
+                                well_depth=80.0))
+
+species(name=u'H2(7)',
+        atoms='H:2',
+        thermo=(NASA([100.00, 1962.85],
+                     [ 3.42253738E+00,  2.86649646E-04, -4.14670529E-07,
+                       4.27547855E-10, -9.38118545E-14, -1.03001135E+03,
+                      -3.86867961E+00]),
+                NASA([1962.85, 5000.00],
+                     [ 2.74218705E+00,  5.79540173E-04,  1.97202440E-07,
+                      -6.41093905E-11,  4.96002684E-15, -5.52263925E+02,
+                       4.09068395E-01])),
+        transport=gas_transport(geom='linear',
+                                diam=2.92,
+                                well_depth=38.0,
+                                polar=0.79,
+                                rot_relax=280.0))
+
+species(name=u'H2O(8)',
+        atoms='H:2 O:1',
+        thermo=(NASA([100.00, 1329.66],
+                     [ 3.99359468E+00, -5.07151249E-04,  2.62893129E-06,
+                      -1.42190236E-09,  2.65086060E-13, -3.02741405E+04,
+                      -1.02853851E-02]),
+                NASA([1329.66, 5000.00],
+                     [ 3.18128758E+00,  1.93649599E-03, -1.27759415E-07,
+                      -3.97527565E-11,  5.21774351E-15, -3.00581215E+04,
+                       4.14007413E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=2.605,
+                                well_depth=572.402,
+                                dipole=1.844,
+                                rot_relax=4.0))
+
+species(name=u'HO2(9)',
+        atoms='H:1 O:2',
+        thermo=(NASA([100.00, 932.08],
+                     [ 4.03106243E+00, -2.55633263E-03,  1.47309516E-05,
+                      -1.63675396E-08,  5.88944020E-12,  3.21463039E+02,
+                       4.80121133E+00]),
+                NASA([932.08, 5000.00],
+                     [ 4.05114756E+00,  2.15392381E-03, -5.68203988E-07,
+                       9.60333966E-11, -7.17391079E-15,  1.09366737E+02,
+                       3.58805393E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.458,
+                                well_depth=107.4,
+                                rot_relax=1.0))
+
+species(name=u'CO(12)',
+        atoms='C:1 O:1',
+        thermo=(NASA([100.00, 1669.93],
+                     [ 3.59709667E+00, -1.02423792E-03,  2.83336378E-06,
+                      -1.75825216E-09,  3.42587036E-13, -1.43331255E+04,
+                       3.45318951E+00]),
+                NASA([1669.93, 5000.00],
+                     [ 2.92795598E+00,  1.81930667E-03, -8.35308571E-07,
+                       1.51269189E-10, -9.88872333E-15, -1.42826439E+04,
+                       6.50653906E+00])),
+        transport=gas_transport(geom='linear',
+                                diam=3.65,
+                                well_depth=98.1,
+                                polar=1.95,
+                                rot_relax=1.8))
+
+species(name=u'CO2(13)',
+        atoms='C:1 O:2',
+        thermo=(NASA([100.00, 987.53],
+                     [ 3.27645720E+00,  2.74207245E-03,  7.26575691E-06,
+                      -1.09999601E-08,  4.23179622E-12, -4.84954373E+04,
+                       5.99714410E+00]),
+                NASA([987.53, 5000.00],
+                     [ 4.59092101E+00,  2.84047450E-03, -1.12037835E-06,
+                       2.21831992E-10, -1.67373126E-14, -4.90194650E+04,
+                      -1.66664861E+00])),
+        transport=gas_transport(geom='linear',
+                                diam=3.763,
+                                well_depth=244.001,
+                                polar=2.65,
+                                rot_relax=2.1))
+
+species(name=u'HCO(14)',
+        atoms='H:1 C:1 O:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 4.23755000E+00, -3.32075000E-03,  1.40030000E-05,
+                      -1.34240000E-08,  4.37416000E-12,  3.87241000E+03,
+                       3.30835000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 3.92002000E+00,  2.52279000E-03, -6.71004000E-07,
+                       1.05616000E-10, -7.43798000E-15,  3.65343000E+03,
+                       3.58077000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.59,
+                                well_depth=498.002))
+
+species(name=u'CH2(17)',
+        atoms='H:2 C:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 3.71758000E+00,  1.27391000E-03,  2.17347000E-06,
+                      -3.48858000E-09,  1.65209000E-12,  4.58724000E+04,
+                       1.75298000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 3.14632000E+00,  3.03671000E-03, -9.96474000E-07,
+                       1.50484000E-10, -8.57336000E-15,  4.60413000E+04,
+                       4.72342000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.8,
+                                well_depth=144.001))
+
+species(name=u'CH3(18)',
+        atoms='H:3 C:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 3.65718000E+00,  2.12660000E-03,  5.45839000E-06,
+                      -6.61810000E-09,  2.46571000E-12,  1.64227000E+04,
+                       1.67354000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 2.97812000E+00,  5.79785000E-03, -1.97558000E-06,
+                       3.07298000E-10, -1.79174000E-14,  1.65095000E+04,
+                       4.72248000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.8,
+                                well_depth=144.001))
+
+species(name=u'CH2O(19)',
+        atoms='H:2 C:1 O:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 4.79372000E+00, -9.90833000E-03,  3.73220000E-05,
+                      -3.79285000E-08,  1.31773000E-11, -1.43792000E+04,
+                       6.02798000E-01]),
+                NASA([1000.00, 6000.00],
+                     [ 3.16953000E+00,  6.19321000E-03, -2.25056000E-06,
+                       3.65976000E-10, -2.20149000E-14, -1.45487000E+04,
+                       6.04208000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.59,
+                                well_depth=498.002,
+                                rot_relax=2.0))
+
+species(name=u'C2H2(22)',
+        atoms='H:2 C:2',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 8.08680000E-01,  2.33616000E-02, -3.55172000E-05,
+                       2.80153000E-08, -8.50075000E-12,  2.64290000E+04,
+                       1.39397000E+01]),
+                NASA([1000.00, 6000.00],
+                     [ 4.65878000E+00,  4.88397000E-03, -1.60829000E-06,
+                       2.46975000E-10, -1.38606000E-14,  2.57594000E+04,
+                      -3.99838000E+00])),
+        transport=gas_transport(geom='linear',
+                                diam=4.1,
+                                well_depth=209.001,
+                                rot_relax=2.5))
+
+species(name=u'CH2(S)(24)',
+        atoms='H:2 C:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 4.19331000E+00, -2.33105000E-03,  8.15676000E-06,
+                      -6.62986000E-09,  1.93233000E-12,  5.03662000E+04,
+                      -7.46734000E-01]),
+                NASA([1000.00, 6000.00],
+                     [ 3.13502000E+00,  2.89594000E-03, -8.16668000E-07,
+                       1.13573000E-10, -6.36263000E-15,  5.05041000E+04,
+                       4.06031000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.8,
+                                well_depth=144.001))
+
+species(name=u'CH3O(26)',
+        atoms='H:3 C:1 O:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 3.71181000E+00, -2.80463000E-03,  3.76551000E-05,
+                      -4.73072000E-08,  1.86588000E-11,  1.29570000E+03,
+                       6.57241000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 4.75779000E+00,  7.44142000E-03, -2.69705000E-06,
+                       4.38091000E-10, -2.63537000E-14,  3.78112000E+02,
+                      -1.96680000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.69,
+                                well_depth=417.002,
+                                dipole=1.7,
+                                rot_relax=2.0))
+
+species(name=u'C2H3(28)',
+        atoms='H:3 C:2',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 3.36378000E+00,  2.65766000E-04,  2.79621000E-05,
+                      -3.72987000E-08,  1.51590000E-11,  3.44750000E+04,
+                       7.91510000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 4.15027000E+00,  7.54021000E-03, -2.62998000E-06,
+                       4.15974000E-10, -2.45408000E-14,  3.38566000E+04,
+                       1.72812000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=4.1,
+                                well_depth=209.001,
+                                rot_relax=1.0))
+
+species(name=u'C2H4(29)',
+        atoms='H:4 C:2',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 3.95920000E+00, -7.57051000E-03,  5.70990000E-05,
+                      -6.91588000E-08,  2.69884000E-11,  5.08978000E+03,
+                       4.09730000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 3.99183000E+00,  1.04834000E-02, -3.71721000E-06,
+                       5.94628000E-10, -3.53630000E-14,  4.26866000E+03,
+                      -2.69082000E-01])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.971,
+                                well_depth=280.801,
+                                rot_relax=1.5))
+
+species(name=u'C2H5(31)',
+        atoms='H:5 C:2',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 4.24186000E+00, -3.56905000E-03,  4.82667000E-05,
+                      -5.85401000E-08,  2.25805000E-11,  1.29690000E+04,
+                       4.44704000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 4.32196000E+00,  1.23931000E-02, -4.39681000E-06,
+                       7.03520000E-10, -4.18435000E-14,  1.21759000E+04,
+                       1.71104000E-01])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=4.302,
+                                well_depth=252.301,
+                                rot_relax=1.5))
+
+species(name=u'CH2OH(32)',
+        atoms='H:3 C:1 O:1',
+        thermo=(NASA([200.00, 1000.00],
+                     [ 4.47834000E+00, -1.35070000E-03,  2.78485000E-05,
+                      -3.64869000E-08,  1.47907000E-11, -3.50073000E+03,
+                       3.30913000E+00]),
+                NASA([1000.00, 6000.00],
+                     [ 5.09314000E+00,  5.94761000E-03, -2.06497000E-06,
+                       3.23008000E-10, -1.88126000E-14, -4.03410000E+03,
+                      -1.84691000E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=3.69,
+                                well_depth=417.002,
+                                dipole=1.7,
+                                rot_relax=2.0))
+
+species(name=u'CH3O2(39)',
+        atoms='H:3 C:1 O:2',
+        thermo=(NASA([100.00, 1022.88],
+                     [ 3.14057847E+00,  1.58033254E-02, -5.30973846E-06,
+                      -4.13264328E-09,  2.63547342E-12,  6.50841975E+03,
+                       1.10750460E+01]),
+                NASA([1022.88, 5000.00],
+                     [ 6.93786962E+00,  7.52637311E-03, -2.81014477E-06,
+                       5.19898847E-10, -3.69267127E-14,  5.38775092E+03,
+                      -9.01130428E+00])),
+        transport=gas_transport(geom='nonlinear',
+                                diam=5.391,
+                                well_depth=384.897))
+
+#-------------------------------------------------------------------------------
+# Reaction data
+#-------------------------------------------------------------------------------
+#  Reaction index: Chemkin #1; RMG #92
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH4(1); H(4), CH4(1);
+
+# Reaction 1
+falloff_reaction('CH3(18) + H(4) (+ M) <=> CH4(1) (+ M)',
+                 kf=[1.801000e+14, 0.0, 0.0],
+                 kf0=[7.930000e+24, -2.17, 0.0],
+                 efficiencies='CH2O(19):2.5 O2(2):0.59 CH4(1):2.0 Ar:0.36 H2O(8):3.42 N2(3):0.59 CO2(13):2.0',
+                 falloff=Troe(A=0.124, T3=1800.0, T1=33.1, T2=90000.0))
+#  Reaction index: Chemkin #2; RMG #19
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: O2(2), HO2(9); H(4), HO2(9);
+
+# Reaction 2
+falloff_reaction('O2(2) + H(4) (+ M) <=> HO2(9) (+ M)',
+                 kf=[4.651000e+12, 0.44, 0.0],
+                 kf0=[9.042000e+19, -1.5, 0.492],
+                 efficiencies='O2(2):0.78 H2(7):2.0 H2O(8):14.0 CO2(13):3.8 Ar:0.67',
+                 falloff=Troe(A=0.5, T3=1e-30, T1=1e+30))
+#  Reaction index: Chemkin #3; RMG #99
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH4(1); HO2(9), O2(2);
+
+# Reaction 3
+reaction('HO2(9) + CH3(18) <=> CH4(1) + O2(2)', [1.269000e+05, 2.228, -3.022])
+#  Reaction index: Chemkin #4; RMG #6
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: HO2(9), O2(2); H(4), H2(7);
+
+# Reaction 4
+reaction('HO2(9) + H(4) <=> O2(2) + H2(7)', [2.750000e+06, 2.09, -1.451])
+#  Reaction index: Chemkin #5; RMG #15
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: H2(7), H(4); H2(7), H(4);
+
+# Reaction 5
+three_body_reaction('H2(7) + M <=> H(4) + H(4) + M', [4.577000e+19, -1.4, 104.38],
+                    efficiencies='H2(7):2.5 H2O(8):12.0 CO2(13):3.8 Ar:0.0')
+#  Reaction index: Chemkin #6; RMG #21
+#  Library reaction: FFCM1(-)
+#  Flux pairs: H2(7), H(4); Ar, Ar; Ar, H(4);
+
+# Reaction 6
+reaction('Ar + H2(7) <=> Ar + H(4) + H(4)', [5.176000e+18, -1.1, 104.39])
+#  Reaction index: Chemkin #7; RMG #131
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH4(1), CH3(18); H(4), H2(7);
+
+# Reaction 7
+reaction('CH4(1) + H(4) <=> H2(7) + CH3(18)', [4.781000e+05, 2.5, 9.588])
+#  Reaction index: Chemkin #8; RMG #7
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: HO2(9), OH(6); H(4), OH(6);
+
+# Reaction 8
+reaction('HO2(9) + H(4) <=> OH(6) + OH(6)', [7.079000e+13, 0.0, 0.295])
+#  Reaction index: Chemkin #9; RMG #1
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: O2(2), O(5); H(4), OH(6);
+
+# Reaction 9
+reaction('O2(2) + H(4) <=> OH(6) + O(5)', [1.040000e+14, 0.0, 15.286])
+#  Reaction index: Chemkin #10; RMG #2
+#  Library reaction: KlippensteinH2O2
+
+# Reaction 10
+reaction('H2(7) + O(5) <=> OH(6) + H(4)', [3.818000e+12, 0.0, 7.948],
+         options='duplicate')
+#  Reaction index: Chemkin #11; RMG #2
+#  Library reaction: KlippensteinH2O2
+
+# Reaction 11
+reaction('H2(7) + O(5) <=> OH(6) + H(4)', [8.792000e+14, 0.0, 19.17],
+         options='duplicate')
+#  Reaction index: Chemkin #12; RMG #8
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: HO2(9), O2(2); O(5), OH(6);
+
+# Reaction 12
+reaction('HO2(9) + O(5) <=> O2(2) + OH(6)', [2.850000e+10, 1.0, -0.724])
+#  Reaction index: Chemkin #13; RMG #16
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: O(5), O2(2); O(5), O2(2);
+
+# Reaction 13
+three_body_reaction('O(5) + O(5) + M <=> O2(2) + M', [6.165000e+15, -0.5, 0.0],
+                    efficiencies='H2(7):2.5 H2O(8):12.0 CO2(13):3.8 Ar:0.0')
+#  Reaction index: Chemkin #14; RMG #17
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: H(4), OH(6); O(5), OH(6);
+
+# Reaction 14
+three_body_reaction('H(4) + O(5) + M <=> OH(6) + M', [4.714000e+18, -1.0, 0.0],
+                    efficiencies='H2(7):2.5 H2O(8):12.0 CO2(13):3.8 Ar:0.75')
+#  Reaction index: Chemkin #15; RMG #23
+#  Library reaction: FFCM1(-)
+#  Flux pairs: O(5), O2(2); Ar, Ar; O(5), Ar;
+
+# Reaction 15
+reaction('Ar + O(5) + O(5) <=> O2(2) + Ar', [1.890000e+13, 0.0, -1.788])
+#  Reaction index: Chemkin #16; RMG #132
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH4(1), CH3(18); O(5), OH(6);
+
+# Reaction 16
+reaction('CH4(1) + O(5) <=> OH(6) + CH3(18)', [6.786000e+08, 1.56, 8.485])
+#  Reaction index: Chemkin #17; RMG #280
+#  PDep reaction: PDepNetwork #7
+#  Flux pairs: OH(6), HO2(9); O(5), HO2(9);
+
+# Reaction 17
+pdep_arrhenius('OH(6) + O(5) <=> HO2(9)',
+               [(0.493, 'atm'), 5.839000e+18, -2.707, 1.085],
+               [(0.855, 'atm'), 9.621000e+18, -2.701, 1.141],
+               [(1.48, 'atm'), 1.566000e+19, -2.693, 1.217])
+#  Reaction index: Chemkin #18; RMG #3
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: OH(6), H2O(8); H2(7), H(4);
+
+# Reaction 18
+reaction('OH(6) + H2(7) <=> H2O(8) + H(4)', [2.160000e+08, 1.51, 3.43])
+#  Reaction index: Chemkin #19; RMG #4
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: OH(6), O(5); OH(6), H2O(8);
+
+# Reaction 19
+reaction('OH(6) + OH(6) <=> H2O(8) + O(5)', [3.340000e+04, 2.42, -1.93])
+#  Reaction index: Chemkin #20; RMG #5
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: H2O(8), H2O(8); H2O(8), H(4); H2O(8), OH(6);
+
+# Reaction 20
+reaction('H2O(8) + H2O(8) <=> OH(6) + H2O(8) + H(4)', [1.006000e+26, -2.44, 120.18])
+#  Reaction index: Chemkin #21; RMG #9
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: HO2(9), O2(2); OH(6), H2O(8);
+
+# Reaction 21
+reaction('OH(6) + HO2(9) <=> O2(2) + H2O(8)', [2.890000e+13, 0.0, -0.497])
+#  Reaction index: Chemkin #22; RMG #18
+#  Library reaction: KlippensteinH2O2
+#  Flux pairs: H2O(8), OH(6); H2O(8), H(4);
+
+# Reaction 22
+three_body_reaction('H2O(8) + M <=> OH(6) + H(4) + M', [6.064000e+27, -3.322, 120.79],
+                    efficiencies='H2(7):3.0 O2(2):1.5 H2O(8):0.0 N2(3):2.0 CO2(13):3.8')
+#  Reaction index: Chemkin #23; RMG #25
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HO2(9), O(5); H(4), H2O(8);
+
+# Reaction 23
+reaction('HO2(9) + H(4) <=> H2O(8) + O(5)', [1.632000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #24; RMG #133
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH4(1), CH3(18); OH(6), H2O(8);
+
+# Reaction 24
+reaction('CH4(1) + OH(6) <=> H2O(8) + CH3(18)', [9.839000e+05, 2.182, 2.446])
+#  Reaction index: Chemkin #25; RMG #276
+#  PDep reaction: PDepNetwork #2
+#  Flux pairs: O2(2), CH3O2(39); CH3(18), CH3O2(39);
+
+# Reaction 25
+pdep_arrhenius('O2(2) + CH3(18) <=> CH3O2(39)',
+               [(0.493, 'atm'), 9.240000e+01, 2.995, 8.431],
+               [(0.855, 'atm'), 9.322000e+01, 2.994, 8.436],
+               [(1.48, 'atm'), 9.467000e+01, 2.992, 8.443])
+#  Reaction index: Chemkin #26; RMG #93
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH2O(19); O(5), H(4);
+
+# Reaction 26
+reaction('CH3(18) + O(5) <=> CH2O(19) + H(4)', [5.722000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #27; RMG #98
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH2O(19); OH(6), H2(7);
+
+# Reaction 27
+reaction('OH(6) + CH3(18) <=> H2(7) + CH2O(19)', [2.735000e+09, 0.734, -2.177])
+#  Reaction index: Chemkin #28; RMG #102
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH2O(19); O2(2), OH(6);
+
+# Reaction 28
+reaction('O2(2) + CH3(18) <=> OH(6) + CH2O(19)', [9.977000e+01, 2.86, 9.768])
+#  Reaction index: Chemkin #29; RMG #302
+#  PDep reaction: PDepNetwork #8
+#  Flux pairs: CH3O2(39), OH(6); CH3O2(39), CH2O(19);
+
+# Reaction 29
+pdep_arrhenius('CH3O2(39) <=> OH(6) + CH2O(19)',
+               [(0.493, 'atm'), 1.918000e+11, -0.644, -0.061],
+               [(0.855, 'atm'), 3.326000e+11, -0.644, -0.06],
+               [(1.48, 'atm'), 5.770000e+11, -0.644, -0.059])
+#  Reaction index: Chemkin #30; RMG #100
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH3O(26); HO2(9), OH(6);
+
+# Reaction 30
+reaction('HO2(9) + CH3(18) <=> OH(6) + CH3O(26)', [8.821000e+12, 0.0, -0.59])
+#  Reaction index: Chemkin #31; RMG #101
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH3O(26); O2(2), O(5);
+
+# Reaction 31
+reaction('O2(2) + CH3(18) <=> CH3O(26) + O(5)', [8.104000e+12, 0.0, 28.297])
+#  Reaction index: Chemkin #32; RMG #111
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH2O(19); CH3O(26), H(4);
+
+# Reaction 32
+falloff_reaction('CH3O(26) (+ M) <=> CH2O(19) + H(4) (+ M)',
+                 kf=[1.130000e+10, 1.21, 24.075],
+                 kf0=[6.020000e+16, -0.547, 18.024],
+                 efficiencies='CH2O(19):2.5 CH4(1):2.0 H2(7):2.0 H2O(8):6.0 CO2(13):2.0 Ar:0.85',
+                 falloff=Troe(A=0.341, T3=28.0, T1=1000.0, T2=2340.0))
+#  Reaction index: Chemkin #33; RMG #114
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH2O(19); H(4), H2(7);
+
+# Reaction 33
+reaction('CH3O(26) + H(4) <=> H2(7) + CH2O(19)', [3.790000e+13, 0.0, 0.596])
+#  Reaction index: Chemkin #34; RMG #115
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH3(18); H(4), OH(6);
+
+# Reaction 34
+reaction('CH3O(26) + H(4) <=> OH(6) + CH3(18)', [3.880000e+14, -0.264, -0.026])
+#  Reaction index: Chemkin #35; RMG #117
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH2O(19); O(5), OH(6);
+
+# Reaction 35
+reaction('CH3O(26) + O(5) <=> OH(6) + CH2O(19)', [3.780000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #36; RMG #118
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH2O(19); OH(6), H2O(8);
+
+# Reaction 36
+reaction('OH(6) + CH3O(26) <=> H2O(8) + CH2O(19)', [1.810000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #37; RMG #119
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH2O(19); O2(2), HO2(9);
+
+# Reaction 37
+reaction('O2(2) + CH3O(26) <=> HO2(9) + CH2O(19)', [6.320000e+10, 0.0, 2.603])
+#  Reaction index: Chemkin #38; RMG #120
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH2O(19); CH3(18), CH4(1);
+
+# Reaction 38
+reaction('CH3(18) + CH3O(26) <=> CH4(1) + CH2O(19)', [2.400000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #39; RMG #277
+#  PDep reaction: PDepNetwork #2
+#  Flux pairs: CH3(18), CH3O(26); O2(2), O(5);
+
+# Reaction 39
+pdep_arrhenius('O2(2) + CH3(18) <=> CH3O(26) + O(5)',
+               [(0.493, 'atm'), 4.333000e+07, 1.55, 27.064],
+               [(0.855, 'atm'), 4.337000e+07, 1.55, 27.065],
+               [(1.48, 'atm'), 4.344000e+07, 1.55, 27.066])
+#  Reaction index: Chemkin #40; RMG #384
+#  PDep reaction: PDepNetwork #6
+#  Flux pairs: CH3(18), CH3O(26); O(5), CH3O(26);
+
+# Reaction 40
+pdep_arrhenius('CH3(18) + O(5) <=> CH3O(26)',
+               [(0.493, 'atm'), 1.239000e+32, -5.77, 9.721],
+               [(0.855, 'atm'), 2.871000e+31, -5.535, 9.72],
+               [(1.48, 'atm'), 4.782000e+30, -5.262, 9.633])
+#  Reaction index: Chemkin #41; RMG #113
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH2OH(32); H(4), H(4);
+
+# Reaction 41
+reaction('CH3O(26) + H(4) <=> CH2OH(32) + H(4)', [1.290000e+07, 1.82, -0.703])
+#  Reaction index: Chemkin #42; RMG #122
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2OH(32), CH2O(19); CH2OH(32), H(4);
+
+# Reaction 42
+falloff_reaction('CH2OH(32) (+ M) <=> CH2O(19) + H(4) (+ M)',
+                 kf=[7.370000e+10, 0.811, 39.58],
+                 kf0=[3.010000e+13, 0.184, 17.23],
+                 efficiencies='CH2O(19):2.5 CH4(1):2.0 H2(7):2.0 H2O(8):5.97 CO2(13):2.0 Ar:0.85',
+                 falloff=Troe(A=0.001, T3=50.0, T1=600.0, T2=2780.0))
+#  Reaction index: Chemkin #43; RMG #124
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2OH(32), CH2O(19); H(4), H2(7);
+
+# Reaction 43
+reaction('CH2OH(32) + H(4) <=> H2(7) + CH2O(19)', [2.440000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #44; RMG #125
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2OH(32), CH3(18); H(4), OH(6);
+
+# Reaction 44
+reaction('CH2OH(32) + H(4) <=> OH(6) + CH3(18)', [2.006000e+13, 0.198, -0.241])
+#  Reaction index: Chemkin #45; RMG #127
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2OH(32), CH2O(19); O(5), OH(6);
+
+# Reaction 45
+reaction('CH2OH(32) + O(5) <=> OH(6) + CH2O(19)', [9.030000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #46; RMG #128
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2OH(32), CH2O(19); OH(6), H2O(8);
+
+# Reaction 46
+reaction('CH2OH(32) + OH(6) <=> H2O(8) + CH2O(19)', [2.410000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #47; RMG #129
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2OH(32), CH2O(19); O2(2), HO2(9);
+
+# Reaction 47
+reaction('O2(2) + CH2OH(32) <=> HO2(9) + CH2O(19)', [7.298000e+13, 0.0, 3.736])
+#  Reaction index: Chemkin #48; RMG #130
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2OH(32), CH2O(19); CH3(18), CH4(1);
+
+# Reaction 48
+reaction('CH2OH(32) + CH3(18) <=> CH4(1) + CH2O(19)', [2.400000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #49; RMG #377
+#  PDep reaction: PDepNetwork #17
+#  Flux pairs: CH2O(19), CH2OH(32); HO2(9), O2(2);
+
+# Reaction 49
+pdep_arrhenius('HO2(9) + CH2O(19) <=> O2(2) + CH2OH(32)',
+               [(0.493, 'atm'), 6.559000e+15, -0.934, 20.378],
+               [(0.855, 'atm'), 6.495000e+15, -0.933, 20.377],
+               [(1.48, 'atm'), 6.385000e+15, -0.931, 20.374])
+#  Reaction index: Chemkin #50; RMG #411
+#  PDep reaction: PDepNetwork #29
+#  Flux pairs: CH3O(26), CH2OH(32);
+
+# Reaction 50
+pdep_arrhenius('CH3O(26) <=> CH2OH(32)',
+               [(0.493, 'atm'), 9.535000e+16, -2.019, 22.891],
+               [(0.855, 'atm'), 3.058000e+17, -2.083, 23.665],
+               [(1.48, 'atm'), 9.176000e+17, -2.139, 24.486])
+#  Reaction index: Chemkin #51; RMG #80
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HCO(14), CH2O(19); H(4), CH2O(19);
+
+# Reaction 51
+falloff_reaction('HCO(14) + H(4) (+ M) <=> CH2O(19) (+ M)',
+                 kf=[1.913000e+14, -0.033, -0.142],
+                 kf0=[4.190000e+34, -5.533, 6.128],
+                 efficiencies='CH2O(19):2.84 H2O(8):6.0 CH4(1):2.0 CO2(13):2.0 Ar:0.79',
+                 falloff=Troe(A=0.782, T3=271.0, T1=2760.0, T2=6570.0))
+#  Reaction index: Chemkin #52; RMG #82
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2O(19), HCO(14); H(4), H2(7);
+
+# Reaction 52
+reaction('CH2O(19) + H(4) <=> H2(7) + HCO(14)', [7.149000e+07, 1.9, 2.742])
+#  Reaction index: Chemkin #53; RMG #83
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2O(19), HCO(14); O(5), OH(6);
+
+# Reaction 53
+reaction('CH2O(19) + O(5) <=> OH(6) + HCO(14)', [4.244000e+11, 0.57, 2.762])
+#  Reaction index: Chemkin #54; RMG #84
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2O(19), HCO(14); OH(6), H2O(8);
+
+# Reaction 54
+reaction('OH(6) + CH2O(19) <=> H2O(8) + HCO(14)', [8.338000e+07, 1.63, -1.055])
+#  Reaction index: Chemkin #55; RMG #85
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2O(19), HCO(14); O2(2), HO2(9);
+
+# Reaction 55
+reaction('O2(2) + CH2O(19) <=> HO2(9) + HCO(14)', [3.297000e+05, 2.5, 36.46])
+#  Reaction index: Chemkin #56; RMG #110
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2O(19), HCO(14); CH3(18), CH4(1);
+
+# Reaction 56
+reaction('CH3(18) + CH2O(19) <=> CH4(1) + HCO(14)', [3.213000e+01, 3.36, 4.31])
+#  Reaction index: Chemkin #57; RMG #320
+#  Template reaction: Disproportionation
+#  Flux pairs: HCO(14), CH2O(19); CH3O(26), CH2O(19);
+#  Estimated using average of templates [Y_rad;Cmethyl_Orad] + [CO_pri_rad;XH_s_Rrad] for rate rule [CO_pri_rad;Cmethyl_Orad]
+#  Multiplied by reaction path degeneracy 3
+
+# Reaction 57
+reaction('HCO(14) + CH3O(26) <=> CH2O(19) + CH2O(19)', [1.717000e+14, 0.0, 0.0])
+#  Reaction index: Chemkin #58; RMG #321
+#  Template reaction: Disproportionation
+#  Flux pairs: HCO(14), CH2O(19); CH2OH(32), CH2O(19);
+#  Exact match found for rate rule [CO_pri_rad;O_Csrad]
+
+# Reaction 58
+reaction('CH2OH(32) + HCO(14) <=> CH2O(19) + CH2O(19)', [1.810000e+14, 0.0, 0.0])
+#  Reaction index: Chemkin #59; RMG #434
+#  PDep reaction: PDepNetwork #4
+#  Flux pairs: CH3(18), CH3O2(39); HO2(9), H(4);
+
+# Reaction 59
+pdep_arrhenius('HO2(9) + CH3(18) <=> CH3O2(39) + H(4)',
+               [(0.493, 'atm'), 4.308000e+03, 2.555, 29.296],
+               [(0.855, 'atm'), 4.334000e+03, 2.554, 29.299],
+               [(1.48, 'atm'), 4.379000e+03, 2.553, 29.304])
+#  Reaction index: Chemkin #60; RMG #435
+#  PDep reaction: PDepNetwork #4
+#  Flux pairs: CH3(18), CH3O(26); HO2(9), OH(6);
+
+# Reaction 60
+pdep_arrhenius('HO2(9) + CH3(18) <=> OH(6) + CH3O(26)',
+               [(0.493, 'atm'), 4.177000e+13, -0.155, 0.355],
+               [(0.855, 'atm'), 4.351000e+13, -0.16, 0.375],
+               [(1.48, 'atm'), 4.669000e+13, -0.168, 0.41])
+#  Reaction index: Chemkin #61; RMG #30
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HCO(14), CO(12); HCO(14), H(4);
+
+# Reaction 61
+three_body_reaction('HCO(14) + M <=> CO(12) + H(4) + M', [4.800000e+17, -1.2, 17.734],
+                    efficiencies='CH2O(19):3.29 O2(2):1.32 CH4(1):2.6 H2(7):1.31 H2O(8):15.31 N2(3):1.31 CO2(13):2.0 Ar:1.4')
+#  Reaction index: Chemkin #62; RMG #31
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HCO(14), CO(12); H(4), H2(7);
+
+# Reaction 62
+reaction('HCO(14) + H(4) <=> H2(7) + CO(12)', [8.482000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #63; RMG #32
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HCO(14), CO(12); O(5), OH(6);
+
+# Reaction 63
+reaction('HCO(14) + O(5) <=> OH(6) + CO(12)', [3.010000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #64; RMG #34
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HCO(14), CO(12); OH(6), H2O(8);
+
+# Reaction 64
+reaction('OH(6) + HCO(14) <=> H2O(8) + CO(12)', [1.199000e+14, 0.0, 0.0])
+#  Reaction index: Chemkin #65; RMG #35
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HCO(14), CO(12); O2(2), HO2(9);
+
+# Reaction 65
+reaction('O2(2) + HCO(14) <=> HO2(9) + CO(12)', [7.562000e+10, 0.521, -0.521])
+#  Reaction index: Chemkin #66; RMG #81
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2O(19), H2(7); CH2O(19), CO(12);
+
+# Reaction 66
+falloff_reaction('CH2O(19) (+ M) <=> H2(7) + CO(12) (+ M)',
+                 kf=[3.700000e+13, 0.0, 71.976],
+                 kf0=[4.400000e+38, -6.1, 94.0],
+                 efficiencies='CH2O(19):2.5 H2O(8):6.0 CH4(1):2.0 CO2(13):2.0 Ar:0.7',
+                 falloff=Troe(A=0.932, T3=197.0, T1=1540.0, T2=10300.0))
+#  Reaction index: Chemkin #67; RMG #94
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CO(12); O(5), H2(7); O(5), H(4);
+
+# Reaction 67
+reaction('CH3(18) + O(5) <=> H2(7) + CO(12) + H(4)', [2.384000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #68; RMG #109
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HCO(14), CO(12); CH3(18), CH4(1);
+
+# Reaction 68
+reaction('HCO(14) + CH3(18) <=> CH4(1) + CO(12)', [5.300000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #69; RMG #108
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), C2H5(31); CH3(18), H(4);
+
+# Reaction 69
+reaction('CH3(18) + CH3(18) <=> C2H5(31) + H(4)', [7.621000e+12, 0.1, 10.6])
+#  Reaction index: Chemkin #70; RMG #245
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H5(31), CH2O(19); O(5), CH3(18);
+
+# Reaction 70
+reaction('C2H5(31) + O(5) <=> CH3(18) + CH2O(19)', [4.420000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #71; RMG #479
+#  PDep reaction: PDepNetwork #48
+#  Flux pairs: HCO(14), CO(12); O2(2), HO2(9);
+
+# Reaction 71
+pdep_arrhenius('O2(2) + HCO(14) <=> HO2(9) + CO(12)',
+               [(0.493, 'atm'), 1.708000e+08, 1.255, 41.393],
+               [(0.855, 'atm'), 1.709000e+08, 1.255, 41.393],
+               [(1.48, 'atm'), 1.711000e+08, 1.255, 41.394])
+#  Reaction index: Chemkin #72; RMG #233
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H4(29), C2H5(31); H(4), C2H5(31);
+
+# Reaction 72
+falloff_reaction('C2H4(29) + H(4) (+ M) <=> C2H5(31) (+ M)',
+                 kf=[1.232000e+09, 1.463, 1.355],
+                 kf0=[2.900000e+39, -6.642, 5.769],
+                 efficiencies='CH2O(19):2.5 CH4(1):2.0 Ar:0.7 H2O(8):4.92 N2(3):0.86 CO2(13):2.0',
+                 falloff=Troe(A=1.569, T3=-9150.0, T1=299.0, T2=152.0))
+#  Reaction index: Chemkin #73; RMG #235
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H4(29), HCO(14); O(5), CH3(18);
+
+# Reaction 73
+reaction('C2H4(29) + O(5) <=> HCO(14) + CH3(18)', [8.355000e+06, 1.88, 0.183])
+#  Reaction index: Chemkin #74; RMG #239
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H4(29), CH2O(19); OH(6), CH3(18);
+
+# Reaction 74
+reaction('OH(6) + C2H4(29) <=> CH3(18) + CH2O(19)', [1.780000e+05, 1.68, 2.06])
+#  Reaction index: Chemkin #75; RMG #244
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H5(31), C2H4(29); H(4), H2(7);
+
+# Reaction 75
+reaction('C2H5(31) + H(4) <=> H2(7) + C2H4(29)', [1.810000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #76; RMG #247
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H5(31), C2H4(29); O(5), OH(6);
+
+# Reaction 76
+reaction('C2H5(31) + O(5) <=> OH(6) + C2H4(29)', [2.940000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #77; RMG #248
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H5(31), C2H4(29); O2(2), HO2(9);
+
+# Reaction 77
+reaction('O2(2) + C2H5(31) <=> HO2(9) + C2H4(29)', [1.355000e+07, 1.09, -1.975])
+#  Reaction index: Chemkin #78; RMG #249
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H5(31), C2H4(29); CH3(18), CH4(1);
+
+# Reaction 78
+reaction('CH3(18) + C2H5(31) <=> CH4(1) + C2H4(29)', [9.000000e+11, 0.0, 0.0])
+#  Reaction index: Chemkin #79; RMG #490
+#  Template reaction: Disproportionation
+#  Flux pairs: OH(6), H2O(8); C2H5(31), C2H4(29);
+#  Exact match found for rate rule [O_pri_rad;Cmethyl_Csrad]
+#  Multiplied by reaction path degeneracy 3
+
+# Reaction 79
+reaction('OH(6) + C2H5(31) <=> H2O(8) + C2H4(29)', [7.230000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #80; RMG #507
+#  Template reaction: Disproportionation
+#  Flux pairs: HCO(14), CH2O(19); C2H5(31), C2H4(29);
+#  Estimated using average of templates [Y_rad;Cmethyl_Csrad] + [CO_pri_rad;XH_s_Rrad] for rate rule [CO_pri_rad;Cmethyl_Csrad]
+#  Multiplied by reaction path degeneracy 3
+
+# Reaction 80
+reaction('HCO(14) + C2H5(31) <=> CH2O(19) + C2H4(29)', [9.517000e+13, -0.096, -0.001])
+#  Reaction index: Chemkin #81; RMG #529
+#  PDep reaction: PDepNetwork #64
+#  Flux pairs: C2H5(31), C2H4(29); O2(2), HO2(9);
+
+# Reaction 81
+pdep_arrhenius('O2(2) + C2H5(31) <=> HO2(9) + C2H4(29)',
+               [(0.493, 'atm'), 2.999000e+10, 0.4, 2.652],
+               [(0.855, 'atm'), 9.258000e+10, 0.269, 3.225],
+               [(1.48, 'atm'), 3.506000e+11, 0.116, 3.921])
+#  Reaction index: Chemkin #82; RMG #50
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CH3(18); H(4), CH3(18);
+
+# Reaction 82
+falloff_reaction('CH2(17) + H(4) (+ M) <=> CH3(18) (+ M)',
+                 kf=[2.130000e+13, 0.32, 0.0],
+                 kf0=[1.390000e+34, -5.04, 7.4],
+                 efficiencies='CH2O(19):2.5 H2O(8):6.0 CH4(1):2.0 CO2(13):2.0 Ar:0.7',
+                 falloff=Troe(A=0.405, T3=258.0, T1=2810.0, T2=9910.0))
+#  Reaction index: Chemkin #83; RMG #51
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CO(12); O(5), H(4); O(5), H(4);
+
+# Reaction 83
+reaction('CH2(17) + O(5) <=> CO(12) + H(4) + H(4)', [8.000000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #84; RMG #52
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CH2O(19); OH(6), H(4);
+
+# Reaction 84
+reaction('OH(6) + CH2(17) <=> CH2O(19) + H(4)', [2.899000e+13, 0.12, -0.162])
+#  Reaction index: Chemkin #85; RMG #54
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CH2O(19); HO2(9), OH(6);
+
+# Reaction 85
+reaction('HO2(9) + CH2(17) <=> OH(6) + CH2O(19)', [2.000000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #86; RMG #55
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CH3(18); H2(7), H(4);
+
+# Reaction 86
+reaction('H2(7) + CH2(17) <=> CH3(18) + H(4)', [1.265000e+06, 2.0, 7.23])
+#  Reaction index: Chemkin #87; RMG #56
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CO(12); O2(2), H(4); O2(2), OH(6);
+
+# Reaction 87
+reaction('O2(2) + CH2(17) <=> OH(6) + CO(12) + H(4)', [2.643000e+12, 0.0, 1.0])
+#  Reaction index: Chemkin #88; RMG #58
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CH2O(19); O2(2), O(5);
+
+# Reaction 88
+reaction('O2(2) + CH2(17) <=> CH2O(19) + O(5)', [1.600000e+12, 0.0, 1.0])
+#  Reaction index: Chemkin #89; RMG #60
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CO(12); O2(2), H2O(8);
+
+# Reaction 89
+reaction('O2(2) + CH2(17) <=> H2O(8) + CO(12)', [5.200000e+11, 0.0, 1.0])
+#  Reaction index: Chemkin #90; RMG #88
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2O(19), HCO(14); CH2(17), CH3(18);
+
+# Reaction 90
+reaction('CH2(17) + CH2O(19) <=> HCO(14) + CH3(18)', [7.400000e-02, 4.21, 1.12])
+#  Reaction index: Chemkin #91; RMG #96
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH2(17); OH(6), H2O(8);
+
+# Reaction 91
+reaction('OH(6) + CH3(18) <=> H2O(8) + CH2(17)', [4.464000e+04, 2.57, 3.998])
+#  Reaction index: Chemkin #92; RMG #105
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), C2H4(29); CH2(17), H(4);
+
+# Reaction 92
+reaction('CH2(17) + CH3(18) <=> C2H4(29) + H(4)', [9.824000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #93; RMG #136
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CH3(18); CH4(1), CH3(18);
+
+# Reaction 93
+reaction('CH4(1) + CH2(17) <=> CH3(18) + CH3(18)', [2.483000e+06, 2.0, 8.27])
+#  Reaction index: Chemkin #94; RMG #237
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H4(29), CH2O(19); O(5), CH2(17);
+
+# Reaction 94
+reaction('C2H4(29) + O(5) <=> CH2(17) + CH2O(19)', [1.400000e+04, 2.62, 0.459])
+#  Reaction index: Chemkin #95; RMG #262
+#  Template reaction: H_Abstraction
+#  Flux pairs: HO2(9), O2(2); CH2(17), CH3(18);
+#  Estimated using template [X_H;CH2_triplet] for rate rule [Orad_O_H;CH2_triplet]
+
+# Reaction 95
+reaction('HO2(9) + CH2(17) <=> O2(2) + CH3(18)', [3.404000e+05, 1.61, 4.377])
+#  Reaction index: Chemkin #96; RMG #278
+#  Template reaction: H_Abstraction
+#  Flux pairs: CH2(17), CH3(18); OH(6), O(5);
+#  Estimated using template [Xrad_H;Y_1centerbirad] for rate rule [OH_rad_H;CH2_triplet]
+
+# Reaction 96
+reaction('OH(6) + CH2(17) <=> CH3(18) + O(5)', [4.806000e+10, 0.75, -0.445])
+#  Reaction index: Chemkin #97; RMG #308
+#  Template reaction: Disproportionation
+#  Flux pairs: CH2(17), CH3(18); CH3O(26), CH2O(19);
+#  Estimated using template [CH2_triplet;Cmethyl_Rrad] for rate rule [CH2_triplet;Cmethyl_Orad]
+#  Multiplied by reaction path degeneracy 3
+
+# Reaction 97
+reaction('CH2(17) + CH3O(26) <=> CH3(18) + CH2O(19)', [9.030000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #98; RMG #309
+#  Template reaction: Disproportionation
+#  Flux pairs: CH2(17), CH3(18); CH2OH(32), CH2O(19);
+#  Exact match found for rate rule [CH2_triplet;O_Csrad]
+
+# Reaction 98
+reaction('CH2OH(32) + CH2(17) <=> CH3(18) + CH2O(19)', [1.210000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #99; RMG #533
+#  Template reaction: Disproportionation
+#  Flux pairs: CH2(17), CH3(18); C2H5(31), C2H4(29);
+#  Exact match found for rate rule [CH2_triplet;Cmethyl_Csrad]
+#  Multiplied by reaction path degeneracy 3
+
+# Reaction 99
+reaction('CH2(17) + C2H5(31) <=> CH3(18) + C2H4(29)', [9.030000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #100; RMG #65
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CH2(17); N2(3), N2(3);
+
+# Reaction 100
+reaction('N2(3) + CH2(S)(24) <=> N2(3) + CH2(17)', [1.200000e+13, 0.0, 0.471])
+#  Reaction index: Chemkin #101; RMG #66
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CH2(17); Ar, Ar;
+
+# Reaction 101
+reaction('Ar + CH2(S)(24) <=> Ar + CH2(17)', [9.000000e+12, 0.0, 0.6])
+#  Reaction index: Chemkin #102; RMG #69
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CO(12); O(5), H(4); O(5), H(4);
+
+# Reaction 102
+reaction('CH2(S)(24) + O(5) <=> CO(12) + H(4) + H(4)', [3.000000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #103; RMG #70
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CH2O(19); OH(6), H(4);
+
+# Reaction 103
+reaction('OH(6) + CH2(S)(24) <=> CH2O(19) + H(4)', [3.000000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #104; RMG #71
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CH3(18); H2(7), H(4);
+
+# Reaction 104
+reaction('H2(7) + CH2(S)(24) <=> CH3(18) + H(4)', [8.291000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #105; RMG #72
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CH2(17); O2(2), O2(2);
+
+# Reaction 105
+reaction('O2(2) + CH2(S)(24) <=> O2(2) + CH2(17)', [3.130000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #106; RMG #74
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CH2(17); H2O(8), H2O(8);
+
+# Reaction 106
+reaction('H2O(8) + CH2(S)(24) <=> H2O(8) + CH2(17)', [1.510000e+13, 0.0, -0.431])
+#  Reaction index: Chemkin #107; RMG #75
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CH2O(19); H2O(8), H2(7);
+
+# Reaction 107
+reaction('H2O(8) + CH2(S)(24) <=> H2(7) + CH2O(19)', [6.670000e+21, -3.134, 3.3])
+#  Reaction index: Chemkin #108; RMG #77
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CO(12), CO(12); CH2(S)(24), CH2(17);
+
+# Reaction 108
+reaction('CO(12) + CH2(S)(24) <=> CO(12) + CH2(17)', [9.000000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #109; RMG #89
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2O(19), HCO(14); CH2(S)(24), CH3(18);
+
+# Reaction 109
+reaction('CH2O(19) + CH2(S)(24) <=> HCO(14) + CH3(18)', [1.330000e+13, 0.0, -0.55])
+#  Reaction index: Chemkin #110; RMG #97
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3(18), CH2(S)(24); OH(6), H2O(8);
+
+# Reaction 110
+reaction('OH(6) + CH3(18) <=> H2O(8) + CH2(S)(24)', [7.810000e+15, -0.91, 0.546])
+#  Reaction index: Chemkin #111; RMG #106
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), C2H4(29); CH3(18), H(4);
+
+# Reaction 111
+reaction('CH3(18) + CH2(S)(24) <=> C2H4(29) + H(4)', [1.400000e+13, 0.0, -0.497])
+#  Reaction index: Chemkin #112; RMG #116
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CH2(S)(24); H(4), H2O(8);
+
+# Reaction 112
+reaction('CH3O(26) + H(4) <=> H2O(8) + CH2(S)(24)', [1.970000e+11, 0.414, 0.243])
+#  Reaction index: Chemkin #113; RMG #126
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2OH(32), CH2(S)(24); H(4), H2O(8);
+
+# Reaction 113
+reaction('CH2OH(32) + H(4) <=> H2O(8) + CH2(S)(24)', [1.280000e+11, 0.516, 0.215])
+#  Reaction index: Chemkin #114; RMG #137
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(S)(24), CH3(18); CH4(1), CH3(18);
+
+# Reaction 114
+reaction('CH4(1) + CH2(S)(24) <=> CH3(18) + CH3(18)', [1.867000e+13, 0.0, -0.497])
+#  Reaction index: Chemkin #115; RMG #661
+#  PDep reaction: PDepNetwork #101
+#  Flux pairs: H2(7), CH4(1); CH2(S)(24), CH4(1);
+
+# Reaction 115
+pdep_arrhenius('H2(7) + CH2(S)(24) <=> CH4(1)',
+               [(0.493, 'atm'), 5.591000e+31, -5.659, 10.305],
+               [(0.855, 'atm'), 1.705000e+31, -5.451, 10.511],
+               [(1.48, 'atm'), 3.179000e+30, -5.187, 10.576])
+#  Reaction index: Chemkin #116; RMG #275
+#  PDep reaction: PDepNetwork #2
+#  Flux pairs: CH3(18), CH2(S)(24); O2(2), HO2(9);
+
+# Reaction 116
+pdep_arrhenius('O2(2) + CH3(18) <=> HO2(9) + CH2(S)(24)',
+               [(0.493, 'atm'), 9.778000e+09, 1.033, 68.889],
+               [(0.855, 'atm'), 9.778000e+09, 1.033, 68.889],
+               [(1.48, 'atm'), 9.780000e+09, 1.033, 68.889])
+#  Reaction index: Chemkin #117; RMG #473
+#  PDep reaction: PDepNetwork #15
+#  Flux pairs: CH2O(19), CH2OH(32); CH3(18), CH2(S)(24);
+
+# Reaction 117
+pdep_arrhenius('CH3(18) + CH2O(19) <=> CH2OH(32) + CH2(S)(24)',
+               [(0.493, 'atm'), 3.846000e+09, 1.304, 88.487],
+               [(0.855, 'atm'), 3.846000e+09, 1.304, 88.487],
+               [(1.48, 'atm'), 3.846000e+09, 1.304, 88.487])
+#  Reaction index: Chemkin #118; RMG #91
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H3(28), C2H4(29); CH2O(19), HCO(14);
+
+# Reaction 118
+reaction('CH2O(19) + C2H3(28) <=> HCO(14) + C2H4(29)', [5.400000e+03, 2.81, 5.862])
+#  Reaction index: Chemkin #119; RMG #192
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H3(28), C2H4(29); H(4), C2H4(29);
+
+# Reaction 119
+falloff_reaction('C2H3(28) + H(4) (+ M) <=> C2H4(29) (+ M)',
+                 kf=[3.880000e+13, 0.2, 0.0],
+                 kf0=[1.400000e+30, -3.86, 3.32],
+                 efficiencies='CH2O(19):2.5 H2O(8):6.0 CH4(1):2.0 CO2(13):2.0 Ar:0.7',
+                 falloff=Troe(A=0.782, T3=208.0, T1=2660.0, T2=6100.0))
+#  Reaction index: Chemkin #120; RMG #197
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H3(28), HCO(14); OH(6), CH3(18);
+
+# Reaction 120
+reaction('OH(6) + C2H3(28) <=> HCO(14) + CH3(18)', [6.000000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #121; RMG #199
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H3(28), CH2O(19); O2(2), HCO(14);
+
+# Reaction 121
+reaction('O2(2) + C2H3(28) <=> HCO(14) + CH2O(19)', [3.936000e+15, -0.959, 0.58])
+#  Reaction index: Chemkin #122; RMG #234
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H4(29), C2H3(28); H(4), H2(7);
+
+# Reaction 122
+reaction('C2H4(29) + H(4) <=> H2(7) + C2H3(28)', [2.201000e+02, 3.62, 11.27])
+#  Reaction index: Chemkin #123; RMG #238
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H4(29), C2H3(28); OH(6), H2O(8);
+
+# Reaction 123
+reaction('OH(6) + C2H4(29) <=> H2O(8) + C2H3(28)', [2.144000e+04, 2.745, 2.216])
+#  Reaction index: Chemkin #124; RMG #241
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H4(29), C2H3(28); CH3(18), CH4(1);
+
+# Reaction 124
+reaction('CH3(18) + C2H4(29) <=> CH4(1) + C2H3(28)', [6.020000e+07, 1.56, 16.63])
+#  Reaction index: Chemkin #125; RMG #242
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H4(29), C2H3(28); O2(2), HO2(9);
+
+# Reaction 125
+reaction('O2(2) + C2H4(29) <=> HO2(9) + C2H3(28)', [7.100000e+13, 0.0, 60.01])
+#  Reaction index: Chemkin #126; RMG #539
+#  Template reaction: H_Abstraction
+#  Flux pairs: OH(6), O(5); C2H3(28), C2H4(29);
+#  Estimated using template [X_H_or_Xrad_H_Xbirad_H_Xtrirad_H;Cd_Cd\H2_pri_rad] for rate rule [OH_rad_H;Cd_Cd\H2_pri_rad]
+
+# Reaction 126
+reaction('OH(6) + C2H3(28) <=> C2H4(29) + O(5)', [2.951000e-02, 3.927, 1.663])
+#  Reaction index: Chemkin #127; RMG #543
+#  Template reaction: Disproportionation
+#  Flux pairs: C2H3(28), C2H4(29); CH3O(26), CH2O(19);
+#  Estimated using template [Cd_pri_rad;Cmethyl_Rrad] for rate rule [Cd_pri_rad;Cmethyl_Orad]
+#  Multiplied by reaction path degeneracy 3
+
+# Reaction 127
+reaction('CH3O(26) + C2H3(28) <=> CH2O(19) + C2H4(29)', [4.560000e+14, -0.7, 0.0])
+#  Reaction index: Chemkin #128; RMG #544
+#  Template reaction: Disproportionation
+#  Flux pairs: C2H3(28), C2H4(29); CH2OH(32), CH2O(19);
+#  Exact match found for rate rule [Cd_pri_rad;O_Csrad]
+
+# Reaction 128
+reaction('CH2OH(32) + C2H3(28) <=> CH2O(19) + C2H4(29)', [3.010000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #129; RMG #557
+#  Template reaction: Disproportionation
+#  Flux pairs: C2H3(28), C2H4(29); C2H5(31), C2H4(29);
+#  Exact match found for rate rule [Cd_pri_rad;Cmethyl_Csrad]
+#  Multiplied by reaction path degeneracy 3
+
+# Reaction 129
+reaction('C2H3(28) + C2H5(31) <=> C2H4(29) + C2H4(29)', [4.560000e+14, -0.7, 0.0])
+#  Reaction index: Chemkin #130; RMG #652
+#  Template reaction: H_Abstraction
+#  Flux pairs: C2H4(29), C2H3(28); CH2(17), CH3(18);
+#  Estimated using template [Cd_pri;Y_1centerbirad] for rate rule [Cd/H2/NonDeC;CH2_triplet]
+#  Multiplied by reaction path degeneracy 4
+
+# Reaction 130
+reaction('CH2(17) + C2H4(29) <=> CH3(18) + C2H3(28)', [1.153000e+08, 1.705, 4.57])
+#  Reaction index: Chemkin #131; RMG #63
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), C2H2(22); CH2(17), H(4); CH2(17), H(4);
+
+# Reaction 131
+reaction('CH2(17) + CH2(17) <=> C2H2(22) + H(4) + H(4)', [2.000000e+14, 0.0, 10.989])
+#  Reaction index: Chemkin #132; RMG #172
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H2(22), C2H3(28); H(4), C2H3(28);
+
+# Reaction 132
+falloff_reaction('C2H2(22) + H(4) (+ M) <=> C2H3(28) (+ M)',
+                 kf=[5.540000e+08, 1.64, 2.096],
+                 kf0=[3.630000e+27, -3.38, 0.847],
+                 efficiencies='CH2O(19):2.5 H2O(8):6.0 CH4(1):2.0 CO2(13):2.0 Ar:0.7',
+                 falloff=Troe(A=0.215, T3=10.7, T1=1040.0, T2=2340.0))
+#  Reaction index: Chemkin #133; RMG #174
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H2(22), CO(12); O(5), CH2(17);
+
+# Reaction 133
+reaction('C2H2(22) + O(5) <=> CO(12) + CH2(17)', [2.304000e+08, 1.4, 2.206])
+#  Reaction index: Chemkin #134; RMG #177
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H2(22), CO(12); OH(6), CH3(18);
+
+# Reaction 134
+reaction('OH(6) + C2H2(22) <=> CO(12) + CH3(18)', [6.140000e+05, 1.62, -0.731])
+#  Reaction index: Chemkin #135; RMG #193
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H3(28), C2H2(22); H(4), H2(7);
+
+# Reaction 135
+reaction('C2H3(28) + H(4) <=> H2(7) + C2H2(22)', [1.210000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #136; RMG #196
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H3(28), C2H2(22); OH(6), H2O(8);
+
+# Reaction 136
+reaction('OH(6) + C2H3(28) <=> H2O(8) + C2H2(22)', [2.100000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #137; RMG #201
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H3(28), C2H2(22); O2(2), HO2(9);
+
+# Reaction 137
+reaction('O2(2) + C2H3(28) <=> HO2(9) + C2H2(22)', [4.400000e+01, 2.95, 0.186])
+#  Reaction index: Chemkin #138; RMG #202
+#  Library reaction: FFCM1(-)
+#  Flux pairs: C2H3(28), C2H2(22); CH3(18), CH4(1);
+
+# Reaction 138
+reaction('CH3(18) + C2H3(28) <=> CH4(1) + C2H2(22)', [9.000000e+12, 0.0, -0.765])
+#  Reaction index: Chemkin #139; RMG #673
+#  Template reaction: Disproportionation
+#  Flux pairs: O(5), OH(6); C2H3(28), C2H2(22);
+#  Estimated using template [O_atom_triplet;CH_d_Rrad] for rate rule [O_atom_triplet;Cd_Cdrad]
+#  Multiplied by reaction path degeneracy 2
+
+# Reaction 139
+reaction('C2H3(28) + O(5) <=> OH(6) + C2H2(22)', [3.400000e+08, 1.5, -0.89])
+#  Reaction index: Chemkin #140; RMG #691
+#  Template reaction: Disproportionation
+#  Flux pairs: HCO(14), CH2O(19); C2H3(28), C2H2(22);
+#  Estimated using template [Y_rad;CH_d_Rrad] for rate rule [CO_pri_rad;Cd_Cdrad]
+#  Multiplied by reaction path degeneracy 2
+
+# Reaction 140
+reaction('HCO(14) + C2H3(28) <=> CH2O(19) + C2H2(22)', [6.447000e+06, 1.902, -1.131])
+#  Reaction index: Chemkin #141; RMG #701
+#  Template reaction: Disproportionation
+#  Flux pairs: CH2(17), CH3(18); C2H3(28), C2H2(22);
+#  Estimated using template [Y_1centerbirad;CH_d_Rrad] for rate rule [CH2_triplet;Cd_Cdrad]
+#  Multiplied by reaction path degeneracy 2
+
+# Reaction 141
+reaction('CH2(17) + C2H3(28) <=> CH3(18) + C2H2(22)', [3.400000e+08, 1.5, -0.89])
+#  Reaction index: Chemkin #142; RMG #705
+#  Template reaction: Disproportionation
+#  Flux pairs: C2H3(28), C2H4(29); C2H3(28), C2H2(22);
+#  Estimated using template [Y_rad;CH_d_Rrad] for rate rule [Cd_pri_rad;Cd_Cdrad]
+#  Multiplied by reaction path degeneracy 2
+
+# Reaction 142
+reaction('C2H3(28) + C2H3(28) <=> C2H2(22) + C2H4(29)', [6.447000e+06, 1.902, -1.131])
+#  Reaction index: Chemkin #143; RMG #26
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CO(12), CO2(13); O(5), CO2(13);
+
+# Reaction 143
+falloff_reaction('CO(12) + O(5) (+ M) <=> CO2(13) (+ M)',
+                 kf=[1.880000e+11, 0.0, 2.43],
+                 kf0=[1.400000e+21, -2.1, 5.5],
+                 efficiencies='CH2O(19):2.5 H2O(8):12.0 CH4(1):2.0 CO2(13):3.8 Ar:0.87')
+#  Reaction index: Chemkin #144; RMG #27
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CO(12), CO2(13); O2(2), O(5);
+
+# Reaction 144
+reaction('O2(2) + CO(12) <=> CO2(13) + O(5)', [1.533000e+12, 0.0, 47.7])
+#  Reaction index: Chemkin #145; RMG #28
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CO(12), CO2(13); OH(6), H(4);
+
+# Reaction 145
+reaction('OH(6) + CO(12) <=> CO2(13) + H(4)', [6.187000e+04, 2.053, -0.356])
+#  Reaction index: Chemkin #146; RMG #29
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CO(12), CO2(13); HO2(9), OH(6);
+
+# Reaction 146
+reaction('HO2(9) + CO(12) <=> OH(6) + CO2(13)', [1.570000e+05, 2.18, 17.944])
+#  Reaction index: Chemkin #147; RMG #33
+#  Library reaction: FFCM1(-)
+#  Flux pairs: HCO(14), CO2(13); O(5), H(4);
+
+# Reaction 147
+reaction('HCO(14) + O(5) <=> CO2(13) + H(4)', [3.001000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #148; RMG #57
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CO2(13); O2(2), H(4); O2(2), H(4);
+
+# Reaction 148
+reaction('O2(2) + CH2(17) <=> CO2(13) + H(4) + H(4)', [1.844000e+12, 0.0, 1.0])
+#  Reaction index: Chemkin #149; RMG #59
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH2(17), CO2(13); O2(2), H2(7);
+
+# Reaction 149
+reaction('O2(2) + CH2(17) <=> H2(7) + CO2(13)', [1.836000e+12, 0.0, 1.0])
+#  Reaction index: Chemkin #150; RMG #78
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CO2(13), CO2(13); CH2(S)(24), CH2(17);
+
+# Reaction 150
+reaction('CO2(13) + CH2(S)(24) <=> CO2(13) + CH2(17)', [1.330000e+13, 0.0, 0.0])
+#  Reaction index: Chemkin #151; RMG #79
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CO2(13), CH2O(19); CH2(S)(24), CO(12);
+
+# Reaction 151
+reaction('CO2(13) + CH2(S)(24) <=> CO(12) + CH2O(19)', [6.620000e+12, 0.0, 0.0])
+#  Reaction index: Chemkin #152; RMG #121
+#  Library reaction: FFCM1(-)
+#  Flux pairs: CH3O(26), CO2(13); CO(12), CH3(18);
+
+# Reaction 152
+reaction('CO(12) + CH3O(26) <=> CO2(13) + CH3(18)', [6.000000e+12, 0.0, 11.0])
+#  Reaction index: Chemkin #153; RMG #1063
+#  PDep reaction: PDepNetwork #127
+#  Flux pairs: C2H2(22), C2H3(28); CH3(18), CH2(S)(24);
+
+# Reaction 153
+pdep_arrhenius('CH3(18) + C2H2(22) <=> CH2(S)(24) + C2H3(28)',
+               [(0.493, 'atm'), 9.627000e+16, -0.891, 86.168],
+               [(0.855, 'atm'), 9.629000e+16, -0.891, 86.168],
+               [(1.48, 'atm'), 9.633000e+16, -0.891, 86.168])
