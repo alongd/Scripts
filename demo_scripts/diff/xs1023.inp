@@ -1,0 +1,3051 @@
+ELEMENTS
+	H
+	D /2.014/
+	T /3.016/
+	C
+	CI /13.003/
+	O
+	OI /18.000/
+	N
+	Ne
+	Ar
+	He
+	Si
+	S
+	Cl
+END
+
+SPECIES
+    Ar                  ! Ar
+    Ne                  ! Ne
+    SO2(1)              ! SO2(1)
+    O2(2)               ! O2(2)
+    H2O(3)              ! H2O(3)
+    N2(4)               ! N2(4)
+    H(5)                ! H(5)
+    O(6)                ! O(6)
+    OH(7)               ! OH(7)
+    H2(8)               ! H2(8)
+    HO2(10)             ! HO2(10)
+    H2O2(11)            ! H2O2(11)
+    NO(13)              ! NO(13)
+    NH(22)              ! NH(22)
+    N2O(44)             ! N2O(44)
+    NO2(45)             ! NO2(45)
+    HNO(48)             ! HNO(48)
+    HNNO(56)            ! HNNO(56)
+    NNOH(57)            ! NNOH(57)
+    NNH(58)             ! NNH(58)
+    HNO2(63)            ! HNO2(63)
+    HONO(67)            ! HONO(67)
+    NO3(69)             ! NO3(69)
+    O3(89)              ! O3(89)
+    HOONO(90)           ! HOONO(90)
+    S(92)               ! S(92)
+    SO(94)              ! SO(94)
+    SO3(95)             ! SO3(95)
+    HOSO(96)            ! HOSO(96)
+    HSO2(97)            ! HSO2(97)
+    HSO(98)             ! HSO(98)
+    H2SO4(102)          ! H2SO4(102)
+    HOSO2(103)          ! HOSO2(103)
+    HO2S(157)           ! [O][SH]=O(157)
+    N2(159)             ! [N]=[N](159)
+    N2O(160)            ! N(=[N])[O](160)
+    OS(162)             ! O=[S](162)
+    HOS(167)            ! [O]S(167)
+    HOS(168)            ! O[S](168)
+    O2S(172)            ! [O]O[S](172)
+    OS(177)             ! O=S(177)
+    O1OS1(180)          ! O1OS1(180)
+    OS(185)             ! OS(185)
+    NO2(203)            ! [N]1OO1(203)
+END
+
+
+
+THERM ALL
+    300.000  1000.000  5000.000
+
+! Thermo library: BurkeH2O2
+Ar                      Ar  1               G   100.000  5000.000 4950.76      1
+ 2.77499054E+00-2.12693169E-04 6.15680832E-08-7.90364645E-12 3.79566382E-16    2
+-1.02890912E+03 2.58803224E+00 2.50000000E+00-1.06332631E-12 1.30802314E-15    3
+-5.21436096E-19 6.38303448E-23-7.45000000E+02 4.36630363E+00                   4
+
+! Thermo library: primaryThermoLibrary
+Ne                      Ne  1               G   200.000  6000.000 1000.00      1
+ 2.50000000E+00 0.00000000E+00 0.00000000E+00 0.00000000E+00 0.00000000E+00    2
+-7.45375000E+02 3.35532000E+00 2.50000000E+00 0.00000000E+00 0.00000000E+00    3
+ 0.00000000E+00 0.00000000E+00-7.45375000E+02 3.35532000E+00                   4
+
+! Thermo library: SOxNOx
+SO2(1)                  S   1O   2          G   100.000  5000.000 1104.83      1
+ 4.96626128E+00 2.61550779E-03-1.25026396E-06 2.54618689E-10-1.87852405E-14    2
+-3.75021084E+04 3.84270583E-01 3.14741950E+00 6.30353954E-03-2.32422165E-06    3
+-1.47065829E-09 9.08637101E-13-3.69233925E+04 1.01406362E+01                   4
+
+! Thermo library: BurkeH2O2
+O2(2)                   O   2               G   100.000  5000.000 1087.71      1
+ 3.16427286E+00 1.69453617E-03-8.00335115E-07 1.59029918E-10-1.14890911E-14    2
+-1.04844568E+03 6.08302675E+00 3.53763684E+00-1.22827492E-03 5.36758564E-06    3
+-4.93128040E-09 1.45955088E-12-1.03799025E+03 4.67179816E+00                   4
+
+! Thermo library: BurkeH2O2
+H2O(3)                  H   2O   1          G   100.000  5000.000 1281.44      1
+ 3.19560480E+00 1.95239817E-03-1.67117123E-07-2.97941102E-11 4.45141369E-15    2
+-3.00687027E+04 4.04333886E+00 3.99882015E+00-5.54832490E-04 2.76774595E-06    3
+-1.55665293E-09 3.02331304E-13-3.02745569E+04-3.08947894E-02                   4
+
+! Thermo library: BurkeH2O2
+N2(4)                   N   2               G   100.000  5000.000 1817.04      1
+ 2.97592153E+00 1.64138375E-03-7.19709084E-07 1.25375037E-10-7.91506855E-15    2
+-1.02585477E+03 5.53745167E+00 3.61262554E+00-1.00892746E-03 2.49897855E-06    3
+-1.43375090E-09 2.58634320E-13-1.05110286E+03 2.65270487E+00                   4
+
+! Thermo library: BurkeH2O2
+H(5)                    H   1               G   100.000  5000.000 4950.76      1
+ 2.77499054E+00-2.12693169E-04 6.15680832E-08-7.90364645E-12 3.79566382E-16    2
+ 2.51887990E+04-2.23783764E+00 2.50000000E+00-1.06332631E-12 1.30802314E-15    3
+-5.21436096E-19 6.38303448E-23 2.54727081E+04-4.59566247E-01                   4
+
+! Thermo library: BurkeH2O2
+O(6)                    O   1               G   100.000  5000.000 4950.76      1
+ 2.77499054E+00-2.12693169E-04 6.15680832E-08-7.90364645E-12 3.79566382E-16    2
+ 2.89428125E+04 3.33279631E+00 2.50000000E+00-1.06332631E-12 1.30802314E-15    3
+-5.21436096E-19 6.38303448E-23 2.92267216E+04 5.11106770E+00                   4
+
+! Thermo library: BurkeH2O2
+OH(7)                   H   1O   1          G   100.000  5000.000 1005.25      1
+ 2.88224676E+00 1.03869768E-03-2.35657541E-07 1.40242832E-11 6.34470172E-16    2
+ 3.66956252E+03 5.59056512E+00 3.48579720E+00 1.33395092E-03-4.70037223E-06    3
+ 5.64371314E-09-2.06314300E-12 3.41195697E+03 1.99787188E+00                   4
+
+! Thermo library: BurkeH2O2
+H2(8)                   H   2               G   100.000  5000.000 1962.85      1
+ 2.74218705E+00 5.79540173E-04 1.97202440E-07-6.41093905E-11 4.96002684E-15    2
+-5.52037477E+02 4.14100584E-01 3.42253738E+00 2.86649646E-04-4.14670529E-07    3
+ 4.27547855E-10-9.38118545E-14-1.02978490E+03-3.86364742E+00                   4
+
+! Thermo library: BurkeH2O2
+HO2(10)                 H   1O   2          G   100.000  5000.000  923.90      1
+ 4.15130013E+00 1.91151670E-03-4.11307362E-07 6.35036387E-11-4.86451354E-15    2
+ 8.34339155E+01 3.09358875E+00 4.02957091E+00-2.63998735E-03 1.52235354E-05    3
+-1.71678442E-08 6.26770606E-12 3.22676812E+02 4.84424092E+00                   4
+
+! Thermo library: BurkeH2O2
+H2O2(11)                H   2O   2          G   100.000  5000.000  923.28      1
+ 4.95153133E+00 3.54227454E-03-1.01039328E-06 1.61938613E-10-1.10206735E-14    2
+-1.81227995E+04-1.52919415E+00 3.72866574E+00 4.13382901E-03 5.67476891E-06    3
+-1.01862808E-08 4.28599013E-12-1.76963957E+04 5.35913121E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+NO(13)                  O   1N   1          G   100.000  5000.000 1407.00      1
+ 2.93796147E+00 1.75427010E-03-7.77019222E-07 1.42654956E-10-9.57864141E-15    2
+ 1.00391003E+04 7.44022795E+00 3.55718253E+00-8.90581717E-04 2.98556166E-06    3
+-2.08690603E-09 4.65959712E-13 9.95239679E+03 4.55251109E+00                   4
+
+! Thermo library: primaryThermoLibrary
+NH(22)                  H   1N   1          G   100.000  5000.000 1032.81      1
+ 2.91398710E+00 1.04068114E-03-2.63121160E-07 2.75193710E-11-8.58740012E-16    2
+ 4.23018714E+04 5.01627010E+00 3.52478131E+00-1.21073395E-05-6.40700198E-07    3
+ 1.50191957E-09-6.55642910E-13 4.21056875E+04 1.71086014E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+N2O(44)                 O   1N   2          G   100.000  5000.000 1026.61      1
+ 4.61743822E+00 3.00863219E-03-1.29223174E-06 2.55912415E-10-1.88712328E-14    2
+ 8.26676760E+03-1.07508448E+00 3.22183142E+00 4.41472114E-03 2.54399866E-06    3
+-6.06061212E-09 2.45086989E-12 8.76576984E+03 6.72929494E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+NO2(45)                 O   2N   1          G   100.000  5000.000 1003.62      1
+ 4.42984675E+00 2.84581401E-03-1.26849280E-06 2.63844572E-10-2.02208317E-14    2
+ 2.58156149E+03 2.40676460E+00 3.95017668E+00-1.10889143E-03 1.34100766E-05    3
+-1.53107271E-08 5.31015666E-12 2.97329522E+03 6.19455831E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+HNO(48)                 H   1O   1N   1     G   100.000  5000.000 1248.01      1
+ 2.64828354E+00 4.64389759E-03-2.01990184E-06 3.74705544E-10-2.55966249E-14    2
+ 1.17551113E+04 1.01310819E+01 4.11013422E+00-2.22099061E-03 8.85069256E-06    3
+-6.83154106E-09 1.69826896E-12 1.15599617E+04 3.43463370E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC + radical(NHJ_N)
+HNNO(56)                H   1O   1N   2     G   100.000  5000.000 1036.02      1
+ 4.73707345E+00 4.57864448E-03-1.90226934E-06 3.80613832E-10-2.82742590E-14    2
+ 2.28504433E+04 1.14849656E+00 3.78811867E+00 2.44483096E-03 9.58127868E-06    3
+-1.24104083E-08 4.36172308E-12 2.33582137E+04 7.26186036E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC + radical(N3dJ_N)
+NNOH(57)                H   1O   1N   2     G   100.000  5000.000 1000.94      1
+ 7.16261525E+00 2.43308782E-03-9.81333774E-07 2.20027367E-10-1.81429986E-14    2
+ 1.31855433E+04-1.07432848E+01 3.42391349E+00 9.20052355E-03 1.12561751E-06    3
+-9.34139680E-09 4.40759591E-12 1.43434183E+04 9.34254735E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+NNH(58)                 H   1N   2          G   100.000  5000.000 1085.70      1
+ 3.08741603E+00 3.98308754E-03-1.66273645E-06 3.09806609E-10-2.15373827E-14    2
+ 2.88828719E+04 8.20537346E+00 4.05639075E+00-1.73130095E-03 9.19499298E-06    3
+-8.17656354E-09 2.35150004E-12 2.87988556E+04 4.03300969E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+HNO2(63)                H   1O   2N   1     G   100.000  5000.000 1007.87      1
+ 3.92434701E+00 6.24035653E-03-2.65590054E-06 5.27586155E-10-3.90797551E-14    2
+-6.89857324E+03 4.68183557E+00 3.98438504E+00-2.90724201E-03 2.42179678E-05    3
+-2.60191368E-08 8.72133114E-12-6.45816954E+03 6.63657686E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+HONO(67)                H   1O   2N   1     G   100.000  5000.000 1030.67      1
+ 5.61861483E+00 4.45477295E-03-1.92172137E-06 3.78240342E-10-2.77201670E-14    2
+-1.12386294E+04-3.67508072E+00 3.58324193E+00 6.77956297E-03 2.80768335E-06    3
+-7.92847105E-09 3.26002089E-12-1.05229890E+04 7.64225441E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+NO3(69)                 O   3N   1          G   100.000  5000.000 1140.53      1
+ 7.25358850E+00 3.41499425E-03-1.64348003E-06 3.33094403E-10-2.44736855E-14    2
+ 7.10615055E+03-1.15536188E+01 3.24880256E+00 1.41575807E-02-1.14281766E-05    3
+ 3.51347850E-09-1.65063116E-13 8.23447975E+03 9.23548598E+00                   4
+
+! Thermo library: BurcatNS
+O3(89)                  O   3               G   200.000  6000.000 1000.00      1
+ 1.23303000E+01-1.19325000E-02 7.98741000E-06-1.77195000E-09 1.26076000E-13    2
+ 1.26756000E+04-4.08823000E+01 3.40738000E+00 2.05379000E-03 1.38486000E-05    3
+-2.23312000E-08 9.76073000E-12 1.58645000E+04 8.28248000E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+HOONO(90)               H   1O   3N   1     G   100.000  5000.000  768.01      1
+ 6.03639136E+00 8.74636120E-03-4.52437011E-06 8.98585149E-10-6.38221820E-14    2
+-3.49793992E+03-1.72377089E+00 2.96302496E+00 2.47518664E-02-3.57819751E-05    3
+ 2.80291907E-08-8.89451019E-12-3.02582331E+03 1.22924920E+01                   4
+
+! Thermo library: SulfurLibrary
+S(92)                   S   1               G   100.000  5000.000 4950.76      1
+ 2.77499054E+00-2.12693169E-04 6.15680832E-08-7.90364645E-12 3.79566382E-16    2
+ 3.22841864E+04 4.16310760E+00 2.50000000E+00-1.06332631E-12 1.30802314E-15    3
+-5.21436096E-19 6.38303448E-23 3.25680955E+04 5.94137900E+00                   4
+
+! Thermo library: BurcatNS
+SO(94)                  S   1O   1          G   200.000  6000.000 1000.00      1
+ 3.96894000E+00 3.77297000E-04 7.67103000E-09-1.37544000E-11 1.37139000E-15    2
+-7.28572000E+02 3.73493000E+00 3.61860000E+00-2.32174000E-03 1.16463000E-05    3
+-1.42093000E-08 5.60765000E-12-4.80622000E+02 6.36504000E+00                   4
+
+! Thermo library: SOxNOx
+SO3(95)                 S   1O   3          G   100.000  5000.000 1089.01      1
+ 6.81037529E+00 3.83966290E-03-1.84632500E-06 3.81331163E-10-2.85113118E-14    2
+-5.01431733E+04-9.82226528E+00 2.75315928E+00 1.36640275E-02-8.38395018E-06    3
+ 1.01710570E-10 1.01863175E-12-4.89583886E+04 1.14799240E+01                   4
+
+! Thermo library: SOxNOx
+HOSO(96)                H   1S   1O   2     G   100.000  5000.000  927.36      1
+ 7.60968495E+00 6.66364145E-04 3.25430476E-07-7.20499618E-11 3.51681587E-15    2
+-3.16682990E+04-1.18573689E+01 3.44904900E+00 7.98874151E-03 5.66537492E-06    3
+-1.62640699E-08 7.69879970E-12-3.04397957E+04 1.03645461E+01                   4
+
+! Thermo library: SOxNOx
+HSO2(97)                H   1S   1O   2     G   100.000  5000.000  962.64      1
+ 7.53502545E+00 1.95329828E-03-5.74598939E-07 1.32396687E-10-1.21918524E-14    2
+-1.97340328E+04-1.23930675E+01 3.45747908E+00 7.23984595E-03 9.35142887E-06    3
+-1.93208399E-08 8.30668791E-12-1.84088967E+04 9.92876194E+00                   4
+
+! Thermo library: SOxNOx
+HSO(98)                 H   1S   1O   1     G   100.000  5000.000  961.29      1
+ 5.41854430E+00 1.24762665E-03-3.78095358E-07 9.57579356E-11-9.22151527E-15    2
+-4.64154972E+03-2.74772691E+00 3.90800837E+00-1.49413552E-03 1.79863659E-05    3
+-2.24092637E-08 8.38422261E-12-3.93404759E+03 6.64953569E+00                   4
+
+! Thermo library: BurcatNS
+H2SO4(102)              H   2S   1O   4     G   200.000  6000.000 1000.00      1
+ 1.13355000E+01 5.60829000E-03-1.94574000E-06 3.07136000E-10-1.81110000E-14    2
+-9.21087000E+04-2.96094000E+01 4.53388000E+00 3.10348000E-02-4.10422000E-05    3
+ 2.95752000E-08-8.81459000E-12-9.05459000E+04 3.93961000E+00                   4
+
+! Thermo library: SOxNOx
+HOSO2(103)              H   1S   1O   3     G   100.000  5000.000 1070.63      1
+ 9.43326211E+00 2.95068088E-03-1.01752401E-06 1.71126172E-10-1.14058227E-14    2
+-5.02690190E+04-1.96946960E+01 2.64374994E+00 2.83169610E-02-3.65566110E-05    3
+ 2.23007092E-08-5.17879846E-12-4.88152000E+04 1.35241782E+01                   4
+
+! Thermo library: SOxNOx + radical(CsOJ)
+HO2S(157)               H   1S   1O   2     G   100.000  5000.000  962.80      1
+ 8.65336202E+00 9.80995525E-04-1.05139346E-07 5.94531117E-11-8.31212239E-15    2
+-9.43289266E+03-1.90717030E+01 3.34349355E+00 8.66054942E-03 1.03345206E-05    3
+-2.26822172E-08 9.92483019E-12-7.74389110E+03 9.80546390E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC + radical(N3dJ_N) + radical(N3dJ_N)
+N2(159)                 N   2               G   100.000  5000.000 2149.92      1
+ 4.61874779E+00-5.97414227E-04 2.44151187E-07-2.79347849E-11 1.14305828E-15    2
+ 3.45177655E+04 1.28399644E+00 4.00100512E+00 4.01485547E-04-3.47825571E-07    3
+ 1.23085102E-10-1.26335398E-14 3.48181510E+04 4.81794101E+00                   4
+
+! Thermo library: thermo_DFT_CCSDTF12_BAC
+N2O(160)                O   1N   2          G   100.000  5000.000  958.24      1
+ 5.63383352E+00 1.01103636E-03-2.61840225E-07 6.68955921E-11-6.72083920E-15    2
+ 4.55128680E+04-2.76596393E+00 3.82476360E+00 7.95530771E-04 1.22339449E-05    3
+-1.70855327E-08 6.67513415E-12 4.62161716E+04 7.74528039E+00                   4
+
+! Thermo library: SOxNOx
+OS(162)                 S   1O   1          G   100.000  5000.000  939.67      1
+ 3.95954402E+00 3.86446645E-04-2.24707671E-08 6.85374685E-12-1.24132888E-15    2
+-6.84369241E+02 3.78631714E+00 3.49156709E+00-1.21486022E-03 8.26988881E-06    3
+-9.94598191E-09 3.72946169E-12-4.37776355E+02 6.85906470E+00                   4
+
+! Thermo library: SOxNOx + radical(CsOJ)
+HOS(167)                H   1S   1O   1     G   100.000  5000.000  957.25      1
+ 7.29564588E+00-5.43145045E-04 4.49725144E-07-5.87754444E-11 1.42227330E-15    2
+-4.74172606E+03-1.03897935E+01 3.55102448E+00 6.36471015E-03 3.31991917E-06    3
+-1.15951954E-08 5.50517779E-12-3.62440159E+03 9.60372517E+00                   4
+
+! Thermo library: SOxNOx
+HOS(168)                H   1S   1O   1     G   100.000  5000.000  916.13      1
+ 5.19978062E+00 2.43385783E-04 4.09777043E-07-8.89068431E-11 5.23267014E-15    2
+-1.74109790E+03-1.38241968E+00 3.94062457E+00-1.50680654E-03 1.51425751E-05    3
+-1.94456739E-08 7.64402275E-12-1.20623147E+03 6.24198867E+00                   4
+
+! Thermo group additivity estimation: group(Os-(Cds-Cd)(Cds-Cd)) + gauche(Os(RR)) + other(R) + group(Os-OsH) + gauche(Os(RR)) + other(R) + group(S2s-
+! CsCs) + gauche(S2s(RR)) + other(R) + radical(Cs_P) + radical(ROOJ)
+O2S(172)                S   1O   2          G   100.000  5000.000  925.78      1
+ 2.41059514E+00 4.28039303E-03-2.66248402E-06 4.67845322E-10-2.67544667E-14    2
+ 3.01173320E+04 1.36825820E+01 3.33676076E+00 2.37513830E-02-7.22425518E-05    3
+ 7.79610981E-08-2.83491542E-11 2.89399735E+04 3.85319220E+00                   4
+
+! Thermo group additivity estimation: group(S2s-CsCs) + other(R) + group(Od-Cd) + other(R)
+OS(177)                 S   1O   1          G   100.000  5000.000  874.25      1
+ 3.84864016E+00-2.41229971E-03 1.40091265E-06-2.71317326E-10 1.83919267E-14    2
+ 4.63120503E+03-1.45063078E+01 3.65805864E+00-4.75238146E-03 1.09269811E-05    3
+-1.17379645E-08 4.49911001E-12 4.78728030E+03-1.29104352E+01                   4
+
+! Thermo group additivity estimation: group(Os-(Cds-Cd)(Cds-Cd)) + other(R) + group(Os-(Cds-Cd)(Cds-Cd)) + other(R) + group(S2s-CsCs) + other(R) +
+! ring(Cyclopropane)
+O1OS1(180)              S   1O   2          G   100.000  5000.000 1730.11      1
+ 4.83243238E+00 2.65034073E-03-1.37943435E-06 2.64242779E-10-1.78593648E-14    2
+-2.01328879E+03 2.41505153E+00 3.88659325E+00 3.15927167E-03-3.65988832E-07    3
+-6.86809064E-10 2.00564931E-13-1.43489582E+03 8.22238491E+00                   4
+
+! Thermo library: SOxNOx
+OS(185)                 H   2S   1O   1     G   100.000  5000.000  945.04      1
+ 7.15907718E+00 1.64832317E-03-3.05350054E-07 5.67662222E-11-5.48233515E-15    2
+-3.09259833E+04-9.47275855E+00 3.45354059E+00 8.48742394E-03 2.87845052E-06    3
+-1.20928091E-08 5.82842522E-12-2.98306285E+04 1.02845853E+01                   4
+
+! Thermo group additivity estimation: group(N3s-CsHH) + other(R) + group(Os-OsN3s) + other(R) + group(Os-OsN3s) + other(R) + ring(Cyclopropane) +
+! radical(NHJ_C)
+NO2(203)                O   2N   1          G   100.000  5000.000 1037.04      1
+ 6.88876935E+00 6.07983643E-03-4.08035256E-06 9.69920229E-10-7.82846150E-14    2
+ 4.24437536E+04-6.03292747E+00 3.85193445E+00-5.11880782E-03 4.52581190E-05    3
+-5.20520034E-08 1.78395975E-11 4.43056677E+04 1.46687070E+01                   4
+
+END
+
+
+
+REACTIONS    KCAL/MOLE   MOLES
+
+! Reaction index: Chemkin #1; RMG #18
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: HO2(10), O2(2); OH(7), H2O(3); 
+OH(7)+HO2(10)=H2O(3)+O2(2)                          2.890e+13 0.000     -0.497   
+
+! Reaction index: Chemkin #2; RMG #264
+! Library reaction: SOxNOx
+! Flux pairs: HOSO2(103), SO2(1); HOSO2(103), OH(7); 
+HOSO2(103)=SO2(1)+OH(7)                             4.340e+14 0.000     25.832   
+
+! Reaction index: Chemkin #3; RMG #12
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H2O(3), H(5); H2O(3), OH(7); 
+H2O(3)+M=H(5)+OH(7)+M                               6.064e+27 -3.322    120.790  
+H2O(3)/0.00/ H2(8)/3.00/ O2(2)/1.50/ N2(4)/2.00/ 
+
+! Reaction index: Chemkin #4; RMG #13
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H2O(3), OH(7); H2O(3), H(5); H2O(3), H2O(3); 
+H2O(3)+H2O(3)=H2O(3)+H(5)+OH(7)                     1.006e+26 -2.440    120.180  
+
+! Reaction index: Chemkin #5; RMG #14
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: O2(2), HO2(10); H(5), HO2(10); 
+O2(2)+H(5)(+M)=HO2(10)(+M)                          4.651e+12 0.440     0.000    
+H2O(3)/14.00/ H2(8)/2.00/ O2(2)/0.78/ Ar/0.67/ 
+    LOW/ 6.366e+20 -1.720    0.525    /
+    TROE/ 5.000e-01 1e-30     1e+30    /
+
+! Reaction index: Chemkin #6; RMG #16
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: HO2(10), OH(7); H(5), OH(7); 
+H(5)+HO2(10)=OH(7)+OH(7)                            7.079e+13 0.000     0.295    
+
+! Reaction index: Chemkin #7; RMG #248
+! Library reaction: SOxNOx
+! Flux pairs: SO3(95), SO2(1); H(5), OH(7); 
+H(5)+SO3(95)=SO2(1)+OH(7)                           8.400e+09 1.220     3.320    
+
+! Reaction index: Chemkin #8; RMG #250
+! Library reaction: SOxNOx
+! Flux pairs: SO3(95), HO2(10); OH(7), SO2(1); 
+OH(7)+SO3(95)=SO2(1)+HO2(10)                        4.800e+04 2.460     27.225   
+
+! Reaction index: Chemkin #9; RMG #597
+! Template reaction: Disproportionation
+! Flux pairs: O2(2), HO2(10); HOSO2(103), SO3(95); 
+! Estimated using template [O2b;O_Rrad] for rate rule [O2b;O_SradOdOd]
+! Multiplied by reaction path degeneracy 4
+! Ea raised from 0.0 to 10.3 kJ/mol to match endothermicity of reaction.
+O2(2)+HOSO2(103)=HO2(10)+SO3(95)                    2.288e+13 0.000     2.457    
+
+! Reaction index: Chemkin #10; RMG #598
+! Template reaction: Disproportionation
+! Flux pairs: OH(7), H2O(3); HOSO2(103), SO3(95); 
+! Estimated using template [O_pri_rad;O_Rrad] for rate rule [O_pri_rad;O_SradOdOd]
+OH(7)+HOSO2(103)=H2O(3)+SO3(95)                     7.605e+09 1.000     -0.595   
+
+! Reaction index: Chemkin #11; RMG #616
+! PDep reaction: PDepNetwork #7
+! Flux pairs: H(5), HOSO2(103); SO3(95), HOSO2(103); 
+H(5)+SO3(95)(+M)=HOSO2(103)(+M)                     1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.018e+01    3.137e-02    -1.280e-03   1.330e-05   /
+    CHEB/ 2.685e+00    5.520e-02    -2.014e-03   5.160e-06   /
+    CHEB/ -3.979e-02   3.780e-02    -9.022e-04   -2.650e-05  /
+    CHEB/ -7.579e-02   1.998e-02    -3.449e-05   -3.224e-05  /
+    CHEB/ -5.196e-02   7.747e-03    2.816e-04    -1.558e-05  /
+    CHEB/ -2.698e-02   1.763e-03    2.286e-04    1.223e-06   /
+
+! Reaction index: Chemkin #12; RMG #245
+! Library reaction: SOxNOx
+! Flux pairs: SO2(1), HOSO(96); H(5), HOSO(96); 
+SO2(1)+H(5)(+M)=HOSO(96)(+M)                        2.370e+08 1.630     7.339    
+H2O(3)/10.00/ SO2(1)/10.00/ 
+    LOW/ 1.850e+37 -6.140    11.075   /
+    TROE/ 2.830e-01 272       4e+03    /
+
+! Reaction index: Chemkin #13; RMG #253
+! Library reaction: SOxNOx
+! Flux pairs: HOSO(96), HO2(10); O2(2), SO2(1); 
+O2(2)+HOSO(96)=SO2(1)+HO2(10)                       9.600e+01 2.360     -10.130  
+
+! Reaction index: Chemkin #14; RMG #588
+! Template reaction: Disproportionation
+! Flux pairs: OH(7), H2O(3); HOSO(96), SO2(1); 
+! Estimated using template [O_pri_rad;O_Rrad] for rate rule [O_pri_rad;O_SradOd]
+OH(7)+HOSO(96)=H2O(3)+SO2(1)                        7.605e+09 1.000     -0.595   
+
+! Reaction index: Chemkin #15; RMG #263
+! Library reaction: SOxNOx
+! Flux pairs: SO3(95), H2SO4(102); H2O(3), H2O(3); H2O(3), H2O(3); 
+H2O(3)+H2O(3)+SO3(95)=H2O(3)+H2SO4(102)             1.410e+07 0.000     -13.500  
+
+! Reaction index: Chemkin #16; RMG #644
+! PDep reaction: PDepNetwork #4
+! Flux pairs: OH(7), H2SO4(102); HOSO2(103), H2SO4(102); 
+OH(7)+HOSO2(103)(+M)=H2SO4(102)(+M)                 1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.329e+01    6.347e-02    -1.698e-03   1.979e-05   /
+    CHEB/ -6.580e-01   9.694e-02    -1.575e-03   -2.963e-05  /
+    CHEB/ -4.403e-01   4.614e-02    3.735e-04    -4.115e-05  /
+    CHEB/ -2.349e-01   1.351e-02    6.325e-04    9.148e-08   /
+    CHEB/ -1.077e-01   1.753e-03    2.339e-04    1.355e-05   /
+    CHEB/ -4.483e-02   -3.551e-04   6.085e-06    4.979e-06   /
+
+! Reaction index: Chemkin #17; RMG #1
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: O2(2), OH(7); H(5), O(6); 
+O2(2)+H(5)=O(6)+OH(7)                               1.040e+14 0.000     15.286   
+
+! Reaction index: Chemkin #18; RMG #4
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: OH(7), O(6); OH(7), H2O(3); 
+OH(7)+OH(7)=H2O(3)+O(6)                             3.340e+04 2.420     -1.930   
+
+! Reaction index: Chemkin #19; RMG #8
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: O(6), O2(2); O(6), O2(2); 
+O(6)+O(6)+M=O2(2)+M                                 6.165e+15 -0.500    0.000    
+H2O(3)/12.00/ H2(8)/2.50/ Ar/0.00/ 
+
+! Reaction index: Chemkin #20; RMG #9
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: O(6), O2(2); Ar, Ar; O(6), Ar; 
+Ar+O(6)+O(6)=Ar+O2(2)                               1.886e+13 0.000     -1.788   
+
+! Reaction index: Chemkin #21; RMG #11
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H(5), OH(7); O(6), OH(7); 
+H(5)+O(6)+M=OH(7)+M                                 4.714e+18 -1.000    0.000    
+H2(8)/2.50/ Ar/0.75/ H2O(3)/12.00/ 
+
+! Reaction index: Chemkin #22; RMG #17
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: HO2(10), O2(2); O(6), OH(7); 
+O(6)+HO2(10)=O2(2)+OH(7)                            2.850e+10 1.000     -0.724   
+
+! Reaction index: Chemkin #23; RMG #243
+! Library reaction: SOxNOx
+! Flux pairs: SO2(1), SO3(95); O(6), SO3(95); 
+SO2(1)+O(6)(+M)=SO3(95)(+M)                         3.700e+11 0.000     1.689    
+N2(4)/0.00/ H2O(3)/10.00/ SO2(1)/10.00/ 
+    LOW/ 2.400e+27 -3.600    5.186    /
+    TROE/ 4.420e-01 316       7.44e+03 /
+
+! Reaction index: Chemkin #24; RMG #244
+! Library reaction: SOxNOx
+! Flux pairs: SO2(1), SO3(95); N2(4), N2(4); O(6), N2(4); 
+N2(4)+SO2(1)+O(6)(+M)=N2(4)+SO3(95)(+M)             3.700e+11 0.000     1.689    
+
+    LOW/ 2.900e+27 -3.580    5.206    /
+    TROE/ 4.300e-01 371       7.44e+03 /
+
+! Reaction index: Chemkin #25; RMG #249
+! Library reaction: SOxNOx
+! Flux pairs: SO3(95), SO2(1); O(6), O2(2); 
+O(6)+SO3(95)=O2(2)+SO2(1)                           2.800e+04 2.570     29.210   
+
+! Reaction index: Chemkin #26; RMG #302
+! Library reaction: FFCM1(-)
+! Flux pairs: HO2(10), O(6); H(5), H2O(3); 
+H(5)+HO2(10)=H2O(3)+O(6)                            1.632e+12 0.000     0.000    
+
+! Reaction index: Chemkin #27; RMG #590
+! Template reaction: Disproportionation
+! Flux pairs: O(6), OH(7); HOSO(96), SO2(1); 
+! Estimated using template [O_atom_triplet;O_Rrad] for rate rule [O_atom_triplet;O_SradOd]
+O(6)+HOSO(96)=SO2(1)+OH(7)                          1.727e+11 0.750     -0.180   
+
+! Reaction index: Chemkin #28; RMG #648
+! PDep reaction: PDepNetwork #12
+! Flux pairs: O(6), HO2(10); OH(7), HO2(10); 
+O(6)+OH(7)(+M)=HO2(10)(+M)                          1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.102e+01    2.938e-01    -1.126e-03   -1.092e-04  /
+    CHEB/ -7.813e-01   1.717e-03    3.048e-04    3.655e-05   /
+    CHEB/ -1.435e-01   -1.726e-03   -2.330e-04   -1.490e-05  /
+    CHEB/ -8.598e-02   1.138e-03    1.785e-04    1.688e-05   /
+    CHEB/ -1.805e-02   -1.898e-04   -2.228e-05   -7.700e-07  /
+    CHEB/ -9.542e-03   1.535e-04    2.166e-05    1.495e-06   /
+
+! Reaction index: Chemkin #29; RMG #610
+! Template reaction: Disproportionation
+! Flux pairs: O(6), OH(7); HOSO2(103), SO3(95); 
+! Estimated using template [O_atom_triplet;O_Rrad] for rate rule [O_atom_triplet;O_SradOdOd]
+O(6)+HOSO2(103)=OH(7)+SO3(95)                       1.727e+11 0.750     -0.180   
+
+! Reaction index: Chemkin #30; RMG #2
+! Library reaction: BurkeH2O2inN2
+O(6)+H2(8)=H(5)+OH(7)                               3.818e+12 0.000     7.948    
+DUPLICATE
+! Reaction index: Chemkin #31; RMG #2
+! Library reaction: BurkeH2O2inN2
+O(6)+H2(8)=H(5)+OH(7)                               8.792e+14 0.000     19.170   
+DUPLICATE
+
+
+! Reaction index: Chemkin #32; RMG #3
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: OH(7), H2O(3); H2(8), H(5); 
+OH(7)+H2(8)=H2O(3)+H(5)                             2.160e+08 1.510     3.430    
+
+! Reaction index: Chemkin #33; RMG #5
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H2(8), H(5); H2(8), H(5); 
+H2(8)+M=H(5)+H(5)+M                                 4.577e+19 -1.400    104.380  
+H2O(3)/12.00/ H2(8)/2.50/ Ar/0.00/ 
+
+! Reaction index: Chemkin #34; RMG #6
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H2(8), H(5); Ar, Ar; Ar, H(5); 
+Ar+H2(8)=Ar+H(5)+H(5)                               5.840e+18 -1.100    104.380  
+
+! Reaction index: Chemkin #35; RMG #15
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: HO2(10), O2(2); H(5), H2(8); 
+H(5)+HO2(10)=O2(2)+H2(8)                            2.750e+06 2.090     -1.451   
+
+! Reaction index: Chemkin #36; RMG #612
+! Template reaction: Disproportionation
+! Flux pairs: HOSO2(103), SO3(95); H(5), H2(8); 
+! Estimated using template [H_rad;O_Rrad] for rate rule [H_rad;O_SradOdOd]
+H(5)+HOSO2(103)=H2(8)+SO3(95)                       9.798e+10 0.750     0.190    
+
+! Reaction index: Chemkin #37; RMG #634
+! Template reaction: Disproportionation
+! Flux pairs: H(5), H2(8); HOSO(96), SO2(1); 
+! Estimated using template [H_rad;O_Rrad] for rate rule [H_rad;O_SradOd]
+H(5)+HOSO(96)=SO2(1)+H2(8)                          9.798e+10 0.750     0.190    
+
+! Reaction index: Chemkin #38; RMG #220
+! Library reaction: SOxNOx
+! Flux pairs: O3(89), O2(2); O3(89), O(6); 
+O3(89)+M=O2(2)+O(6)+M                               1.250e+19 -1.250    24.367   
+
+
+! Reaction index: Chemkin #39; RMG #19
+! Library reaction: BurkeH2O2inN2
+HO2(10)+HO2(10)=O2(2)+H2O2(11)                      4.200e+14 0.000     11.982   
+DUPLICATE
+! Reaction index: Chemkin #40; RMG #19
+! Library reaction: BurkeH2O2inN2
+HO2(10)+HO2(10)=O2(2)+H2O2(11)                      1.300e+11 0.000     -1.629   
+DUPLICATE
+
+
+! Reaction index: Chemkin #41; RMG #20
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H2O2(11), OH(7); H2O2(11), OH(7); 
+H2O2(11)(+M)=OH(7)+OH(7)(+M)                        2.000e+12 0.900     48.749   
+H2O2(11)/7.70/ H2(8)/3.70/ O2(2)/1.20/ N2(4)/1.50/ H2O(3)/7.50/ 
+    LOW/ 2.490e+24 -2.300    48.749   /
+    TROE/ 4.300e-01 1e-30     1e+30    /
+
+! Reaction index: Chemkin #42; RMG #21
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H2O2(11), OH(7); H(5), H2O(3); 
+H(5)+H2O2(11)=H2O(3)+OH(7)                          2.410e+13 0.000     3.970    
+
+! Reaction index: Chemkin #43; RMG #22
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H2O2(11), HO2(10); H(5), H2(8); 
+H(5)+H2O2(11)=H2(8)+HO2(10)                         4.820e+13 0.000     7.950    
+
+! Reaction index: Chemkin #44; RMG #23
+! Library reaction: BurkeH2O2inN2
+! Flux pairs: H2O2(11), HO2(10); O(6), OH(7); 
+O(6)+H2O2(11)=OH(7)+HO2(10)                         9.550e+06 2.000     3.970    
+
+! Reaction index: Chemkin #45; RMG #24
+! Library reaction: BurkeH2O2inN2
+OH(7)+H2O2(11)=H2O(3)+HO2(10)                       1.740e+12 0.000     0.318    
+DUPLICATE
+! Reaction index: Chemkin #46; RMG #24
+! Library reaction: BurkeH2O2inN2
+OH(7)+H2O2(11)=H2O(3)+HO2(10)                       7.590e+13 0.000     7.270    
+DUPLICATE
+
+
+! Reaction index: Chemkin #47; RMG #600
+! Template reaction: Disproportionation
+! Flux pairs: HO2(10), H2O2(11); HOSO2(103), SO3(95); 
+! Estimated using template [O_rad/NonDeO;O_Rrad] for rate rule [O_rad/NonDeO;O_SradOdOd]
+HO2(10)+HOSO2(103)=H2O2(11)+SO3(95)                 5.964e+08 1.345     -0.800   
+
+! Reaction index: Chemkin #48; RMG #629
+! Template reaction: Disproportionation
+! Flux pairs: HO2(10), H2O2(11); HOSO(96), SO2(1); 
+! Estimated using template [O_rad/NonDeO;O_Rrad] for rate rule [O_rad/NonDeO;O_SradOd]
+HO2(10)+HOSO(96)=SO2(1)+H2O2(11)                    5.964e+08 1.345     -0.800   
+
+! Reaction index: Chemkin #49; RMG #652
+! PDep reaction: PDepNetwork #6
+! Flux pairs: H(5), H2O2(11); HO2(10), H2O2(11); 
+H(5)+HO2(10)(+M)=H2O2(11)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.268e+01    1.145e-01    -4.965e-03   3.779e-05   /
+    CHEB/ -6.099e-01   7.807e-02    2.710e-04    -1.006e-04  /
+    CHEB/ -2.438e-01   1.836e-02    8.751e-04    -1.859e-06  /
+    CHEB/ -9.767e-02   4.490e-03    2.734e-04    6.275e-06   /
+    CHEB/ -3.929e-02   1.420e-03    4.398e-05    2.408e-06   /
+    CHEB/ -1.483e-02   1.355e-04    2.955e-05    -3.313e-07  /
+
+! Reaction index: Chemkin #50; RMG #686
+! PDep reaction: PDepNetwork #14
+! Flux pairs: NNOH(57), N2(4); NNOH(57), OH(7); 
+NNOH(57)(+M)=N2(4)+OH(7)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 9.755e+00    3.003e-01    -1.210e-04   -1.320e-05  /
+    CHEB/ -2.476e-01   -1.380e-03   -2.288e-04   -2.492e-05  /
+    CHEB/ -6.440e-02   -1.190e-03   -1.970e-04   -2.136e-05  /
+    CHEB/ -1.729e-02   -9.506e-04   -1.568e-04   -1.688e-05  /
+    CHEB/ -6.403e-03   -7.106e-04   -1.166e-04   -1.244e-05  /
+    CHEB/ -3.040e-03   -5.015e-04   -8.184e-05   -8.620e-06  /
+
+! Reaction index: Chemkin #51; RMG #240
+! Library reaction: SOxNOx
+! Flux pairs: SO2(1), O(6); SO2(1), SO(94); 
+SO2(1)=O(6)+SO(94)                                  2.840e+10 0.000     109.674  
+
+! Reaction index: Chemkin #52; RMG #247
+! Library reaction: SOxNOx
+! Flux pairs: SO2(1), SO(94); H(5), OH(7); 
+SO2(1)+H(5)(+M)=OH(7)+SO(94)(+M)                    9.190e+25 2.770     20.850   
+H2O(3)/10.00/ SO2(1)/10.00/ 
+    LOW/ 1.350e+22 -2.300    30.965   /
+    TROE/ 2.830e-01 272       4e+03    /
+
+! Reaction index: Chemkin #53; RMG #251
+! Library reaction: SOxNOx
+! Flux pairs: HO2(10), SO2(1); SO(94), OH(7); 
+HO2(10)+SO(94)=SO2(1)+OH(7)                         3.700e+03 2.420     7.660    
+
+! Reaction index: Chemkin #54; RMG #257
+! Library reaction: SOxNOx
+! Flux pairs: HOSO(96), OH(7); HOSO(96), SO(94); 
+HOSO(96)(+M)=OH(7)+SO(94)(+M)                       1.650e+16 -0.320    67.720   
+
+    LOW/ 1.250e+32 -4.330    69.115   /
+    TROE/ 1.000e+00 1e-30     1e+30    /
+
+! Reaction index: Chemkin #55; RMG #260
+! Library reaction: SOxNOx
+! Flux pairs: O2(2), SO2(1); SO(94), O(6); 
+O2(2)+SO(94)=SO2(1)+O(6)                            3.200e+03 2.420     3.050    
+
+! Reaction index: Chemkin #56; RMG #102
+! Library reaction: SOxNOx
+! Flux pairs: O(6), OH(7); NNH(58), N2(4); 
+O(6)+NNH(58)=N2(4)+OH(7)                            1.200e+13 0.145     -0.217   
+
+! Reaction index: Chemkin #57; RMG #108
+! Library reaction: SOxNOx
+! Flux pairs: O2(2), HO2(10); NNH(58), N2(4); 
+O2(2)+NNH(58)=N2(4)+HO2(10)                         5.550e+13 -0.385    -0.013   
+
+! Reaction index: Chemkin #58; RMG #109
+! Library reaction: SOxNOx
+! Flux pairs: NNH(58), H2(8); H(5), N2(4); 
+H(5)+NNH(58)=N2(4)+H2(8)                            2.400e+08 1.500     -0.894   
+
+! Reaction index: Chemkin #59; RMG #110
+! Library reaction: SOxNOx
+OH(7)+NNH(58)=N2(4)+H2O(3)                          2.400e+22 -2.880    2.444    
+DUPLICATE
+! Reaction index: Chemkin #60; RMG #110
+! Library reaction: SOxNOx
+OH(7)+NNH(58)=N2(4)+H2O(3)                          1.250e+06 2.000     -1.192   
+DUPLICATE
+
+
+! Reaction index: Chemkin #61; RMG #753
+! PDep reaction: PDepNetwork #22
+! Flux pairs: NNH(58), N2(4); NNH(58), H(5); 
+NNH(58)(+M)=N2(4)+H(5)(+M)                          1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 6.944e+00    3.007e-01    -5.655e-05   -6.390e-06  /
+    CHEB/ 1.847e+00    7.318e-06    1.567e-06    2.515e-07   /
+    CHEB/ -1.710e-02   -6.332e-05   -1.046e-05   -1.130e-06  /
+    CHEB/ 4.455e-02    -6.747e-05   -1.124e-05   -1.235e-06  /
+    CHEB/ -6.012e-02   8.788e-05    1.495e-05    1.711e-06   /
+    CHEB/ 5.286e-02    -7.586e-05   -1.275e-05   -1.428e-06  /
+
+! Reaction index: Chemkin #62; RMG #659
+! Template reaction: Disproportionation
+! Flux pairs: HO2(10), H2O2(11); NNH(58), N2(4); 
+! Exact match found for rate rule [O_rad/NonDeO;N3d/H_d_Nrad]
+HO2(10)+NNH(58)=N2(4)+H2O2(11)                      1.400e+04 2.690     -1.600   
+
+! Reaction index: Chemkin #63; RMG #759
+! PDep reaction: PDepNetwork #25
+! Flux pairs: OH(7), OH(7); N2(159), N2(4); 
+N2(159)+OH(7)(+M)=N2(4)+OH(7)(+M)                   1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.330e+01    -4.522e-04   -7.559e-05   -8.372e-06  /
+    CHEB/ -8.344e-01   -6.711e-04   -1.117e-04   -1.226e-05  /
+    CHEB/ -5.586e-01   -3.356e-04   -5.505e-05   -5.864e-06  /
+    CHEB/ -2.854e-01   -1.180e-04   -1.855e-05   -1.793e-06  /
+    CHEB/ -1.083e-01   -2.864e-05   -3.799e-06   -2.030e-07  /
+    CHEB/ -2.847e-02   -4.933e-06   -1.277e-07   1.382e-07   /
+
+! Reaction index: Chemkin #64; RMG #615
+! PDep reaction: PDepNetwork #5
+! Flux pairs: H(5), H(5); N2(4), N2(159); 
+N2(4)+H(5)(+M)=N2(159)+H(5)(+M)                     1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.431e+01   -2.150e-06   -3.653e-07   -4.179e-08  /
+    CHEB/ 2.229e+01    -1.862e-06   -3.164e-07   -3.618e-08  /
+    CHEB/ -3.036e-02   -1.052e-06   -1.787e-07   -2.044e-08  /
+    CHEB/ 1.255e-01    -6.272e-07   -1.066e-07   -1.219e-08  /
+    CHEB/ -1.310e-01   -2.194e-07   -3.728e-08   -4.264e-09  /
+    CHEB/ 6.270e-03    -1.912e-07   -3.248e-08   -3.715e-09  /
+
+! Reaction index: Chemkin #65; RMG #758
+! PDep reaction: PDepNetwork #25
+! Flux pairs: N2(159), NNOH(57); OH(7), NNOH(57); 
+N2(159)+OH(7)(+M)=NNOH(57)(+M)                      1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.028e+01    3.006e-01    -7.015e-05   -7.780e-06  /
+    CHEB/ 5.403e-01    -6.110e-04   -1.017e-04   -1.118e-05  /
+    CHEB/ -2.275e-01   -2.898e-04   -4.751e-05   -5.054e-06  /
+    CHEB/ -1.847e-01   -8.876e-05   -1.378e-05   -1.290e-06  /
+    CHEB/ -7.312e-02   -1.255e-05   -1.220e-06   5.851e-08   /
+    CHEB/ -1.510e-02   3.043e-06    1.115e-06    2.561e-07   /
+
+! Reaction index: Chemkin #66; RMG #715
+! Template reaction: Disproportionation
+! Flux pairs: N2(159), NNH(58); HOSO(96), SO2(1); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad;O_SradOd]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HOSO(96)=SO2(1)+NNH(58)                     2.800e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #67; RMG #716
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), O2(2); N2(159), NNH(58); 
+! Estimated using average of templates [X_H;N3_rad] + [Orad_O_H;Y_rad] for rate rule [Orad_O_H;N3_rad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HO2(10)=O2(2)+NNH(58)                       4.965e+08 0.928     1.744    
+
+! Reaction index: Chemkin #68; RMG #718
+! Template reaction: Disproportionation
+! Flux pairs: N2(159), NNH(58); NNH(58), N2(4); 
+! Estimated using an average for rate rule [N3d_rad;N3d/H_d_Nrad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+NNH(58)=N2(4)+NNH(58)                       2.400e+06 2.000     -1.190   
+
+! Reaction index: Chemkin #69; RMG #721
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); NNH(58), N2(159); 
+! Estimated using an average for rate rule [N3_H;O_pri_rad]
+OH(7)+NNH(58)=H2O(3)+N2(159)                        3.533e+05 2.240     -1.646   
+
+! Reaction index: Chemkin #70; RMG #725
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), H2O2(11); NNH(58), N2(159); 
+! Estimated using an average for rate rule [N3_H;O_rad/NonDeO]
+HO2(10)+NNH(58)=N2(159)+H2O2(11)                    2.900e+04 2.690     8.305    
+
+! Reaction index: Chemkin #71; RMG #727
+! Template reaction: H_Abstraction
+! Flux pairs: H(5), H2(8); NNH(58), N2(159); 
+! Estimated using an average for rate rule [N3_H;H_rad]
+H(5)+NNH(58)=N2(159)+H2(8)                          7.885e+07 1.660     4.265    
+
+! Reaction index: Chemkin #72; RMG #729
+! Template reaction: Disproportionation
+! Flux pairs: N2(159), NNH(58); HOSO2(103), SO3(95); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad;O_SradOdOd]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HOSO2(103)=SO3(95)+NNH(58)                  2.800e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #73; RMG #736
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); NNH(58), N2(159); 
+! Estimated using an average for rate rule [N3_H;O_atom_triplet]
+O(6)+NNH(58)=N2(159)+OH(7)                          7.931e+14 -0.935    3.086    
+
+! Reaction index: Chemkin #74; RMG #762
+! PDep reaction: PDepNetwork #26
+! Flux pairs: N2(159), NNH(58); H(5), NNH(58); 
+N2(159)+H(5)(+M)=NNH(58)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.093e+01    2.917e-01    -1.309e-03   -9.768e-05  /
+    CHEB/ -1.080e+00   8.772e-03    1.189e-03    8.105e-05   /
+    CHEB/ -2.601e-01   2.273e-03    2.759e-04    1.147e-05   /
+    CHEB/ -4.175e-02   -4.046e-03   -4.373e-04   -7.482e-06  /
+    CHEB/ -2.742e-02   1.666e-03    1.176e-04    -1.227e-05  /
+    CHEB/ -1.026e-02   -3.497e-04   -1.173e-05   5.427e-06   /
+
+! Reaction index: Chemkin #75; RMG #764
+! PDep reaction: PDepNetwork #27
+! Flux pairs: O(6), O(6); N2(159), N2(4); 
+N2(159)+O(6)(+M)=N2(4)+O(6)(+M)                     1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.137e+01    -2.724e-03   -2.768e-04   -1.335e-05  /
+    CHEB/ -1.674e+00   -4.645e-03   -4.402e-04   -1.677e-05  /
+    CHEB/ -1.006e+00   -2.887e-03   -2.041e-04   2.144e-06   /
+    CHEB/ -3.428e-01   -1.187e-03   -9.761e-07   1.479e-05   /
+    CHEB/ -7.244e-02   -7.709e-05   9.918e-05    1.614e-05   /
+    CHEB/ -1.676e-02   4.173e-04    1.092e-04    9.835e-06   /
+
+! Reaction index: Chemkin #76; RMG #90
+! Library reaction: SOxNOx
+! Flux pairs: N2O(44), N2(4); N2O(44), O(6); 
+N2O(44)+M=N2(4)+O(6)+M                              4.000e+14 0.000     56.099   
+
+
+! Reaction index: Chemkin #77; RMG #91
+! Library reaction: SOxNOx
+! Flux pairs: N2O(44), O2(2); O(6), N2(4); 
+O(6)+N2O(44)=N2(4)+O2(2)                            1.400e+12 0.000     10.810   
+
+! Reaction index: Chemkin #78; RMG #94
+! Library reaction: SOxNOx
+! Flux pairs: H(5), NNOH(57); N2O(44), NNOH(57); 
+H(5)+N2O(44)=NNOH(57)                               1.300e+14 0.000     18.403   
+
+! Reaction index: Chemkin #79; RMG #98
+! Library reaction: SOxNOx
+! Flux pairs: N2O(44), HO2(10); OH(7), N2(4); 
+OH(7)+N2O(44)=N2(4)+HO2(10)                         1.290e-02 4.720     36.565   
+
+! Reaction index: Chemkin #80; RMG #101
+! Library reaction: SOxNOx
+! Flux pairs: O(6), N2O(44); NNH(58), H(5); 
+O(6)+NNH(58)=H(5)+N2O(44)                           1.900e+14 -0.274    -0.022   
+
+! Reaction index: Chemkin #81; RMG #194
+! Library reaction: SOxNOx
+! Flux pairs: N2O(44), OH(7); H(5), N2(4); 
+H(5)+N2O(44)=N2(4)+OH(7)                            6.400e+07 1.835     13.492   
+
+! Reaction index: Chemkin #82; RMG #246
+! Library reaction: SOxNOx
+! Flux pairs: SO2(1), HSO2(97); H(5), HSO2(97); 
+SO2(1)+H(5)(+M)=HSO2(97)(+M)                        5.310e+08 1.590     2.472    
+H2O(3)/10.00/ SO2(1)/10.00/ 
+    LOW/ 1.410e+31 -5.190    4.513    /
+    TROE/ 3.900e-01 167       2.19e+03 /
+
+! Reaction index: Chemkin #83; RMG #254
+! Library reaction: SOxNOx
+! Flux pairs: HSO2(97), HO2(10); O2(2), SO2(1); 
+O2(2)+HSO2(97)=SO2(1)+HO2(10)                       1.100e+03 3.200     -0.235   
+
+! Reaction index: Chemkin #84; RMG #255
+! Library reaction: SOxNOx
+! Flux pairs: HOSO(96), HSO2(97); 
+HOSO(96)(+M)=HSO2(97)(+M)                           1.030e+09 1.030     49.980   
+
+    LOW/ 1.720e+35 -5.640    55.423   /
+    TROE/ 1.000e+00 1e-30     1e+30    /
+
+! Reaction index: Chemkin #85; RMG #893
+! PDep reaction: PDepNetwork #34
+! Flux pairs: OS(162), HOSO(96); OH(7), HOSO(96); 
+OS(162)+OH(7)(+M)=HOSO(96)(+M)                      1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.257e+01    1.812e-01    -5.556e-03   -4.839e-05  /
+    CHEB/ -1.050e+00   7.600e-02    2.298e-03    -7.645e-05  /
+    CHEB/ -3.172e-01   8.249e-03    8.175e-04    3.512e-05   /
+    CHEB/ -1.067e-01   1.136e-03    1.211e-04    8.917e-06   /
+    CHEB/ -3.946e-02   3.603e-04    2.800e-05    1.380e-06   /
+    CHEB/ -1.522e-02   1.002e-04    9.313e-06    4.803e-07   /
+
+! Reaction index: Chemkin #86; RMG #609
+! PDep reaction: PDepNetwork #1
+! Flux pairs: OH(7), N2O(160); N2(4), H(5); 
+N2(4)+OH(7)(+M)=N2O(160)+H(5)(+M)                   1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -4.845e+01   -1.951e-07   -3.315e-08   -3.791e-09  /
+    CHEB/ 4.189e+01    -8.504e-08   -1.445e-08   -1.653e-09  /
+    CHEB/ -2.401e-01   -2.503e-08   -4.252e-09   -4.864e-10  /
+    CHEB/ -6.180e-02   -6.932e-09   -1.178e-09   -1.347e-10  /
+    CHEB/ -2.288e-02   -1.838e-09   -3.123e-10   -3.580e-11  /
+    CHEB/ -9.692e-03   -4.164e-10   -7.066e-11   -8.146e-12  /
+
+! Reaction index: Chemkin #87; RMG #655
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), NNOH(57); HOSO(96), SO2(1); 
+! Estimated using template [O_sec_rad;O_Rrad] for rate rule [O_sec_rad;O_SradOd]
+N2O(160)+HOSO(96)=SO2(1)+NNOH(57)                   1.351e+08 1.569     -0.933   
+
+! Reaction index: Chemkin #88; RMG #656
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), O2(2); N2O(160), NNOH(57); 
+! Estimated using template [X_H;O_rad/OneDeN] for rate rule [Orad_O_H;O_rad/OneDeN]
+N2O(160)+HO2(10)=O2(2)+NNOH(57)                     3.260e+04 2.725     2.726    
+
+! Reaction index: Chemkin #89; RMG #660
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), NNOH(57); NNH(58), N2(4); 
+! Estimated using an average for rate rule [O_sec_rad;N3d/H_d_Nrad]
+N2O(160)+NNH(58)=N2(4)+NNOH(57)                     1.400e+04 2.690     -1.600   
+
+! Reaction index: Chemkin #90; RMG #663
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); NNOH(57), N2O(160); 
+! Exact match found for rate rule [O/H/OneDeN;O_pri_rad]
+OH(7)+NNOH(57)=H2O(3)+N2O(160)                      1.200e+06 2.000     -0.600   
+
+! Reaction index: Chemkin #91; RMG #666
+! Template reaction: H_Abstraction
+! Flux pairs: H2O2(11), HO2(10); N2O(160), NNOH(57); 
+! Estimated using template [H2O2;O_rad/OneDe] for rate rule [H2O2;O_rad/OneDeN]
+! Multiplied by reaction path degeneracy 2
+N2O(160)+H2O2(11)=HO2(10)+NNOH(57)                  6.990e-02 3.750     10.890   
+
+! Reaction index: Chemkin #92; RMG #668
+! Template reaction: H_Abstraction
+! Flux pairs: H(5), H2(8); NNOH(57), N2O(160); 
+! Exact match found for rate rule [O/H/OneDeN;H_rad]
+H(5)+NNOH(57)=N2O(160)+H2(8)                        2.000e+08 1.550     10.900   
+
+! Reaction index: Chemkin #93; RMG #670
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), NNOH(57); HOSO2(103), SO3(95); 
+! Estimated using template [O_sec_rad;O_Rrad] for rate rule [O_sec_rad;O_SradOdOd]
+N2O(160)+HOSO2(103)=SO3(95)+NNOH(57)                1.351e+08 1.569     -0.933   
+
+! Reaction index: Chemkin #94; RMG #678
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); NNOH(57), N2O(160); 
+! Exact match found for rate rule [O/H/OneDeN;O_atom_triplet]
+O(6)+NNOH(57)=N2O(160)+OH(7)                        1.700e+08 1.500     12.340   
+
+! Reaction index: Chemkin #95; RMG #952
+! PDep reaction: PDepNetwork #37
+! Flux pairs: N2O(160), NNOH(57); H(5), NNOH(57); 
+N2O(160)+H(5)(+M)=NNOH(57)(+M)                      1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.352e+01    4.440e-02    -2.328e-03   5.438e-05   /
+    CHEB/ -2.871e-01   6.386e-02    -2.242e-03   -2.986e-05  /
+    CHEB/ -1.676e-01   3.106e-02    -2.059e-04   -5.943e-05  /
+    CHEB/ -8.433e-02   1.111e-02    3.232e-04    -2.030e-05  /
+    CHEB/ -3.770e-02   2.921e-03    2.148e-04    3.225e-06   /
+    CHEB/ -1.546e-02   5.190e-04    6.857e-05    5.378e-06   /
+
+! Reaction index: Chemkin #96; RMG #757
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); NNH(58), N2(159); 
+! Estimated using an average for rate rule [N3_H;O_rad/OneDeN]
+N2O(160)+NNH(58)=N2(159)+NNOH(57)                   7.627e+03 2.594     -2.715   
+
+! Reaction index: Chemkin #97; RMG #761
+! PDep reaction: PDepNetwork #25
+! Flux pairs: OH(7), N2O(160); N2(159), H(5); 
+N2(159)+OH(7)(+M)=N2O(160)+H(5)(+M)                 1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.668e+01   -1.672e-05   -2.841e-06   -3.249e-07  /
+    CHEB/ 2.076e+01    1.413e-05    2.401e-06    2.745e-07   /
+    CHEB/ -1.726e-04   -7.078e-08   -1.198e-08   -1.359e-09  /
+    CHEB/ 4.897e-02    -1.124e-06   -1.910e-07   -2.184e-08  /
+    CHEB/ 1.331e-02    2.712e-07    4.607e-08    5.266e-09   /
+    CHEB/ 3.954e-03    2.813e-08    4.781e-09    5.472e-10   /
+
+! Reaction index: Chemkin #98; RMG #763
+! PDep reaction: PDepNetwork #27
+! Flux pairs: N2(159), N2O(160); O(6), N2O(160); 
+N2(159)+O(6)(+M)=N2O(160)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 8.893e+00    2.983e-01    -2.774e-04   -1.340e-05  /
+    CHEB/ 8.790e-01    -4.656e-03   -4.411e-04   -1.684e-05  /
+    CHEB/ -4.380e-01   -2.895e-03   -2.046e-04   2.122e-06   /
+    CHEB/ -1.653e-01   -1.192e-03   -1.165e-06   1.481e-05   /
+    CHEB/ -1.644e-02   -8.088e-05   9.910e-05    1.617e-05   /
+    CHEB/ -2.781e-03   4.142e-04    1.091e-04    9.849e-06   /
+
+! Reaction index: Chemkin #99; RMG #950
+! PDep reaction: PDepNetwork #36
+! Flux pairs: N2O(160), N2(4); N2O(160), O(6); 
+N2O(160)(+M)=N2(4)+O(6)(+M)                         1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 9.561e+00    2.478e-01    -2.727e-03   3.128e-06   /
+    CHEB/ -5.029e-01   -9.561e-02   -4.350e-03   6.522e-05   /
+    CHEB/ -2.829e-01   -7.002e-02   -2.007e-03   1.606e-04   /
+    CHEB/ -1.871e-01   -4.174e-02   1.386e-04    1.961e-04   /
+    CHEB/ -1.116e-01   -1.914e-02   1.322e-03    1.491e-04   /
+    CHEB/ -5.882e-02   -4.741e-03   1.574e-03    5.776e-05   /
+
+! Reaction index: Chemkin #100; RMG #900
+! PDep reaction: PDepNetwork #21
+! Flux pairs: O(6), O1OS1(180); SO(94), O1OS1(180); 
+O(6)+SO(94)(+M)=O1OS1(180)(+M)                      1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.062e+01    2.332e-01    -5.369e-03   -4.725e-05  /
+    CHEB/ -5.149e-01   4.784e-02    3.141e-03    -2.171e-05  /
+    CHEB/ -2.145e-01   -2.027e-03   4.227e-04    4.848e-05   /
+    CHEB/ -7.387e-02   1.588e-04    7.057e-05    1.421e-07   /
+    CHEB/ -4.617e-02   5.449e-03    -6.599e-05   -3.477e-05  /
+    CHEB/ 7.519e-03    -5.480e-03   1.186e-04    3.516e-05   /
+
+! Reaction index: Chemkin #101; RMG #252
+! Library reaction: SOxNOx
+! Flux pairs: O2(2), HSO2(97); HSO(98), O(6); 
+O2(2)+HSO(98)=O(6)+HSO2(97)                         8.400e-07 5.100     11.312   
+
+! Reaction index: Chemkin #102; RMG #880
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); HSO(98), OS(162); 
+! Estimated using template [Xrad_H;O_pri_rad] for rate rule [Srad_H;O_pri_rad]
+OH(7)+HSO(98)=H2O(3)+OS(162)                        8.485e+09 1.000     0.025    
+
+! Reaction index: Chemkin #103; RMG #881
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); HSO(98), OS(162); 
+! Estimated using template [Xrad_H;O_atom_triplet] for rate rule [Srad_H;O_atom_triplet]
+O(6)+HSO(98)=OS(162)+OH(7)                          4.806e+10 0.750     -0.445   
+
+! Reaction index: Chemkin #104; RMG #882
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), O2(2); OS(162), HSO(98); 
+! Estimated using template [X_H;S_atom_triplet] for rate rule [Orad_O_H;S_atom_triplet]
+OS(162)+HO2(10)=O2(2)+HSO(98)                       4.170e+06 2.200     -0.600   
+
+! Reaction index: Chemkin #105; RMG #883
+! Template reaction: Disproportionation
+! Flux pairs: HOSO2(103), SO3(95); OS(162), HSO(98); 
+! Estimated using template [Y_1centerbirad;O_Rrad] for rate rule [Y_1centerbirad;O_SradOdOd]
+OS(162)+HOSO2(103)=SO3(95)+HSO(98)                  1.639e+11 0.562     -0.135   
+
+! Reaction index: Chemkin #106; RMG #885
+! Template reaction: Disproportionation
+! Flux pairs: HOSO(96), SO2(1); OS(162), HSO(98); 
+! Estimated using template [Y_1centerbirad;O_Rrad] for rate rule [Y_1centerbirad;O_SradOd]
+OS(162)+HOSO(96)=SO2(1)+HSO(98)                     1.639e+11 0.562     -0.135   
+
+! Reaction index: Chemkin #107; RMG #887
+! Template reaction: H_Abstraction
+! Flux pairs: H2(8), H(5); OS(162), HSO(98);
+! Exact match found for rate rule [H2;S_atom_triplet]
+! Multiplied by reaction path degeneracy 2
+! Ea raised from 190.4 to 191.3 kJ/mol to match endothermicity of reaction.
+OS(162)+H2(8)=H(5)+HSO(98)                          3.160e+14 0.000     45.716   
+
+! Reaction index: Chemkin #108; RMG #888
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), H2O2(11); HSO(98), OS(162); 
+! Estimated using template [X_H_or_Xrad_H_Xbirad_H_Xtrirad_H;O_rad/NonDeO] for rate rule [Srad_H;O_rad/NonDeO]
+HO2(10)+HSO(98)=OS(162)+H2O2(11)                    3.190e+01 3.194     7.288    
+
+! Reaction index: Chemkin #109; RMG #889
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); HSO(98), OS(162); 
+! Estimated using template [X_H_or_Xrad_H_Xbirad_H_Xtrirad_H;O_rad/OneDeN] for rate rule [Srad_H;O_rad/OneDeN]
+N2O(160)+HSO(98)=OS(162)+NNOH(57)                   3.634e+02 2.229     1.920    
+
+! Reaction index: Chemkin #110; RMG #890
+! Template reaction: Disproportionation
+! Flux pairs: NNH(58), N2(4); OS(162), HSO(98); 
+! Estimated using an average for rate rule [Y_1centerbirad;N3d/H_d_Nrad]
+OS(162)+NNH(58)=N2(4)+HSO(98)                       1.700e+08 1.500     -0.890   
+
+! Reaction index: Chemkin #111; RMG #891
+! Template reaction: H_Abstraction
+! Flux pairs: N2(159), NNH(58); HSO(98), OS(162); 
+! Estimated using template [Xrad_H;N3_rad] for rate rule [Srad_H;N3_rad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HSO(98)=OS(162)+NNH(58)                     1.574e+10 0.935     6.270    
+
+! Reaction index: Chemkin #112; RMG #957
+! PDep reaction: PDepNetwork #35
+! Flux pairs: OS(162), HSO(98); H(5), HSO(98); 
+OS(162)+H(5)(+M)=HSO(98)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.231e+01    2.035e-01    -4.612e-03   -9.745e-05  /
+    CHEB/ -7.186e-01   6.002e-02    2.101e-03    -5.118e-06  /
+    CHEB/ -2.271e-01   6.081e-03    4.827e-04    2.544e-05   /
+    CHEB/ -7.606e-02   9.598e-04    7.315e-05    4.999e-06   /
+    CHEB/ -2.749e-02   3.099e-04    1.492e-05    1.600e-06   /
+    CHEB/ -9.127e-03   -5.397e-04   7.883e-05    -4.946e-06  /
+
+! Reaction index: Chemkin #113; RMG #691
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); HOS(168), SO(94); 
+! Exact match found for rate rule [X_H;O_pri_rad]
+HOS(168)+OH(7)=H2O(3)+SO(94)                        1.200e+06 2.000     0.000    
+
+! Reaction index: Chemkin #114; RMG #693
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); HOS(168), SO(94); 
+! Exact match found for rate rule [X_H;O_atom_triplet]
+HOS(168)+O(6)=OH(7)+SO(94)                          1.700e+08 1.500     0.000    
+
+! Reaction index: Chemkin #115; RMG #697
+! Template reaction: H_Abstraction
+! Flux pairs: O2(2), HO2(10); HOS(168), SO(94); 
+! Exact match found for rate rule [X_H;O2b]
+! Multiplied by reaction path degeneracy 2
+! Ea raised from 17.3 to 17.4 kJ/mol to match endothermicity of reaction.
+O2(2)+HOS(168)=HO2(10)+SO(94)                       1.000e+11 0.000     4.161    
+
+! Reaction index: Chemkin #116; RMG #699
+! Template reaction: Disproportionation
+! Flux pairs: HOSO2(103), SO3(95); SO(94), HOS(168); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_SradOdOd]
+SO(94)+HOSO2(103)=HOS(168)+SO3(95)                  2.112e+10 0.906     -0.214   
+
+! Reaction index: Chemkin #117; RMG #703
+! Template reaction: Disproportionation
+! Flux pairs: HOSO(96), SO2(1); SO(94), HOS(168); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_SradOd]
+SO(94)+HOSO(96)=SO2(1)+HOS(168)                     2.112e+10 0.906     -0.214   
+
+! Reaction index: Chemkin #118; RMG #709
+! Template reaction: H_Abstraction
+! Flux pairs: H(5), H2(8); HOS(168), SO(94); 
+! Exact match found for rate rule [X_H;H_rad]
+HOS(168)+H(5)=H2(8)+SO(94)                          1.230e+08 1.653     -1.105   
+
+! Reaction index: Chemkin #119; RMG #711
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), H2O2(11); HOS(168), SO(94); 
+! Estimated using an average for rate rule [X_H;O_rad/NonDeO]
+HOS(168)+HO2(10)=H2O2(11)+SO(94)                    3.897e+04 2.251     7.253    
+
+! Reaction index: Chemkin #120; RMG #713
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); HOS(168), SO(94); 
+! Estimated using an average for rate rule [X_H;O_rad/OneDeN]
+N2O(160)+HOS(168)=SO(94)+NNOH(57)                   3.260e+04 2.725     2.843    
+
+! Reaction index: Chemkin #121; RMG #747
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(168); NNH(58), N2(4); 
+! Estimated using an average for rate rule [Y_rad;N3d/H_d_Nrad]
+SO(94)+NNH(58)=N2(4)+HOS(168)                       9.411e+06 1.829     -1.086   
+
+! Reaction index: Chemkin #122; RMG #749
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), SO(94); N2(159), NNH(58); 
+! Estimated using an average for rate rule [X_H;N3_rad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HOS(168)=SO(94)+NNH(58)                     7.043e+06 1.856     6.810    
+
+! Reaction index: Chemkin #123; RMG #813
+! PDep reaction: PDepNetwork #18
+! Flux pairs: H(5), HOS(168); SO(94), HOS(168); 
+H(5)+SO(94)(+M)=HOS(168)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.144e+01    1.850e-01    -1.863e-03   1.666e-04   /
+    CHEB/ -5.798e-01   5.326e-02    -1.029e-03   -2.273e-04  /
+    CHEB/ -2.101e-01   1.209e-02    7.162e-04    1.842e-05   /
+    CHEB/ -4.759e-02   -5.771e-04   4.520e-05    1.008e-05   /
+    CHEB/ -3.260e-02   1.390e-03    5.745e-05    2.618e-06   /
+    CHEB/ -1.916e-02   8.774e-04    4.472e-05    -2.699e-06  /
+
+! Reaction index: Chemkin #124; RMG #870
+! PDep reaction: PDepNetwork #16
+! Flux pairs: SO(94), O(6); OH(7), HOS(168); 
+OH(7)+SO(94)(+M)=HOS(168)+O(6)(+M)                  1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -8.791e+00   -1.270e-14   8.882e-15    3.553e-15   /
+    CHEB/ 1.587e+01    2.731e-14    1.465e-14    -2.487e-14  /
+    CHEB/ 1.095e-01    -2.232e-14   3.775e-15    8.882e-16   /
+    CHEB/ 2.070e-02    -1.615e-14   -1.332e-15   9.215e-15   /
+    CHEB/ 3.884e-03    -3.275e-15   -1.354e-14   -2.731e-14  /
+    CHEB/ -1.860e-04   -2.898e-14   2.709e-14    -1.929e-14  /
+
+! Reaction index: Chemkin #125; RMG #1008
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), SO(94); OS(162), HSO(98); 
+! Exact match found for rate rule [X_H;S_atom_triplet]
+OS(162)+HOS(168)=SO(94)+HSO(98)                     4.170e+06 2.200     -0.600   
+
+! Reaction index: Chemkin #126; RMG #965
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); OS(185), HOS(168); 
+! Estimated using template [S_sec;O_pri_rad] for rate rule [S/H/NonDeO;O_pri_rad]
+OS(185)+OH(7)=H2O(3)+HOS(168)                       2.030e+05 2.410     -4.190   
+
+! Reaction index: Chemkin #127; RMG #970
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), O(6); HOS(168), OS(185); 
+! Estimated using template [X_H_or_Xrad_H_Xbirad_H_Xtrirad_H;S_sec_rad] for rate rule [OH_rad_H;S_rad/NonDeO]
+HOS(168)+OH(7)=OS(185)+O(6)                         3.108e+00 3.756     4.761    
+
+! Reaction index: Chemkin #128; RMG #975
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), O2(2); HOS(168), OS(185); 
+! Estimated using template [X_H;S_sec_rad] for rate rule [Orad_O_H;S_rad/NonDeO]
+HOS(168)+HO2(10)=O2(2)+OS(185)                      4.451e-01 4.053     5.748    
+
+! Reaction index: Chemkin #129; RMG #977
+! Template reaction: Disproportionation
+! Flux pairs: HOSO2(103), SO3(95); HOS(168), OS(185); 
+! Estimated using template [S_sec_rad;XH_s_Rrad] for rate rule [S_sec_rad;O_SradOdOd]
+HOS(168)+HOSO2(103)=OS(185)+SO3(95)                 1.299e+09 0.867     -0.485   
+
+! Reaction index: Chemkin #130; RMG #987
+! Template reaction: Disproportionation
+! Flux pairs: HOSO(96), SO2(1); HOS(168), OS(185); 
+! Estimated using template [S_sec_rad;XH_s_Rrad] for rate rule [S_sec_rad;O_SradOd]
+HOS(168)+HOSO(96)=SO2(1)+OS(185)                    1.299e+09 0.867     -0.485   
+
+! Reaction index: Chemkin #131; RMG #995
+! Template reaction: H_Abstraction
+! Flux pairs: H2(8), H(5); HOS(168), OS(185); 
+! Estimated using template [X_H;S_sec_rad] for rate rule [H2;S_rad/NonDeO]
+! Multiplied by reaction path degeneracy 2
+HOS(168)+H2(8)=OS(185)+H(5)                         8.902e-01 4.053     5.748    
+
+! Reaction index: Chemkin #132; RMG #998
+! Template reaction: H_Abstraction
+! Flux pairs: H2O2(11), HO2(10); HOS(168), OS(185); 
+! Estimated using template [O_sec;S_sec_rad] for rate rule [H2O2;S_rad/NonDeO]
+! Multiplied by reaction path degeneracy 2
+HOS(168)+H2O2(11)=OS(185)+HO2(10)                   5.900e-06 5.630     11.750   
+
+! Reaction index: Chemkin #133; RMG #1005
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); OS(185), HOS(168); 
+! Estimated using template [S_sec;O_sec_rad] for rate rule [S/H/NonDeO;O_rad/OneDeN]
+N2O(160)+OS(185)=HOS(168)+NNOH(57)                  1.320e+06 2.090     -0.470   
+
+! Reaction index: Chemkin #134; RMG #1018
+! Template reaction: Disproportionation
+! Flux pairs: NNH(58), N2(4); HOS(168), OS(185); 
+! Estimated using template [Y_rad;N3d/H_d_Nrad] for rate rule [S_sec_rad;N3d/H_d_Nrad]
+HOS(168)+NNH(58)=N2(4)+OS(185)                      9.411e+06 1.829     -1.086   
+
+! Reaction index: Chemkin #135; RMG #1020
+! Template reaction: H_Abstraction
+! Flux pairs: NNH(58), N2(159); HOS(168), OS(185); 
+! Estimated using template [X_H;S_sec_rad] for rate rule [N3_H;S_rad/NonDeO]
+HOS(168)+NNH(58)=N2(159)+OS(185)                    4.451e-01 4.053     5.748    
+
+! Reaction index: Chemkin #136; RMG #1057
+! Template reaction: H_Abstraction
+! Flux pairs: HSO(98), OS(162); HOS(168), OS(185); 
+! Estimated using template [X_H_or_Xrad_H_Xbirad_H_Xtrirad_H;S_sec_rad] for rate rule [Srad_H;S_rad/NonDeO]
+HOS(168)+HSO(98)=OS(162)+OS(185)                    3.108e+00 3.756     4.761    
+
+! Reaction index: Chemkin #137; RMG #1060
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), SO(94); HOS(168), OS(185); 
+! Estimated using template [X_H;S_sec_rad] for rate rule [X_H;S_rad/NonDeO]
+! Multiplied by reaction path degeneracy 2
+HOS(168)+HOS(168)=OS(185)+SO(94)                    8.902e-01 4.053     5.748    
+
+! Reaction index: Chemkin #138; RMG #1066
+! PDep reaction: PDepNetwork #51
+! Flux pairs: HOS(168), OS(185); H(5), OS(185); 
+HOS(168)+H(5)(+M)=OS(185)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.425e+01    4.626e-02    -2.316e-03   4.646e-05   /
+    CHEB/ -5.795e-02   6.729e-02    -2.331e-03   -2.886e-05  /
+    CHEB/ -1.183e-01   3.139e-02    -1.471e-04   -5.930e-05  /
+    CHEB/ -6.820e-02   9.936e-03    4.128e-04    -1.891e-05  /
+    CHEB/ -3.239e-02   2.563e-03    2.072e-04    5.654e-06   /
+    CHEB/ -1.480e-02   9.374e-04    1.831e-05    6.127e-06   /
+
+! Reaction index: Chemkin #139; RMG #1129
+! PDep reaction: PDepNetwork #30
+! Flux pairs: H(5), NNOH(57); N2O(44), NNOH(57); 
+H(5)+N2O(44)(+M)=NNOH(57)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 9.355e+00    -1.447e-02   -6.521e-03   -6.083e-05  /
+    CHEB/ 2.577e+00    1.032e-01    1.867e-03    9.242e-05   /
+    CHEB/ -1.605e-01   2.548e-02    -1.071e-03   1.280e-05   /
+    CHEB/ -6.244e-02   1.264e-02    -4.616e-04   -5.936e-05  /
+    CHEB/ -2.764e-02   6.202e-03    9.361e-05    -3.465e-05  /
+    CHEB/ -1.318e-02   2.264e-03    1.726e-04    -7.701e-06  /
+
+! Reaction index: Chemkin #140; RMG #1130
+! PDep reaction: PDepNetwork #30
+! Flux pairs: N2O(44), N2O(160); H(5), H(5); 
+H(5)+N2O(44)(+M)=N2O(160)+H(5)(+M)                  1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.681e+01   -5.256e-04   -8.462e-05   -8.653e-06  /
+    CHEB/ 2.329e+01    2.251e-04    3.415e-05    3.023e-06   /
+    CHEB/ -9.167e-04   4.416e-05    7.482e-06    8.425e-07   /
+    CHEB/ -4.024e-03   1.475e-05    2.402e-06    2.523e-07   /
+    CHEB/ -2.851e-03   4.620e-06    8.109e-07    9.781e-08   /
+    CHEB/ -1.438e-03   7.044e-07    1.427e-07    2.138e-08   /
+
+! Reaction index: Chemkin #141; RMG #690
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); HOS(167), SO(94); 
+! Exact match found for rate rule [X_H;O_pri_rad]
+HOS(167)+OH(7)=H2O(3)+SO(94)                        1.200e+06 2.000     0.000    
+
+! Reaction index: Chemkin #142; RMG #692
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); HOS(167), SO(94); 
+! Exact match found for rate rule [X_H;O_atom_triplet]
+HOS(167)+O(6)=OH(7)+SO(94)                          1.700e+08 1.500     0.000    
+
+! Reaction index: Chemkin #143; RMG #696
+! Template reaction: H_Abstraction
+! Flux pairs: O2(2), HO2(10); HOS(167), SO(94); 
+! Exact match found for rate rule [X_H;O2b]
+! Multiplied by reaction path degeneracy 2
+! Ea raised from 36.2 to 37.6 kJ/mol to match endothermicity of reaction.
+O2(2)+HOS(167)=HO2(10)+SO(94)                       1.000e+11 0.000     8.995    
+
+! Reaction index: Chemkin #144; RMG #698
+! Template reaction: Disproportionation
+! Flux pairs: HOSO2(103), SO3(95); SO(94), HOS(167); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_SradOdOd]
+SO(94)+HOSO2(103)=HOS(167)+SO3(95)                  2.112e+10 0.906     -0.214   
+
+! Reaction index: Chemkin #145; RMG #702
+! Template reaction: Disproportionation
+! Flux pairs: HOSO(96), SO2(1); SO(94), HOS(167); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_SradOd]
+SO(94)+HOSO(96)=SO2(1)+HOS(167)                     2.112e+10 0.906     -0.214   
+
+! Reaction index: Chemkin #146; RMG #708
+! Template reaction: H_Abstraction
+! Flux pairs: H(5), H2(8); HOS(167), SO(94); 
+! Exact match found for rate rule [X_H;H_rad]
+HOS(167)+H(5)=H2(8)+SO(94)                          1.230e+08 1.653     -1.105   
+
+! Reaction index: Chemkin #147; RMG #710
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), H2O2(11); HOS(167), SO(94); 
+! Estimated using an average for rate rule [X_H;O_rad/NonDeO]
+HOS(167)+HO2(10)=H2O2(11)+SO(94)                    3.897e+04 2.251     7.253    
+
+! Reaction index: Chemkin #148; RMG #712
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); HOS(167), SO(94); 
+! Estimated using an average for rate rule [X_H;O_rad/OneDeN]
+N2O(160)+HOS(167)=SO(94)+NNOH(57)                   3.260e+04 2.725     2.970    
+
+! Reaction index: Chemkin #149; RMG #746
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(167); NNH(58), N2(4); 
+! Estimated using an average for rate rule [Y_rad;N3d/H_d_Nrad]
+SO(94)+NNH(58)=N2(4)+HOS(167)                       9.411e+06 1.829     -1.086   
+
+! Reaction index: Chemkin #150; RMG #748
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), SO(94); N2(159), NNH(58); 
+! Estimated using an average for rate rule [X_H;N3_rad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HOS(167)=SO(94)+NNH(58)                     7.043e+06 1.856     6.861    
+
+! Reaction index: Chemkin #151; RMG #811
+! PDep reaction: PDepNetwork #18
+! Flux pairs: H(5), HOS(167); SO(94), HOS(167); 
+H(5)+SO(94)(+M)=HOS(167)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.365e+01    1.622e-01    -4.771e-03   -4.857e-05  /
+    CHEB/ -4.800e-01   7.323e-02    1.497e-03    -5.128e-05  /
+    CHEB/ -1.792e-01   1.052e-02    5.752e-04    2.332e-05   /
+    CHEB/ -5.144e-02   3.439e-04    1.063e-04    6.690e-06   /
+    CHEB/ -2.298e-02   9.034e-04    1.124e-05    1.475e-06   /
+    CHEB/ -1.450e-02   8.609e-04    5.254e-05    -1.926e-06  /
+
+! Reaction index: Chemkin #152; RMG #1007
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), SO(94); OS(162), HSO(98); 
+! Exact match found for rate rule [X_H;S_atom_triplet]
+OS(162)+HOS(167)=SO(94)+HSO(98)                     4.170e+06 2.200     -0.600   
+
+! Reaction index: Chemkin #153; RMG #1011
+! Template reaction: H_Abstraction
+! Flux pairs: SO(94), HOS(167); HOS(168), SO(94); 
+! Estimated using an average for rate rule [X_H;Y_rad]
+HOS(168)+SO(94)=HOS(167)+SO(94)                     8.505e+04 2.309     9.351    
+
+! Reaction index: Chemkin #154; RMG #1064
+! PDep reaction: PDepNetwork #47
+! Flux pairs: HOS(168), HOS(167); 
+HOS(168)(+M)=HOS(167)(+M)                           1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -3.073e+00   1.172e-01    -4.419e-03   5.710e-05   /
+    CHEB/ 1.017e+01    1.068e-01    1.237e-04    -1.400e-04  /
+    CHEB/ -1.482e-01   2.365e-02    1.369e-03    -1.792e-06  /
+    CHEB/ -7.880e-02   2.235e-03    3.662e-04    2.233e-05   /
+    CHEB/ -3.128e-02   -1.683e-04   8.745e-06    3.690e-06   /
+    CHEB/ -1.139e-02   2.956e-06    -3.620e-05   1.059e-07   /
+
+! Reaction index: Chemkin #155; RMG #1071
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(185); HOSO(96), SO2(1); 
+! Estimated using template [O_sec_rad;O_Rrad] for rate rule [O_sec_rad;O_SradOd]
+HOS(167)+HOSO(96)=SO2(1)+OS(185)                    1.351e+08 1.569     -0.933   
+
+! Reaction index: Chemkin #156; RMG #1072
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), O2(2); HOS(167), OS(185); 
+! Estimated using an average for rate rule [Orad_O_H;O_sec_rad]
+HOS(167)+HO2(10)=O2(2)+OS(185)                      1.750e+10 0.000     -3.275   
+
+! Reaction index: Chemkin #157; RMG #1073
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(185); NNH(58), N2(4); 
+! Estimated using an average for rate rule [O_sec_rad;N3d/H_d_Nrad]
+HOS(167)+NNH(58)=N2(4)+OS(185)                      1.400e+04 2.690     -1.600   
+
+! Reaction index: Chemkin #158; RMG #1074
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); OS(185), HOS(167); 
+! Estimated using an average for rate rule [O_sec;O_pri_rad]
+OS(185)+OH(7)=H2O(3)+HOS(167)                       2.921e+04 2.467     -0.722   
+
+! Reaction index: Chemkin #159; RMG #1075
+! Template reaction: H_Abstraction
+! Flux pairs: H2O2(11), HO2(10); HOS(167), OS(185); 
+! Estimated using an average for rate rule [H2O2;O_sec_rad]
+! Multiplied by reaction path degeneracy 2
+HOS(167)+H2O2(11)=OS(185)+HO2(10)                   1.134e-01 3.855     8.760    
+
+! Reaction index: Chemkin #160; RMG #1076
+! Template reaction: H_Abstraction
+! Flux pairs: H(5), H2(8); OS(185), HOS(167); 
+! Estimated using an average for rate rule [O_sec;H_rad]
+OS(185)+H(5)=HOS(167)+H2(8)                         2.488e+05 2.388     5.497    
+
+! Reaction index: Chemkin #161; RMG #1077
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(185); HOSO2(103), SO3(95); 
+! Estimated using template [O_sec_rad;O_Rrad] for rate rule [O_sec_rad;O_SradOdOd]
+HOS(167)+HOSO2(103)=OS(185)+SO3(95)                 1.351e+08 1.569     -0.933   
+
+! Reaction index: Chemkin #162; RMG #1082
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), O(6); HOS(167), OS(185); 
+! Estimated using template [Xrad_H;O_rad] for rate rule [OH_rad_H;O_sec_rad]
+HOS(167)+OH(7)=OS(185)+O(6)                         8.485e+09 1.000     0.025    
+
+! Reaction index: Chemkin #163; RMG #1087
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), SO(94); HOS(168), OS(185); 
+! Estimated using template [X_H;S_sec_rad] for rate rule [X_H;S_rad/NonDeO]
+! Multiplied by reaction path degeneracy 2
+HOS(167)+HOS(168)=OS(185)+SO(94)                    8.902e-01 4.053     5.748    
+
+! Reaction index: Chemkin #164; RMG #1088
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), SO(94); HOS(167), OS(185); 
+! Exact match found for rate rule [X_H;O_sec_rad]
+! Multiplied by reaction path degeneracy 2
+HOS(167)+HOS(167)=OS(185)+SO(94)                    2.800e+04 2.690     0.000    
+
+! Reaction index: Chemkin #165; RMG #1093
+! Template reaction: H_Abstraction
+! Flux pairs: NNH(58), N2(159); HOS(167), OS(185); 
+! Estimated using an average for rate rule [N3_H;O_sec_rad]
+HOS(167)+NNH(58)=N2(159)+OS(185)                    7.244e+03 2.736     3.383    
+
+! Reaction index: Chemkin #166; RMG #1108
+! Template reaction: H_Abstraction
+! Flux pairs: HSO(98), OS(162); HOS(167), OS(185); 
+! Estimated using template [Xrad_H;O_rad] for rate rule [Srad_H;O_sec_rad]
+HOS(167)+HSO(98)=OS(162)+OS(185)                    8.485e+09 1.000     0.025    
+
+! Reaction index: Chemkin #167; RMG #1111
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); OS(185), HOS(167); 
+! Estimated using template [O_sec;O_rad/OneDe] for rate rule [O_sec;O_rad/OneDeN]
+N2O(160)+OS(185)=HOS(167)+NNOH(57)                  3.495e-02 3.750     10.890   
+
+! Reaction index: Chemkin #168; RMG #1122
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), OS(185); OS(185), HOS(167); 
+! Estimated using template [O_sec;S_sec_rad] for rate rule [O_sec;S_rad/NonDeO]
+HOS(168)+OS(185)=HOS(167)+OS(185)                   2.950e-06 5.630     11.750   
+
+! Reaction index: Chemkin #169; RMG #1181
+! PDep reaction: PDepNetwork #57
+! Flux pairs: HOS(167), OS(185); H(5), OS(185); 
+HOS(167)+H(5)(+M)=OS(185)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.335e+01    7.041e-02    -2.674e-03   4.494e-05   /
+    CHEB/ -5.451e-01   9.050e-02    -1.520e-03   -7.144e-05  /
+    CHEB/ -2.940e-01   3.320e-02    6.140e-04    -4.204e-05  /
+    CHEB/ -1.290e-01   7.179e-03    4.921e-04    9.025e-06   /
+    CHEB/ -4.975e-02   6.666e-04    1.102e-04    1.027e-05   /
+    CHEB/ -1.813e-02   -7.479e-05   -4.627e-06   1.545e-06   /
+
+! Reaction index: Chemkin #170; RMG #1183
+! PDep reaction: PDepNetwork #58
+! Flux pairs: O(6), O1OS1(180); HOS(167), H(5); 
+HOS(167)+O(6)(+M)=O1OS1(180)+H(5)(+M)               1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.502e+00   -4.958e-07   -8.425e-08   -9.636e-09  /
+    CHEB/ 9.213e+00    1.393e-07    2.368e-08    2.708e-09   /
+    CHEB/ 3.133e-02    6.045e-08    1.027e-08    1.175e-09   /
+    CHEB/ 1.712e-02    6.177e-09    1.050e-09    1.201e-10   /
+    CHEB/ 8.730e-03    2.394e-09    4.068e-10    4.651e-11   /
+    CHEB/ 3.973e-03    -5.239e-09   -8.901e-10   -1.018e-10  /
+
+! Reaction index: Chemkin #171; RMG #92
+! Library reaction: SOxNOx
+! Flux pairs: N2O(44), NO(13); O(6), NO(13); 
+O(6)+N2O(44)=NO(13)+NO(13)                          2.900e+13 0.000     23.151   
+
+! Reaction index: Chemkin #172; RMG #241
+! Library reaction: SOxNOx
+! Flux pairs: SO(94), O2(2); O(6), S(92); 
+O(6)+SO(94)=O2(2)+S(92)                             2.360e+07 1.510     5.042    
+
+! Reaction index: Chemkin #173; RMG #242
+! Library reaction: SOxNOx
+! Flux pairs: SO(94), O(6); SO(94), S(92); 
+SO(94)+M=O(6)+S(92)+M                               3.980e+14 0.000     107.000  
+
+
+! Reaction index: Chemkin #174; RMG #261
+! Library reaction: SOxNOx
+! Flux pairs: SO2(1), SO(94); S(92), SO(94); 
+SO2(1)+S(92)=SO(94)+SO(94)                          5.890e+12 0.000     9.034    
+
+! Reaction index: Chemkin #175; RMG #879
+! PDep reaction: PDepNetwork #17
+! Flux pairs: SO(94), HO2(10); OH(7), S(92); 
+OH(7)+SO(94)(+M)=HO2(10)+S(92)(+M)                  1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.203e+01   -3.546e-09   -6.024e-10   -6.891e-11  /
+    CHEB/ 1.815e+01    2.332e-09    3.963e-10    4.530e-11   /
+    CHEB/ -8.601e-02   -6.692e-11   -1.136e-11   -1.298e-12  /
+    CHEB/ -2.988e-02   -2.049e-12   -3.482e-13   -2.959e-14  /
+    CHEB/ -1.234e-02   1.502e-11    2.542e-12    2.609e-13   /
+    CHEB/ -5.242e-03   7.802e-12    1.363e-12    1.293e-13   /
+
+! Reaction index: Chemkin #176; RMG #1253
+! PDep reaction: PDepNetwork #61
+! Flux pairs: OH(7), HOS(168); S(92), HOS(168); 
+OH(7)+S(92)(+M)=HOS(168)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.168e+01    2.710e-01    -3.453e-03   -1.718e-04  /
+    CHEB/ -7.658e-01   2.927e-03    1.085e-03    1.407e-04   /
+    CHEB/ -2.113e-01   5.861e-03    6.110e-04    -5.749e-06  /
+    CHEB/ -5.250e-02   -3.450e-04   3.406e-05    4.265e-06   /
+    CHEB/ -1.082e-02   -1.686e-03   -1.053e-04   7.740e-06   /
+    CHEB/ -2.414e-02   3.218e-03    1.701e-04    -2.227e-05  /
+
+! Reaction index: Chemkin #177; RMG #587
+! Template reaction: Disproportionation
+! Flux pairs: OH(7), H2O(3); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [O_pri_rad;XH_s_Rrad]
+HO2S(157)+OH(7)=H2O(3)+SO2(1)                       7.868e+10 0.667     0.603    
+
+! Reaction index: Chemkin #178; RMG #589
+! Template reaction: Disproportionation
+! Flux pairs: O(6), OH(7); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [O_atom_triplet;XH_s_Rrad]
+HO2S(157)+O(6)=SO2(1)+OH(7)                         2.837e+09 1.250     -0.473   
+
+! Reaction index: Chemkin #179; RMG #593
+! Template reaction: Disproportionation
+! Flux pairs: O2(2), HO2(10); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [O2b;XH_s_Rrad]
+! Multiplied by reaction path degeneracy 4
+O2(2)+HO2S(157)=SO2(1)+HO2(10)                      1.206e+12 0.000     5.908    
+
+! Reaction index: Chemkin #180; RMG #1358
+! PDep reaction: PDepNetwork #73
+! Flux pairs: HO2S(157), HOSO(96); 
+HO2S(157)(+M)=HOSO(96)(+M)                          1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.218e+00    9.747e-02    -3.039e-03   5.392e-05   /
+    CHEB/ 7.407e+00    1.185e-01    -7.669e-04   -1.089e-04  /
+    CHEB/ -2.840e-01   3.720e-02    1.264e-03    -2.940e-05  /
+    CHEB/ -1.286e-01   3.674e-03    5.844e-04    2.610e-05   /
+    CHEB/ -3.545e-02   -2.102e-03   1.320e-05    1.103e-05   /
+    CHEB/ -2.956e-03   -1.203e-03   -6.472e-05   -2.114e-06  /
+
+! Reaction index: Chemkin #181; RMG #649
+! Template reaction: Disproportionation
+! Flux pairs: H(5), H2(8); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [H_rad;XH_s_Rrad]
+HO2S(157)+H(5)=SO2(1)+H2(8)                         1.157e+11 0.550     0.023    
+
+! Reaction index: Chemkin #182; RMG #653
+! Template reaction: Disproportionation
+! Flux pairs: HO2(10), H2O2(11); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [O_rad/NonDeO;XH_s_Rrad]
+HO2S(157)+HO2(10)=SO2(1)+H2O2(11)                   4.159e+06 2.018     -1.200   
+
+! Reaction index: Chemkin #183; RMG #654
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), NNOH(57); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [O_sec_rad;XH_s_Rrad]
+N2O(160)+HO2S(157)=SO2(1)+NNOH(57)                  1.819e+08 1.470     -1.280   
+
+! Reaction index: Chemkin #184; RMG #714
+! Template reaction: Disproportionation
+! Flux pairs: N2(159), NNH(58); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [N3d_rad;XH_s_Rrad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HO2S(157)=SO2(1)+NNH(58)                    2.800e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #185; RMG #894
+! PDep reaction: PDepNetwork #34
+! Flux pairs: OS(162), HO2S(157); OH(7), HO2S(157); 
+OS(162)+OH(7)(+M)=HO2S(157)(+M)                     1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 8.641e+00    -1.212e-02   -1.824e-03   -1.633e-04  /
+    CHEB/ 1.688e+00    1.447e-02    2.121e-03    1.784e-04   /
+    CHEB/ 3.310e-01    -2.359e-03   -2.866e-04   -1.222e-05  /
+    CHEB/ 1.106e-01    -3.187e-04   -6.397e-05   -8.455e-06  /
+    CHEB/ 3.557e-02    -5.052e-06   -2.799e-06   -7.815e-07  /
+    CHEB/ 1.135e-02    8.835e-06    1.270e-06    8.389e-08   /
+
+! Reaction index: Chemkin #186; RMG #960
+! Template reaction: Disproportionation
+! Flux pairs: OS(162), HSO(98); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [Y_1centerbirad;XH_s_Rrad]
+OS(162)+HO2S(157)=SO2(1)+HSO(98)                    6.926e+10 0.677     -0.234   
+
+! Reaction index: Chemkin #187; RMG #961
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(168); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [Y_rad;XH_s_Rrad]
+HO2S(157)+SO(94)=SO2(1)+HOS(168)                    7.373e+10 0.566     0.419    
+
+! Reaction index: Chemkin #188; RMG #1069
+! Template reaction: Disproportionation
+! Flux pairs: HOS(168), OS(185); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [S_sec_rad;XH_s_Rrad]
+HOS(168)+HO2S(157)=SO2(1)+OS(185)                   1.299e+09 0.867     -0.485   
+
+! Reaction index: Chemkin #189; RMG #1070
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(185); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [O_sec_rad;XH_s_Rrad]
+HOS(167)+HO2S(157)=SO2(1)+OS(185)                   1.819e+08 1.470     -1.280   
+
+! Reaction index: Chemkin #190; RMG #1133
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(167); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [Y_rad;XH_s_Rrad]
+HO2S(157)+SO(94)=SO2(1)+HOS(167)                    7.373e+10 0.566     0.419    
+
+! Reaction index: Chemkin #191; RMG #1257
+! PDep reaction: PDepNetwork #52
+! Flux pairs: O(6), HO2S(157); HSO(98), HO2S(157); 
+O(6)+HSO(98)(+M)=HO2S(157)(+M)                      1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.172e+01    1.186e-01    -3.893e-03   3.174e-05   /
+    CHEB/ -3.853e-01   9.383e-02    5.248e-04    -8.614e-05  /
+    CHEB/ -2.716e-01   2.139e-02    9.142e-04    5.671e-06   /
+    CHEB/ -1.150e-01   3.476e-03    2.170e-04    1.100e-05   /
+    CHEB/ -4.351e-02   4.303e-04    2.981e-05    1.373e-06   /
+    CHEB/ -1.673e-02   1.938e-04    -2.790e-07   -2.030e-07  /
+
+! Reaction index: Chemkin #192; RMG #202
+! Library reaction: SOxNOx
+! Flux pairs: HONO(67), NO(13); H(5), H2O(3); 
+H(5)+HONO(67)=H2O(3)+NO(13)                         8.130e+06 1.890     3.847    
+
+! Reaction index: Chemkin #193; RMG #1250
+! PDep reaction: PDepNetwork #60
+! Flux pairs: OH(7), HONO(67); NO(13), HONO(67); 
+OH(7)+NO(13)(+M)=HONO(67)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.163e+01    2.543e-01    -3.235e-03   -6.331e-05  /
+    CHEB/ -1.176e+00   4.973e-02    2.313e-03    -6.479e-06  /
+    CHEB/ -2.854e-01   -5.331e-03   7.424e-04    -1.578e-05  /
+    CHEB/ -9.120e-02   1.106e-03    -3.981e-04   4.889e-05   /
+    CHEB/ -2.287e-02   -3.840e-03   1.982e-04    7.916e-06   /
+    CHEB/ -1.525e-02   1.101e-03    -1.106e-04   -1.230e-06  /
+
+! Reaction index: Chemkin #194; RMG #97
+! Library reaction: SOxNOx
+! Flux pairs: N2O(44), NO2(45); NO(13), N2(4); 
+NO(13)+N2O(44)=N2(4)+NO2(45)                        5.260e+05 2.230     46.286   
+
+! Reaction index: Chemkin #195; RMG #189
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), O(6); NO2(45), NO(13); 
+NO2(45)(+M)=O(6)+NO(13)(+M)                         3.980e+14 0.000     71.700   
+
+    LOW/ 3.980e+15 0.000     60.000   /
+    TROE/ 1.000e+00 1e-30     1e+30    /
+
+! Reaction index: Chemkin #196; RMG #190
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), O2(2); NO2(45), NO(13); NO2(45), NO(13); 
+NO2(45)+NO2(45)=O2(2)+NO(13)+NO(13)                 4.510e+12 0.000     27.600   
+
+! Reaction index: Chemkin #197; RMG #197
+! Library reaction: SOxNOx
+! Flux pairs: HONO(67), NO2(45); H(5), H2(8); 
+H(5)+HONO(67)=H2(8)+NO2(45)                         2.010e+08 1.550     6.614    
+
+! Reaction index: Chemkin #198; RMG #203
+! Library reaction: SOxNOx
+! Flux pairs: HONO(67), NO2(45); HONO(67), H2O(3); HONO(67), NO(13); 
+HONO(67)+HONO(67)=H2O(3)+NO(13)+NO2(45)             3.490e-01 3.640     12.140   
+
+! Reaction index: Chemkin #199; RMG #225
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), HO2(10); OH(7), NO(13); 
+OH(7)+NO2(45)=HO2(10)+NO(13)                        2.000e+06 2.000     3.000    
+
+! Reaction index: Chemkin #200; RMG #297
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), SO3(95); SO2(1), NO(13); 
+SO2(1)+NO2(45)=NO(13)+SO3(95)                       6.310e+12 0.000     53.700   
+
+! Reaction index: Chemkin #201; RMG #298
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), SO(94); S(92), NO(13); 
+S(92)+NO2(45)=NO(13)+SO(94)                         1.140e+13 0.000     -0.980   
+
+! Reaction index: Chemkin #202; RMG #1251
+! PDep reaction: PDepNetwork #60
+! Flux pairs: NO(13), NO2(45); OH(7), H(5); 
+OH(7)+NO(13)(+M)=H(5)+NO2(45)(+M)                   1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -5.841e-01   -3.545e-05   -6.022e-06   -6.886e-07  /
+    CHEB/ 9.358e+00    3.327e-05    5.652e-06    6.462e-07   /
+    CHEB/ 5.069e-02    -3.381e-06   -5.741e-07   -6.556e-08  /
+    CHEB/ 3.348e-02    2.209e-07    3.746e-08    4.268e-09   /
+    CHEB/ 1.945e-02    -6.459e-08   -1.096e-08   -1.251e-09  /
+    CHEB/ -7.550e-03   1.929e-07    3.277e-08    3.746e-09   /
+
+! Reaction index: Chemkin #203; RMG #1367
+! Template reaction: Disproportionation
+! Flux pairs: NO2(45), HONO(67); HO2S(157), SO2(1); 
+! Estimated using an average for rate rule [O_sec_rad;XH_s_Rrad]
+HO2S(157)+NO2(45)=SO2(1)+HONO(67)                   1.819e+08 1.470     -1.280   
+
+! Reaction index: Chemkin #204; RMG #1368
+! Template reaction: Disproportionation
+! Flux pairs: NO2(45), HONO(67); HOSO(96), SO2(1); 
+! Estimated using template [O_sec_rad;O_Rrad] for rate rule [O_sec_rad;O_SradOd]
+HOSO(96)+NO2(45)=SO2(1)+HONO(67)                    1.351e+08 1.569     -0.933   
+
+! Reaction index: Chemkin #205; RMG #1369
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), O2(2); NO2(45), HONO(67); 
+! Estimated using template [X_H;O_rad/OneDeN] for rate rule [Orad_O_H;O_rad/OneDeN]
+HO2(10)+NO2(45)=O2(2)+HONO(67)                      3.260e+04 2.725     3.753    
+
+! Reaction index: Chemkin #206; RMG #1372
+! Template reaction: Disproportionation
+! Flux pairs: NO2(45), HONO(67); NNH(58), N2(4); 
+! Estimated using an average for rate rule [O_sec_rad;N3d/H_d_Nrad]
+NNH(58)+NO2(45)=N2(4)+HONO(67)                      1.400e+04 2.690     -1.600   
+
+! Reaction index: Chemkin #207; RMG #1375
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); HONO(67), NO2(45); 
+! Exact match found for rate rule [O/H/OneDeN;O_pri_rad]
+OH(7)+HONO(67)=H2O(3)+NO2(45)                       1.200e+06 2.000     -0.600   
+
+! Reaction index: Chemkin #208; RMG #1378
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), H2O2(11); HONO(67), NO2(45); 
+! Estimated using average of templates [O_sec;O_rad/NonDeO] + [O/H/OneDeN;O_rad] for rate rule [O/H/OneDeN;O_rad/NonDeO]
+HO2(10)+HONO(67)=H2O2(11)+NO2(45)                   2.428e+03 2.768     2.980    
+
+! Reaction index: Chemkin #209; RMG #1381
+! Template reaction: Disproportionation
+! Flux pairs: NO2(45), HONO(67); HOSO2(103), SO3(95); 
+! Estimated using template [O_sec_rad;O_Rrad] for rate rule [O_sec_rad;O_SradOdOd]
+HOSO2(103)+NO2(45)=SO3(95)+HONO(67)                 1.351e+08 1.569     -0.933   
+
+! Reaction index: Chemkin #210; RMG #1386
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); HONO(67), NO2(45); 
+! Exact match found for rate rule [O/H/OneDeN;O_atom_triplet]
+O(6)+HONO(67)=OH(7)+NO2(45)                         1.700e+08 1.500     3.030    
+
+! Reaction index: Chemkin #211; RMG #1395
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), SO(94); NO2(45), HONO(67); 
+! Estimated using an average for rate rule [X_H;O_rad/OneDeN]
+HOS(167)+NO2(45)=SO(94)+HONO(67)                    3.260e+04 2.725     3.996    
+
+! Reaction index: Chemkin #212; RMG #1396
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), SO(94); NO2(45), HONO(67); 
+! Estimated using an average for rate rule [X_H;O_rad/OneDeN]
+HOS(168)+NO2(45)=SO(94)+HONO(67)                    3.260e+04 2.725     3.869    
+
+! Reaction index: Chemkin #213; RMG #1400
+! Template reaction: H_Abstraction
+! Flux pairs: NNH(58), N2(159); NO2(45), HONO(67); 
+! Estimated using an average for rate rule [N3_H;O_rad/OneDeN]
+NNH(58)+NO2(45)=N2(159)+HONO(67)                    7.627e+03 2.594     -2.715   
+
+! Reaction index: Chemkin #214; RMG #1410
+! Template reaction: H_Abstraction
+! Flux pairs: HSO(98), OS(162); NO2(45), HONO(67); 
+! Estimated using template [X_H_or_Xrad_H_Xbirad_H_Xtrirad_H;O_rad/OneDeN] for rate rule [Srad_H;O_rad/OneDeN]
+HSO(98)+NO2(45)=OS(162)+HONO(67)                    3.634e+02 2.229     3.118    
+
+! Reaction index: Chemkin #215; RMG #1412
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); HONO(67), NO2(45); 
+! Estimated using template [O_sec;O_rad/OneDe] for rate rule [O/H/OneDeN;O_rad/OneDeN]
+N2O(160)+HONO(67)=NNOH(57)+NO2(45)                  3.495e-02 3.750     10.890   
+
+! Reaction index: Chemkin #216; RMG #1422
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), OS(185); HONO(67), NO2(45); 
+! Estimated using template [O/H/OneDe;S_sec_rad] for rate rule [O/H/OneDeN;S_rad/NonDeO]
+HOS(168)+HONO(67)=OS(185)+NO2(45)                   2.950e-06 5.630     11.750   
+
+! Reaction index: Chemkin #217; RMG #1429
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), OS(185); HONO(67), NO2(45); 
+! Estimated using template [O/H/OneDeN;O_rad] for rate rule [O/H/OneDeN;O_sec_rad]
+HOS(167)+HONO(67)=OS(185)+NO2(45)                   1.200e+06 2.000     -0.600   
+
+! Reaction index: Chemkin #218; RMG #1517
+! PDep reaction: PDepNetwork #82
+! Flux pairs: H(5), HONO(67); NO2(45), HONO(67); 
+H(5)+NO2(45)(+M)=HONO(67)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.321e+01    1.089e-01    -4.731e-03   6.732e-05   /
+    CHEB/ -5.952e-01   8.305e-02    2.400e-04    -1.134e-04  /
+    CHEB/ -2.632e-01   2.034e-02    9.704e-04    -6.968e-06  /
+    CHEB/ -1.032e-01   4.201e-03    2.759e-04    1.008e-05   /
+    CHEB/ -3.852e-02   9.310e-04    3.945e-05    1.943e-06   /
+    CHEB/ -1.424e-02   1.969e-04    1.335e-05    -8.193e-07  /
+
+! Reaction index: Chemkin #219; RMG #812
+! PDep reaction: PDepNetwork #18
+! Flux pairs: SO(94), OS(177); H(5), H(5); 
+H(5)+SO(94)(+M)=OS(177)+H(5)(+M)                    1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.406e-01   -1.120e-03   -1.894e-04   -2.145e-05  /
+    CHEB/ 3.573e+00    4.994e-04    8.434e-05    9.529e-06   /
+    CHEB/ -9.677e-03   1.260e-04    2.129e-05    2.410e-06   /
+    CHEB/ 1.211e-02    -2.499e-05   -4.177e-06   -4.622e-07  /
+    CHEB/ -5.396e-03   2.628e-05    4.427e-06    4.976e-07   /
+    CHEB/ 8.972e-04    4.002e-05    6.736e-06    7.559e-07   /
+
+! Reaction index: Chemkin #220; RMG #868
+! PDep reaction: PDepNetwork #16
+! Flux pairs: SO(94), OH(7); OH(7), OS(177); 
+OH(7)+SO(94)(+M)=OS(177)+OH(7)(+M)                  1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -2.893e+00   -4.446e-14   -5.773e-15   -1.110e-16  /
+    CHEB/ 4.236e+00    4.824e-14    1.060e-14    -5.773e-15  /
+    CHEB/ -1.858e-01   -8.356e-15   -2.220e-16   8.882e-16   /
+    CHEB/ -6.346e-02   -5.829e-15   5.551e-16    1.721e-15   /
+    CHEB/ -2.395e-02   -1.964e-15   -2.387e-15   -7.050e-15  /
+    CHEB/ -1.001e-02   -7.536e-15   6.883e-15    -4.888e-15  /
+DUPLICATE
+
+! Reaction index: Chemkin #221; RMG #876
+! PDep reaction: PDepNetwork #17
+! Flux pairs: SO(94), OH(7); OH(7), OS(177); 
+OH(7)+SO(94)(+M)=OS(177)+OH(7)(+M)                  1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -2.895e+00   -2.186e-09   -3.714e-10   -4.249e-11  /
+    CHEB/ 4.225e+00    1.309e-09    2.224e-10    2.543e-11   /
+    CHEB/ -1.786e-01   6.628e-11    1.126e-11    1.289e-12   /
+    CHEB/ -6.324e-02   1.280e-11    2.175e-12    2.511e-13   /
+    CHEB/ -2.335e-02   6.543e-12    1.109e-12    1.200e-13   /
+    CHEB/ -8.992e-03   2.835e-12    4.896e-13    5.110e-14   /
+DUPLICATE
+
+! Reaction index: Chemkin #222; RMG #899
+! PDep reaction: PDepNetwork #21
+! Flux pairs: SO(94), O(6); O(6), OS(177); 
+O(6)+SO(94)(+M)=OS(177)+O(6)(+M)                    1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -3.938e+00   -1.904e-05   -3.226e-06   -3.671e-07  /
+    CHEB/ 3.845e+00    1.273e-05    2.152e-06    2.436e-07   /
+    CHEB/ -2.968e-01   1.913e-07    3.626e-08    5.002e-09   /
+    CHEB/ -9.886e-02   5.593e-07    9.467e-08    1.074e-08   /
+    CHEB/ -3.463e-02   1.175e-07    1.895e-08    1.938e-09   /
+    CHEB/ -1.350e-02   4.141e-08    8.486e-09    1.300e-09   /
+
+! Reaction index: Chemkin #223; RMG #962
+! Template reaction: Disproportionation
+! Flux pairs: O2(2), HO2(10); HOS(168), OS(177); 
+! Estimated using template [O2b;O_Rrad] for rate rule [O2b;O_Srad]
+! Multiplied by reaction path degeneracy 4
+! Ea raised from 0.0 to 61.2 kJ/mol to match endothermicity of reaction.
+O2(2)+HOS(168)=OS(177)+HO2(10)                      2.288e+13 0.000     14.629   
+
+! Reaction index: Chemkin #224; RMG #969
+! Template reaction: Disproportionation
+! Flux pairs: OH(7), H2O(3); HOS(168), OS(177); 
+! Estimated using template [O_pri_rad;O_Rrad] for rate rule [O_pri_rad;O_Srad]
+HOS(168)+OH(7)=H2O(3)+OS(177)                       7.605e+09 1.000     -0.595   
+
+! Reaction index: Chemkin #225; RMG #974
+! Template reaction: Disproportionation
+! Flux pairs: HO2(10), H2O2(11); HOS(168), OS(177); 
+! Estimated using template [O_rad/NonDeO;O_Rrad] for rate rule [O_rad/NonDeO;O_Srad]
+HOS(168)+HO2(10)=OS(177)+H2O2(11)                   5.964e+08 1.345     -0.800   
+
+! Reaction index: Chemkin #226; RMG #979
+! Template reaction: Disproportionation
+! Flux pairs: H(5), H2(8); HOS(168), OS(177); 
+! Estimated using template [H_rad;O_Rrad] for rate rule [H_rad;O_Srad]
+HOS(168)+H(5)=OS(177)+H2(8)                         9.798e+10 0.750     0.190    
+
+! Reaction index: Chemkin #227; RMG #992
+! Template reaction: Disproportionation
+! Flux pairs: O(6), OH(7); HOS(168), OS(177); 
+! Estimated using template [O_atom_triplet;O_Rrad] for rate rule [O_atom_triplet;O_Srad]
+HOS(168)+O(6)=OS(177)+OH(7)                         1.727e+11 0.750     -0.180   
+
+! Reaction index: Chemkin #228; RMG #1009
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(167); HOS(168), OS(177); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_Srad]
+! Ea raised from -0.9 to 23.6 kJ/mol to match endothermicity of reaction.
+HOS(168)+SO(94)=HOS(167)+OS(177)                    2.112e+10 0.906     5.634    
+
+! Reaction index: Chemkin #229; RMG #1010
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(168); HOS(168), OS(177); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_Srad]
+! Ea raised from -0.9 to 43.8 kJ/mol to match endothermicity of reaction.
+HOS(168)+SO(94)=HOS(168)+OS(177)                    2.112e+10 0.906     10.469   
+
+! Reaction index: Chemkin #230; RMG #1022
+! Template reaction: Disproportionation
+! Flux pairs: N2(159), NNH(58); HOS(168), OS(177); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad;O_Srad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HOS(168)=OS(177)+NNH(58)                    2.800e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #231; RMG #1041
+! Template reaction: Disproportionation
+! Flux pairs: OS(162), HSO(98); HOS(168), OS(177); 
+! Estimated using template [Y_1centerbirad;O_Rrad] for rate rule [Y_1centerbirad;O_Srad]
+! Ea raised from -0.6 to 20.8 kJ/mol to match endothermicity of reaction.
+OS(162)+HOS(168)=OS(177)+HSO(98)                    1.639e+11 0.562     4.971    
+
+! Reaction index: Chemkin #232; RMG #1046
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), NNOH(57); HOS(168), OS(177); 
+! Estimated using template [O_sec_rad;O_Rrad] for rate rule [O_sec_rad;O_Srad]
+N2O(160)+HOS(168)=OS(177)+NNOH(57)                  1.351e+08 1.569     -0.933   
+
+! Reaction index: Chemkin #233; RMG #1059
+! Template reaction: Disproportionation
+! Flux pairs: HOS(168), OS(185); HOS(168), OS(177); 
+! Estimated using template [S_sec_rad;XH_s_Rrad] for rate rule [S_sec_rad;O_Srad]
+! Multiplied by reaction path degeneracy 2
+HOS(168)+HOS(168)=OS(177)+OS(185)                   2.599e+09 0.867     -0.485   
+
+! Reaction index: Chemkin #234; RMG #1532
+! PDep reaction: PDepNetwork #91
+! Flux pairs: OS(177), HOS(168); H(5), HOS(168); 
+OS(177)+H(5)(+M)=HOS(168)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 9.835e+00    4.344e-07    -7.381e-08   8.442e-09   /
+    CHEB/ 2.917e+00    7.599e-07    -1.291e-07   1.477e-08   /
+    CHEB/ 1.389e-01    5.540e-07    -9.412e-08   1.076e-08   /
+    CHEB/ 4.103e-02    3.602e-07    -6.120e-08   6.999e-09   /
+    CHEB/ 1.363e-02    2.163e-07    -3.675e-08   4.202e-09   /
+    CHEB/ 4.830e-03    1.223e-07    -2.078e-08   2.377e-09   /
+
+! Reaction index: Chemkin #235; RMG #1134
+! Template reaction: Disproportionation
+! Flux pairs: O2(2), HO2(10); HOS(167), OS(177); 
+! Estimated using an average for rate rule [O2b;XH_s_Rrad]
+! Multiplied by reaction path degeneracy 4
+! Ea raised from 79.2 to 81.4 kJ/mol to match endothermicity of reaction.
+O2(2)+HOS(167)=OS(177)+HO2(10)                      1.206e+12 0.000     19.463   
+
+! Reaction index: Chemkin #236; RMG #1135
+! Template reaction: Disproportionation
+! Flux pairs: OH(7), H2O(3); HOS(167), OS(177); 
+! Estimated using an average for rate rule [O_pri_rad;XH_s_Rrad]
+HOS(167)+OH(7)=H2O(3)+OS(177)                       7.868e+10 0.667     0.603    
+
+! Reaction index: Chemkin #237; RMG #1137
+! Template reaction: Disproportionation
+! Flux pairs: HO2(10), H2O2(11); HOS(167), OS(177); 
+! Estimated using an average for rate rule [O_rad/NonDeO;XH_s_Rrad]
+HOS(167)+HO2(10)=OS(177)+H2O2(11)                   4.159e+06 2.018     -1.200   
+
+! Reaction index: Chemkin #238; RMG #1138
+! Template reaction: Disproportionation
+! Flux pairs: H(5), H2(8); HOS(167), OS(177); 
+! Estimated using an average for rate rule [H_rad;XH_s_Rrad]
+HOS(167)+H(5)=OS(177)+H2(8)                         1.157e+11 0.550     0.023    
+
+! Reaction index: Chemkin #239; RMG #1143
+! Template reaction: Disproportionation
+! Flux pairs: O(6), OH(7); HOS(167), OS(177); 
+! Estimated using an average for rate rule [O_atom_triplet;XH_s_Rrad]
+HOS(167)+O(6)=OS(177)+OH(7)                         2.837e+09 1.250     -0.473   
+
+! Reaction index: Chemkin #240; RMG #1148
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(167); HOS(167), OS(177); 
+! Estimated using an average for rate rule [Y_rad;XH_s_Rrad]
+! Ea raised from 43.0 to 43.8 kJ/mol to match endothermicity of reaction.
+HOS(167)+SO(94)=HOS(167)+OS(177)                    7.373e+10 0.566     10.469   
+
+! Reaction index: Chemkin #241; RMG #1149
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(168); HOS(167), OS(177); 
+! Estimated using an average for rate rule [Y_rad;XH_s_Rrad]
+! Ea raised from 61.9 to 64.0 kJ/mol to match endothermicity of reaction.
+HOS(167)+SO(94)=HOS(168)+OS(177)                    7.373e+10 0.566     15.303   
+
+! Reaction index: Chemkin #242; RMG #1153
+! Template reaction: Disproportionation
+! Flux pairs: N2(159), NNH(58); HOS(167), OS(177); 
+! Estimated using an average for rate rule [N3d_rad;XH_s_Rrad]
+! Multiplied by reaction path degeneracy 2
+! Ea raised from -6.7 to 20.1 kJ/mol to match endothermicity of reaction.
+N2(159)+HOS(167)=OS(177)+NNH(58)                    2.800e+04 2.690     4.804    
+
+! Reaction index: Chemkin #243; RMG #1163
+! Template reaction: Disproportionation
+! Flux pairs: OS(162), HSO(98); HOS(167), OS(177); 
+! Estimated using an average for rate rule [Y_1centerbirad;XH_s_Rrad]
+! Ea raised from -1.0 to 41.0 kJ/mol to match endothermicity of reaction.
+OS(162)+HOS(167)=OS(177)+HSO(98)                    6.926e+10 0.677     9.806    
+
+! Reaction index: Chemkin #244; RMG #1164
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), NNOH(57); HOS(167), OS(177); 
+! Estimated using an average for rate rule [O_sec_rad;XH_s_Rrad]
+N2O(160)+HOS(167)=OS(177)+NNOH(57)                  1.819e+08 1.470     -1.280   
+
+! Reaction index: Chemkin #245; RMG #1174
+! Template reaction: Disproportionation
+! Flux pairs: HOS(168), OS(185); HOS(167), OS(177); 
+! Estimated using an average for rate rule [S_sec_rad;XH_s_Rrad]
+! Multiplied by reaction path degeneracy 2
+HOS(167)+HOS(168)=OS(177)+OS(185)                   2.599e+09 0.867     -0.485   
+
+! Reaction index: Chemkin #246; RMG #1175
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(185); HOS(167), OS(177); 
+! Estimated using an average for rate rule [O_sec_rad;XH_s_Rrad]
+! Multiplied by reaction path degeneracy 2
+HOS(167)+HOS(167)=OS(177)+OS(185)                   3.639e+08 1.470     -1.280   
+
+! Reaction index: Chemkin #247; RMG #1533
+! PDep reaction: PDepNetwork #92
+! Flux pairs: OS(177), HOS(167); H(5), HOS(167); 
+OS(177)+H(5)(+M)=HOS(167)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.297e+01    2.019e-09    -3.431e-10   3.924e-11   /
+    CHEB/ 5.656e-01    3.376e-09    -5.737e-10   6.562e-11   /
+    CHEB/ 1.253e-01    2.279e-09    -3.873e-10   4.430e-11   /
+    CHEB/ 3.700e-02    1.359e-09    -2.309e-10   2.641e-11   /
+    CHEB/ 1.229e-02    7.542e-10    -1.282e-10   1.466e-11   /
+    CHEB/ 4.356e-03    4.000e-10    -6.797e-11   7.774e-12   /
+
+! Reaction index: Chemkin #248; RMG #1489
+! Template reaction: Disproportionation
+! Flux pairs: HOS(168), OS(177); NO2(45), HONO(67); 
+! Estimated using template [O_sec_rad;O_Rrad] for rate rule [O_sec_rad;O_Srad]
+HOS(168)+NO2(45)=OS(177)+HONO(67)                   1.351e+08 1.569     -0.933   
+
+! Reaction index: Chemkin #249; RMG #1500
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(177); NO2(45), HONO(67); 
+! Estimated using an average for rate rule [O_sec_rad;XH_s_Rrad]
+HOS(167)+NO2(45)=OS(177)+HONO(67)                   1.819e+08 1.470     -1.280   
+
+! Reaction index: Chemkin #250; RMG #96
+! Library reaction: SOxNOx
+! Flux pairs: HNNO(56), N2(4); HNNO(56), OH(7); 
+HNNO(56)+M=N2(4)+OH(7)+M                            6.800e+12 0.000     29.398   
+
+
+! Reaction index: Chemkin #251; RMG #100
+! Library reaction: SOxNOx
+! Flux pairs: HNNO(56), O(6); HNNO(56), NNH(58); 
+HNNO(56)+M=O(6)+NNH(58)+M                           4.900e+15 0.000     61.663   
+
+
+! Reaction index: Chemkin #252; RMG #607
+! PDep reaction: PDepNetwork #1
+! Flux pairs: N2(4), HNNO(56); OH(7), HNNO(56); 
+N2(4)+OH(7)(+M)=HNNO(56)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.882e+01   -1.503e-03   -2.448e-04   -2.571e-05  /
+    CHEB/ 2.125e+01    -2.655e-03   -4.308e-04   -4.484e-05  /
+    CHEB/ -2.831e-01   -2.003e-03   -3.218e-04   -3.279e-05  /
+    CHEB/ -1.598e-01   -1.374e-03   -2.176e-04   -2.145e-05  /
+    CHEB/ -7.130e-02   -8.902e-04   -1.383e-04   -1.305e-05  /
+    CHEB/ -2.517e-02   -5.550e-04   -8.431e-05   -7.507e-06  /
+
+! Reaction index: Chemkin #253; RMG #1706
+! PDep reaction: PDepNetwork #97
+! Flux pairs: HNNO(56), NNOH(57); 
+HNNO(56)(+M)=NNOH(57)(+M)                           1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -2.695e-01   1.135e-01    -3.678e-03   1.126e-04   /
+    CHEB/ 8.129e+00    1.009e-01    8.006e-05    -5.904e-05  /
+    CHEB/ -3.617e-01   2.119e-02    9.531e-04    -2.166e-05  /
+    CHEB/ -1.358e-01   2.614e-03    2.308e-04    -5.066e-06  /
+    CHEB/ -4.233e-02   2.745e-04    4.447e-05    -2.477e-06  /
+    CHEB/ -1.074e-02   -5.938e-05   2.540e-05    1.026e-06   /
+
+! Reaction index: Chemkin #254; RMG #760
+! PDep reaction: PDepNetwork #25
+! Flux pairs: N2(159), HNNO(56); OH(7), HNNO(56); 
+N2(159)+OH(7)(+M)=HNNO(56)(+M)                      1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 7.962e+00    -1.261e-04   -2.137e-05   -2.432e-06  /
+    CHEB/ 1.418e+00    -9.531e-05   -1.611e-05   -1.823e-06  /
+    CHEB/ -7.508e-02   5.211e-05    8.891e-06    1.025e-06   /
+    CHEB/ -1.122e-01   7.260e-05    1.233e-05    1.410e-06   /
+    CHEB/ -1.031e-02   3.218e-05    5.453e-06    6.201e-07   /
+    CHEB/ 2.144e-02    6.875e-07    1.043e-07    8.998e-09   /
+
+! Reaction index: Chemkin #255; RMG #769
+! Template reaction: Disproportionation
+! Flux pairs: OH(7), H2O(3); HNNO(56), N2O(44); 
+! Exact match found for rate rule [O_pri_rad;N3d/H_d_Nrad]
+OH(7)+HNNO(56)=H2O(3)+N2O(44)                       1.200e+06 2.000     -1.190   
+
+! Reaction index: Chemkin #256; RMG #774
+! Template reaction: Disproportionation
+! Flux pairs: O(6), OH(7); HNNO(56), N2O(44); 
+! Exact match found for rate rule [O_atom_triplet;N3d/H_d_Nrad]
+O(6)+HNNO(56)=OH(7)+N2O(44)                         1.700e+08 1.500     -0.890   
+
+! Reaction index: Chemkin #257; RMG #779
+! Template reaction: Disproportionation
+! Flux pairs: O2(2), HO2(10); HNNO(56), N2O(44); 
+! Exact match found for rate rule [O2b;N3d/H_d_Nrad]
+! Multiplied by reaction path degeneracy 4
+O2(2)+HNNO(56)=HO2(10)+N2O(44)                      4.800e+12 -0.340    0.150    
+
+! Reaction index: Chemkin #258; RMG #792
+! Template reaction: Disproportionation
+! Flux pairs: H(5), H2(8); HNNO(56), N2O(44); 
+! Exact match found for rate rule [H_rad;N3d/H_d_Nrad]
+H(5)+HNNO(56)=H2(8)+N2O(44)                         2.400e+08 1.500     -0.890   
+
+! Reaction index: Chemkin #259; RMG #797
+! Template reaction: Disproportionation
+! Flux pairs: HO2(10), H2O2(11); HNNO(56), N2O(44); 
+! Exact match found for rate rule [O_rad/NonDeO;N3d/H_d_Nrad]
+HO2(10)+HNNO(56)=H2O2(11)+N2O(44)                   1.400e+04 2.690     -1.600   
+
+! Reaction index: Chemkin #260; RMG #802
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), NNOH(57); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [O_sec_rad;N3d/H_d_Nrad]
+N2O(160)+HNNO(56)=NNOH(57)+N2O(44)                  1.400e+04 2.690     -1.600   
+
+! Reaction index: Chemkin #261; RMG #807
+! Template reaction: Disproportionation
+! Flux pairs: N2(159), NNH(58); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [N3d_rad;N3d/H_d_Nrad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HNNO(56)=NNH(58)+N2O(44)                    2.400e+06 2.000     -1.190   
+
+! Reaction index: Chemkin #262; RMG #902
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); HNNO(56), N2O(160); 
+! Exact match found for rate rule [N3d/H/NonDeN;O_pri_rad]
+OH(7)+HNNO(56)=H2O(3)+N2O(160)                      2.400e+06 2.000     -1.190   
+
+! Reaction index: Chemkin #263; RMG #906
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); HNNO(56), N2O(160); 
+! Exact match found for rate rule [N3d/H/NonDeN;O_atom_triplet]
+O(6)+HNNO(56)=N2O(160)+OH(7)                        3.300e+08 1.500     0.500    
+
+! Reaction index: Chemkin #264; RMG #910
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), O2(2); N2O(160), HNNO(56); 
+! Estimated using template [X_H;N3d_rad] for rate rule [Orad_O_H;N3d_rad]
+N2O(160)+HO2(10)=O2(2)+HNNO(56)                     5.891e+06 1.824     7.905    
+
+! Reaction index: Chemkin #265; RMG #913
+! Template reaction: Disproportionation
+! Flux pairs: HOSO2(103), SO3(95); N2O(160), HNNO(56); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad/N;O_SradOdOd]
+N2O(160)+HOSO2(103)=SO3(95)+HNNO(56)                1.400e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #266; RMG #920
+! Template reaction: Disproportionation
+! Flux pairs: HOSO(96), SO2(1); N2O(160), HNNO(56); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad/N;O_SradOd]
+N2O(160)+HOSO(96)=SO2(1)+HNNO(56)                   1.400e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #267; RMG #928
+! Template reaction: H_Abstraction
+! Flux pairs: H(5), H2(8); HNNO(56), N2O(160); 
+! Exact match found for rate rule [N3d/H/NonDeN;H_rad]
+H(5)+HNNO(56)=N2O(160)+H2(8)                        4.800e+08 1.500     1.580    
+
+! Reaction index: Chemkin #268; RMG #932
+! Template reaction: H_Abstraction
+! Flux pairs: H2O2(11), HO2(10); N2O(160), HNNO(56); 
+! Estimated using template [H2O2;Y_rad] for rate rule [H2O2;N3d_rad]
+! Multiplied by reaction path degeneracy 2
+N2O(160)+H2O2(11)=HO2(10)+HNNO(56)                  1.381e-02 4.118     1.722    
+
+! Reaction index: Chemkin #269; RMG #936
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); HNNO(56), N2O(160); 
+! Estimated using average of templates [N3_H;O_rad/OneDeN] + [N3d/H/NonDeN;O_rad] for rate rule [N3d/H/NonDeN;O_rad/OneDeN]
+N2O(160)+HNNO(56)=N2O(160)+NNOH(57)                 1.353e+05 2.297     -1.953   
+
+! Reaction index: Chemkin #270; RMG #939
+! Template reaction: Disproportionation
+! Flux pairs: NNH(58), N2(4); N2O(160), HNNO(56); 
+! Estimated using template [N3d_rad;N3d/H_d_Nrad] for rate rule [N3d_rad/N;N3d/H_d_Nrad]
+N2O(160)+NNH(58)=N2(4)+HNNO(56)                     1.200e+06 2.000     -1.190   
+
+! Reaction index: Chemkin #271; RMG #941
+! Template reaction: H_Abstraction
+! Flux pairs: NNH(58), N2(159); N2O(160), HNNO(56); 
+! Estimated using an average for rate rule [N3_H;N3d_rad]
+N2O(160)+NNH(58)=N2(159)+HNNO(56)                   2.727e+04 2.468     15.159   
+
+! Reaction index: Chemkin #272; RMG #1027
+! Template reaction: Disproportionation
+! Flux pairs: OS(162), HSO(98); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [Y_1centerbirad;N3d/H_d_Nrad]
+OS(162)+HNNO(56)=HSO(98)+N2O(44)                    1.700e+08 1.500     -0.890   
+
+! Reaction index: Chemkin #273; RMG #1032
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(168); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [Y_rad;N3d/H_d_Nrad]
+SO(94)+HNNO(56)=HOS(168)+N2O(44)                    9.411e+06 1.829     -1.086   
+
+! Reaction index: Chemkin #274; RMG #1043
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), HNNO(56); HSO(98), OS(162); 
+! Estimated using template [Xrad_H;N3_rad] for rate rule [Srad_H;N3d_rad]
+N2O(160)+HSO(98)=OS(162)+HNNO(56)                   7.872e+09 0.935     6.270    
+
+! Reaction index: Chemkin #275; RMG #1047
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), HNNO(56); HOS(168), OS(177); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad/N;O_Srad]
+N2O(160)+HOS(168)=OS(177)+HNNO(56)                  1.400e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #276; RMG #1049
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), HNNO(56); HOS(168), SO(94); 
+! Estimated using an average for rate rule [X_H;N3d_rad]
+N2O(160)+HOS(168)=SO(94)+HNNO(56)                   5.891e+06 1.824     7.905    
+
+! Reaction index: Chemkin #277; RMG #1102
+! Template reaction: Disproportionation
+! Flux pairs: HOS(168), OS(185); HNNO(56), N2O(44); 
+! Estimated using template [Y_rad;N3d/H_d_Nrad] for rate rule [S_sec_rad;N3d/H_d_Nrad]
+HOS(168)+HNNO(56)=OS(185)+N2O(44)                   9.411e+06 1.829     -1.086   
+
+! Reaction index: Chemkin #278; RMG #1103
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(185); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [O_sec_rad;N3d/H_d_Nrad]
+HOS(167)+HNNO(56)=OS(185)+N2O(44)                   1.400e+04 2.690     -1.600   
+
+! Reaction index: Chemkin #279; RMG #1112
+! Template reaction: H_Abstraction
+! Flux pairs: HNNO(56), N2O(160); HOS(168), OS(185); 
+! Estimated using template [N3d/H/NonDeN;Y_rad] for rate rule [N3d/H/NonDeN;S_rad/NonDeO]
+HOS(168)+HNNO(56)=N2O(160)+OS(185)                  7.589e+06 1.828     0.553    
+
+! Reaction index: Chemkin #280; RMG #1113
+! Template reaction: H_Abstraction
+! Flux pairs: HNNO(56), N2O(160); HOS(167), OS(185); 
+! Estimated using template [N3d/H/NonDeN;O_rad] for rate rule [N3d/H/NonDeN;O_sec_rad]
+HOS(167)+HNNO(56)=N2O(160)+OS(185)                  2.400e+06 2.000     -1.190   
+
+! Reaction index: Chemkin #281; RMG #1128
+! PDep reaction: PDepNetwork #30
+! Flux pairs: H(5), HNNO(56); N2O(44), HNNO(56); 
+H(5)+N2O(44)(+M)=HNNO(56)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 8.766e+00    2.324e-01    -5.851e-03   -1.719e-04  /
+    CHEB/ 1.693e+00    5.781e-02    5.035e-03    -2.219e-05  /
+    CHEB/ -3.944e-01   -6.902e-04   8.442e-04    8.841e-05   /
+    CHEB/ -1.180e-01   -2.880e-03   -7.731e-05   2.241e-05   /
+    CHEB/ -3.009e-02   -1.130e-03   -9.374e-05   4.329e-06   /
+    CHEB/ -4.378e-03   -4.045e-04   -5.360e-05   1.389e-06   /
+
+! Reaction index: Chemkin #282; RMG #1158
+! Template reaction: Disproportionation
+! Flux pairs: SO(94), HOS(167); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [Y_rad;N3d/H_d_Nrad]
+SO(94)+HNNO(56)=HOS(167)+N2O(44)                    9.411e+06 1.829     -1.086   
+
+! Reaction index: Chemkin #283; RMG #1165
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), HNNO(56); HOS(167), OS(177); 
+! Estimated using template [N3d_rad;XH_s_Rrad] for rate rule [N3d_rad/N;XH_s_Rrad]
+N2O(160)+HOS(167)=OS(177)+HNNO(56)                  1.400e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #284; RMG #1167
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), HNNO(56); HOS(167), SO(94); 
+! Estimated using an average for rate rule [X_H;N3d_rad]
+N2O(160)+HOS(167)=SO(94)+HNNO(56)                   5.891e+06 1.824     7.905    
+
+! Reaction index: Chemkin #285; RMG #1319
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), HNNO(56); HO2S(157), SO2(1); 
+! Estimated using template [N3d_rad;XH_s_Rrad] for rate rule [N3d_rad/N;XH_s_Rrad]
+N2O(160)+HO2S(157)=SO2(1)+HNNO(56)                  1.400e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #286; RMG #1405
+! Template reaction: Disproportionation
+! Flux pairs: NO2(45), HONO(67); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [O_sec_rad;N3d/H_d_Nrad]
+HNNO(56)+NO2(45)=HONO(67)+N2O(44)                   1.400e+04 2.690     -1.600   
+
+! Reaction index: Chemkin #287; RMG #1413
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), HNNO(56); HONO(67), NO2(45); 
+! Estimated using template [O/H/OneDeN;N3_rad] for rate rule [O/H/OneDeN;N3d_rad]
+N2O(160)+HONO(67)=HNNO(56)+NO2(45)                  9.200e+05 1.940     1.920    
+
+! Reaction index: Chemkin #288; RMG #1534
+! PDep reaction: PDepNetwork #38
+! Flux pairs: N2O(160), HNNO(56); H(5), HNNO(56); 
+N2O(160)+H(5)(+M)=HNNO(56)(+M)                      1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.281e+01    1.091e-01    -3.977e-03   5.769e-05   /
+    CHEB/ -7.455e-01   9.957e-02    1.658e-05    -1.121e-04  /
+    CHEB/ -3.511e-01   2.236e-02    1.124e-03    -3.083e-06  /
+    CHEB/ -1.352e-01   2.762e-03    2.625e-04    1.765e-05   /
+    CHEB/ -4.783e-02   -2.977e-05   1.296e-05    2.376e-06   /
+    CHEB/ -1.686e-02   -1.095e-04   4.310e-06    -1.300e-06  /
+
+! Reaction index: Chemkin #289; RMG #1611
+! Template reaction: Disproportionation
+! Flux pairs: N2O(160), HNNO(56); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [Y_1centerbirad;N3d/H_d_Nrad]
+N2O(160)+HNNO(56)=HNNO(56)+N2O(44)                  1.700e+08 1.500     -0.890   
+
+! Reaction index: Chemkin #290; RMG #1712
+! PDep reaction: PDepNetwork #48
+! Flux pairs: HSO(98), HOSO(96); OH(7), H(5); 
+OH(7)+HSO(98)(+M)=H(5)+HOSO(96)(+M)                 1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.362e+01    -3.746e-03   -6.180e-04   -6.660e-05  /
+    CHEB/ -6.156e-02   3.212e-03    5.295e-04    5.695e-05   /
+    CHEB/ -4.397e-02   5.263e-04    8.666e-05    9.309e-06   /
+    CHEB/ -2.011e-02   -1.094e-04   -1.769e-05   -1.826e-06  /
+    CHEB/ -6.647e-03   -3.589e-05   -5.974e-06   -6.544e-07  /
+    CHEB/ -1.046e-03   5.084e-05    8.064e-06    7.991e-07   /
+
+! Reaction index: Chemkin #291; RMG #1710
+! PDep reaction: PDepNetwork #9
+! Flux pairs: HOSO(96), HO2S(157); H(5), H(5); 
+H(5)+HOSO(96)(+M)=HO2S(157)+H(5)(+M)                1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -5.619e+00   -3.103e-06   -5.272e-07   -6.030e-08  /
+    CHEB/ 1.418e+01    1.406e-06    2.389e-07    2.733e-08   /
+    CHEB/ 5.472e-02    5.566e-07    9.457e-08    1.082e-08   /
+    CHEB/ 2.005e-02    4.857e-08    8.252e-09    9.440e-10   /
+    CHEB/ 6.258e-03    7.868e-08    1.337e-08    1.529e-09   /
+    CHEB/ 1.879e-03    1.299e-07    2.207e-08    2.525e-09   /
+
+! Reaction index: Chemkin #292; RMG #1713
+! PDep reaction: PDepNetwork #48
+! Flux pairs: HSO(98), HO2S(157); OH(7), H(5); 
+OH(7)+HSO(98)(+M)=HO2S(157)+H(5)(+M)                1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -5.417e+00   -3.191e-06   -5.422e-07   -6.202e-08  /
+    CHEB/ 1.219e+01    1.324e-06    2.250e-07    2.573e-08   /
+    CHEB/ 2.220e-01    5.431e-07    9.229e-08    1.056e-08   /
+    CHEB/ 7.349e-02    5.689e-08    9.667e-09    1.106e-09   /
+    CHEB/ 1.299e-02    8.994e-08    1.528e-08    1.748e-09   /
+    CHEB/ -6.757e-03   1.382e-07    2.348e-08    2.686e-09   /
+
+! Reaction index: Chemkin #293; RMG #878
+! PDep reaction: PDepNetwork #17
+! Flux pairs: SO(94), O2S(172); OH(7), H(5); 
+OH(7)+SO(94)(+M)=O2S(172)+H(5)(+M)                  1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -3.343e+01   -5.647e-09   -9.595e-10   -1.097e-10  /
+    CHEB/ 3.196e+01    3.707e-09    6.299e-10    7.199e-11   /
+    CHEB/ -7.818e-02   -7.115e-11   -1.207e-11   -1.377e-12  /
+    CHEB/ -3.136e-02   1.469e-12    2.549e-13    4.641e-14   /
+    CHEB/ -1.281e-02   2.550e-11    4.305e-12    4.365e-13   /
+    CHEB/ -5.307e-03   1.327e-11    2.323e-12    2.199e-13   /
+
+! Reaction index: Chemkin #294; RMG #1765
+! PDep reaction: PDepNetwork #106
+! Flux pairs: O2S(172), O(6); O2S(172), SO(94); 
+O2S(172)(+M)=O(6)+SO(94)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 9.385e+00    3.010e-01    -3.610e-06   -4.125e-07  /
+    CHEB/ -4.820e-01   -4.382e-06   -7.422e-07   -8.437e-08  /
+    CHEB/ 5.023e-02    4.570e-06    7.761e-07    8.868e-08   /
+    CHEB/ 5.901e-02    1.300e-05    2.207e-06    2.519e-07   /
+    CHEB/ -2.746e-02   1.093e-05    1.855e-06    2.117e-07   /
+    CHEB/ -2.256e-02   -2.958e-06   -5.025e-07   -5.747e-08  /
+
+! Reaction index: Chemkin #295; RMG #1766
+! PDep reaction: PDepNetwork #106
+! Flux pairs: O2S(172), O1OS1(180); 
+O2S(172)(+M)=O1OS1(180)(+M)                         1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 9.637e+00    3.010e-01    -1.430e-08   -1.636e-09  /
+    CHEB/ -2.013e-01   6.562e-08    1.115e-08    1.275e-09   /
+    CHEB/ -7.995e-02   -3.538e-09   -6.012e-10   -6.877e-11  /
+    CHEB/ -2.562e-02   -5.259e-10   -8.937e-11   -1.022e-11  /
+    CHEB/ -1.835e-02   9.664e-11    1.642e-11    1.878e-12   /
+    CHEB/ -2.207e-02   4.893e-09    8.313e-10    9.509e-11   /
+
+! Reaction index: Chemkin #296; RMG #1185
+! PDep reaction: PDepNetwork #58
+! Flux pairs: O(6), O2S(172); HOS(167), H(5); 
+HOS(167)+O(6)(+M)=O2S(172)+H(5)(+M)                 1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.440e+01   -1.641e-07   -2.788e-08   -3.189e-09  /
+    CHEB/ 1.795e+01    1.104e-08    1.876e-09    2.146e-10   /
+    CHEB/ -1.349e-01   8.192e-09    1.392e-09    1.592e-10   /
+    CHEB/ -3.907e-02   1.110e-09    1.886e-10    2.158e-11   /
+    CHEB/ -6.898e-03   -1.629e-10   -2.769e-11   -3.198e-12  /
+    CHEB/ -2.817e-03   -3.040e-09   -5.165e-10   -5.911e-11  /
+
+! Reaction index: Chemkin #297; RMG #1715
+! PDep reaction: PDepNetwork #93
+! Flux pairs: OS(177), O2S(172); O(6), O2S(172); 
+OS(177)+O(6)(+M)=O2S(172)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 8.904e+00    1.794e-05    -3.047e-06   3.483e-07   /
+    CHEB/ 8.325e-01    -1.377e-05   2.338e-06    -2.672e-07  /
+    CHEB/ -1.759e-01   -8.084e-07   1.376e-07    -1.578e-08  /
+    CHEB/ -5.195e-02   1.355e-07    -2.298e-08   2.621e-09   /
+    CHEB/ -1.726e-02   -1.066e-07   1.811e-08    -2.068e-09  /
+    CHEB/ -6.116e-03   -7.629e-08   1.296e-08    -1.482e-09  /
+
+! Reaction index: Chemkin #298; RMG #95
+! Library reaction: SOxNOx
+! Flux pairs: HNNO(56), NO(13); HNNO(56), NH(22); 
+HNNO(56)+M=NO(13)+NH(22)+M                          4.000e+15 0.000     49.952   
+
+
+! Reaction index: Chemkin #299; RMG #103
+! Library reaction: SOxNOx
+! Flux pairs: O(6), NO(13); NNH(58), NH(22); 
+O(6)+NNH(58)=NO(13)+NH(22)                          5.200e+11 0.388     -0.409   
+
+! Reaction index: Chemkin #300; RMG #157
+! Library reaction: SOxNOx
+! Flux pairs: NO(13), N2O(44); NH(22), H(5); 
+NO(13)+NH(22)=H(5)+N2O(44)                          1.800e+14 -0.351    -0.244   
+
+! Reaction index: Chemkin #301; RMG #158
+! Library reaction: SOxNOx
+! Flux pairs: NO(13), OH(7); NH(22), N2(4); 
+NO(13)+NH(22)=N2(4)+OH(7)                           2.700e+12 -0.072    -0.512   
+
+! Reaction index: Chemkin #302; RMG #209
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), N2O(44); NH(22), OH(7); 
+NH(22)+NO2(45)+M=OH(7)+N2O(44)+M                    2.080e+13 -0.490    0.715    
+
+
+! Reaction index: Chemkin #303; RMG #228
+! Library reaction: SOxNOx
+! Flux pairs: O2(2), NO(13); NH(22), OH(7); 
+O2(2)+NH(22)=OH(7)+NO(13)                           1.280e+06 1.500     0.100    
+
+! Reaction index: Chemkin #304; RMG #99
+! Library reaction: SOxNOx
+! Flux pairs: N2O(44), HNO(48); OH(7), NO(13); 
+OH(7)+N2O(44)=NO(13)+HNO(48)                        1.180e-04 4.330     25.039   
+
+! Reaction index: Chemkin #305; RMG #171
+! Library reaction: SOxNOx
+! Flux pairs: OH(7), HNO(48); NH(22), H(5); 
+OH(7)+NH(22)+M=H(5)+HNO(48)+M                       3.250e+14 -0.376    -0.046   
+
+
+! Reaction index: Chemkin #306; RMG #193
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), HONO(67); HNO(48), NO(13); 
+NO2(45)+HNO(48)=NO(13)+HONO(67)                     4.420e+04 2.640     4.042    
+
+! Reaction index: Chemkin #307; RMG #200
+! Library reaction: SOxNOx
+! Flux pairs: HNO(48), NO(13); H(5), H2(8); 
+H(5)+HNO(48)=H2(8)+NO(13)                           4.460e+11 0.720     0.655    
+
+! Reaction index: Chemkin #308; RMG #201
+! Library reaction: SOxNOx
+! Flux pairs: HONO(67), HNO(48); H(5), OH(7); 
+H(5)+HONO(67)=OH(7)+HNO(48)                         5.640e+10 0.860     4.970    
+
+! Reaction index: Chemkin #309; RMG #210
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), HNO(48); NH(22), NO(13); 
+NH(22)+NO2(45)=NO(13)+HNO(48)                       1.250e+06 1.960     2.345    
+
+! Reaction index: Chemkin #310; RMG #227
+! Library reaction: SOxNOx
+! Flux pairs: O2(2), HNO(48); NH(22), O(6); 
+O2(2)+NH(22)=O(6)+HNO(48)                           4.610e+05 2.000     6.500    
+
+! Reaction index: Chemkin #311; RMG #1187
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); HNO(48), NO(13); 
+! Exact match found for rate rule [N3d/H/NonDeO;O_pri_rad]
+OH(7)+HNO(48)=H2O(3)+NO(13)                         1.300e+07 1.880     -0.950   
+
+! Reaction index: Chemkin #312; RMG #1191
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); HNO(48), NO(13); 
+! Exact match found for rate rule [N3d/H/NonDeO;O_atom_triplet]
+O(6)+HNO(48)=OH(7)+NO(13)                           4.500e+11 0.720     0.660    
+
+! Reaction index: Chemkin #313; RMG #1195
+! Template reaction: H_Abstraction
+! Flux pairs: O2(2), HO2(10); HNO(48), NO(13); 
+! Exact match found for rate rule [N3d/H/NonDeO;O2b]
+! Multiplied by reaction path degeneracy 2
+O2(2)+HNO(48)=HO2(10)+NO(13)                        4.000e+13 0.000     15.900   
+
+! Reaction index: Chemkin #314; RMG #1198
+! Template reaction: Disproportionation
+! Flux pairs: HOSO2(103), SO3(95); NO(13), HNO(48); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad/O;O_SradOdOd]
+! Ea raised from -6.7 to 12.4 kJ/mol to match endothermicity of reaction.
+NO(13)+HOSO2(103)=SO3(95)+HNO(48)                   1.400e+04 2.690     2.955    
+
+! Reaction index: Chemkin #315; RMG #1202
+! Template reaction: Disproportionation
+! Flux pairs: HOSO(96), SO2(1); NO(13), HNO(48); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad/O;O_SradOd]
+NO(13)+HOSO(96)=SO2(1)+HNO(48)                      1.400e+04 2.690     -1.610   
+
+! Reaction index: Chemkin #316; RMG #1209
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), H2O2(11); HNO(48), NO(13); 
+! Estimated using template [N3d/H/NonDeO;O_rad] for rate rule [N3d/H/NonDeO;O_rad/NonDeO]
+HO2(10)+HNO(48)=H2O2(11)+NO(13)                     1.300e+07 1.880     -0.950   
+
+! Reaction index: Chemkin #317; RMG #1212
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); HNO(48), NO(13); 
+! Estimated using average of templates [N3_H;O_rad/OneDeN] + [N3d/H/NonDeO;O_rad] for rate rule [N3d/H/NonDeO;O_rad/OneDeN]
+N2O(160)+HNO(48)=NO(13)+NNOH(57)                    3.149e+05 2.237     -1.833   
+
+! Reaction index: Chemkin #318; RMG #1216
+! Template reaction: Disproportionation
+! Flux pairs: NNH(58), N2(4); NO(13), HNO(48); 
+! Exact match found for rate rule [N3d_rad/O;N3d/H_d_Nrad]
+NO(13)+NNH(58)=N2(4)+HNO(48)                        1.200e+06 2.000     -1.190   
+
+! Reaction index: Chemkin #319; RMG #1218
+! Template reaction: H_Abstraction
+! Flux pairs: N2(159), NNH(58); HNO(48), NO(13); 
+! Estimated using an average for rate rule [N3d/H/NonDeO;N3_rad]
+! Multiplied by reaction path degeneracy 2
+N2(159)+HNO(48)=NO(13)+NNH(58)                      1.840e+06 1.940     -1.150   
+
+! Reaction index: Chemkin #320; RMG #1227
+! Template reaction: H_Abstraction
+! Flux pairs: OS(162), HSO(98); HNO(48), NO(13); 
+! Estimated using template [N3d/H/NonDeO;Y_1centerbirad] for rate rule [N3d/H/NonDeO;S_atom_triplet]
+OS(162)+HNO(48)=NO(13)+HSO(98)                      4.500e+11 0.720     0.660    
+
+! Reaction index: Chemkin #321; RMG #1230
+! Template reaction: Disproportionation
+! Flux pairs: HOS(168), OS(177); NO(13), HNO(48); 
+! Estimated using template [N3d_rad;O_Rrad] for rate rule [N3d_rad/O;O_Srad]
+! Ea raised from -6.7 to 63.3 kJ/mol to match endothermicity of reaction.
+HOS(168)+NO(13)=OS(177)+HNO(48)                     1.400e+04 2.690     15.127   
+
+! Reaction index: Chemkin #322; RMG #1232
+! Template reaction: H_Abstraction
+! Flux pairs: SO(94), HOS(168); HNO(48), NO(13); 
+! Estimated using an average for rate rule [N3d/H/NonDeO;Y_rad]
+SO(94)+HNO(48)=HOS(168)+NO(13)                      1.929e+07 1.708     2.588    
+
+! Reaction index: Chemkin #323; RMG #1238
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), OS(185); HNO(48), NO(13); 
+! Estimated using template [N3d/H/NonDeO;Y_rad] for rate rule [N3d/H/NonDeO;S_rad/NonDeO]
+HOS(168)+HNO(48)=OS(185)+NO(13)                     1.929e+07 1.708     2.588    
+
+! Reaction index: Chemkin #324; RMG #1239
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), OS(185); HNO(48), NO(13); 
+! Estimated using template [N3d/H/NonDeO;O_rad] for rate rule [N3d/H/NonDeO;O_sec_rad]
+HOS(167)+HNO(48)=OS(185)+NO(13)                     1.300e+07 1.880     -0.950   
+
+! Reaction index: Chemkin #325; RMG #1242
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(177); NO(13), HNO(48); 
+! Estimated using average of templates [N3d_rad;XH_s_Rrad] + [N3d_rad/O;XH_Rrad] for rate rule [N3d_rad/O;XH_s_Rrad]
+! Ea raised from -5.9 to 83.5 kJ/mol to match endothermicity of reaction.
+HOS(167)+NO(13)=OS(177)+HNO(48)                     1.296e+05 2.345     19.961   
+
+! Reaction index: Chemkin #326; RMG #1244
+! Template reaction: H_Abstraction
+! Flux pairs: SO(94), HOS(167); HNO(48), NO(13); 
+! Estimated using an average for rate rule [N3d/H/NonDeO;Y_rad]
+SO(94)+HNO(48)=HOS(167)+NO(13)                      1.929e+07 1.708     2.588    
+
+! Reaction index: Chemkin #327; RMG #1348
+! Template reaction: Disproportionation
+! Flux pairs: NO(13), HNO(48); HO2S(157), SO2(1); 
+! Estimated using average of templates [N3d_rad;XH_s_Rrad] + [N3d_rad/O;XH_Rrad] for rate rule [N3d_rad/O;XH_s_Rrad]
+HO2S(157)+NO(13)=SO2(1)+HNO(48)                     1.296e+05 2.345     -1.400   
+
+! Reaction index: Chemkin #328; RMG #1521
+! PDep reaction: PDepNetwork #64
+! Flux pairs: H(5), HNO(48); NO(13), HNO(48); 
+H(5)+NO(13)(+M)=HNO(48)(+M)                         1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.137e+01    2.643e-01    -3.465e-03   -8.267e-05  /
+    CHEB/ -7.713e-01   2.543e-02    2.136e-03    2.693e-05   /
+    CHEB/ -2.113e-01   1.900e-03    1.539e-04    5.743e-06   /
+    CHEB/ -6.667e-02   -9.025e-04   7.418e-05    1.642e-05   /
+    CHEB/ -2.105e-02   -1.654e-03   9.836e-05    1.786e-05   /
+    CHEB/ -2.252e-02   4.477e-03    -9.855e-05   -4.688e-05  /
+
+! Reaction index: Chemkin #329; RMG #1665
+! Template reaction: H_Abstraction
+! Flux pairs: HNO(48), NO(13); N2O(160), HNNO(56); 
+! Estimated using an average for rate rule [N3d/H/NonDeO;Y_1centerbirad]
+N2O(160)+HNO(48)=NO(13)+HNNO(56)                    4.500e+11 0.720     0.660    
+
+! Reaction index: Chemkin #330; RMG #1666
+! Template reaction: Disproportionation
+! Flux pairs: NO(13), HNO(48); HNNO(56), N2O(44); 
+! Exact match found for rate rule [N3d_rad/O;N3d/H_d_Nrad]
+NO(13)+HNNO(56)=N2O(44)+HNO(48)                     1.200e+06 2.000     -1.190   
+
+! Reaction index: Chemkin #331; RMG #1944
+! PDep reaction: PDepNetwork #23
+! Flux pairs: OH(7), HNNO(56); NNH(58), H(5); 
+OH(7)+NNH(58)(+M)=H(5)+HNNO(56)(+M)                 1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -2.475e+00   -2.025e-04   -3.436e-05   -3.921e-06  /
+    CHEB/ 1.029e+01    2.550e-04    4.326e-05    4.933e-06   /
+    CHEB/ 2.620e-02    -5.686e-05   -9.630e-06   -1.094e-06  /
+    CHEB/ 1.527e-02    -1.734e-06   -3.025e-07   -3.639e-08  /
+    CHEB/ 3.598e-03    5.477e-07    9.360e-08    1.083e-08   /
+    CHEB/ 1.884e-04    -2.237e-08   -3.662e-09   -3.869e-10  /
+
+! Reaction index: Chemkin #332; RMG #1945
+! PDep reaction: PDepNetwork #23
+! Flux pairs: OH(7), NNOH(57); NNH(58), H(5); 
+OH(7)+NNH(58)(+M)=H(5)+NNOH(57)(+M)                 1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 5.640e+00    -9.335e-04   -1.576e-04   -1.778e-05  /
+    CHEB/ 5.000e+00    1.283e-03    2.163e-04    2.435e-05   /
+    CHEB/ 1.405e-01    -3.931e-04   -6.586e-05   -7.321e-06  /
+    CHEB/ 4.500e-02    3.036e-05    4.836e-06    4.804e-07   /
+    CHEB/ 1.056e-02    2.740e-06    5.301e-07    7.501e-08   /
+    CHEB/ 1.760e-03    1.280e-06    2.103e-07    2.250e-08   /
+
+! Reaction index: Chemkin #333; RMG #1252
+! PDep reaction: PDepNetwork #60
+! Flux pairs: OH(7), HNO2(63); NO(13), HNO2(63); 
+OH(7)+NO(13)(+M)=HNO2(63)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 5.060e-01    -4.204e-05   -7.142e-06   -8.166e-07  /
+    CHEB/ 8.253e+00    4.008e-05    6.809e-06    7.784e-07   /
+    CHEB/ 4.450e-02    -4.158e-06   -7.059e-07   -8.059e-08  /
+    CHEB/ 3.483e-02    1.900e-07    3.218e-08    3.658e-09   /
+    CHEB/ 4.495e-03    8.333e-08    1.416e-08    1.621e-09   /
+    CHEB/ 1.115e-02    -3.925e-09   -6.645e-10   -7.546e-11  /
+
+! Reaction index: Chemkin #334; RMG #2026
+! PDep reaction: PDepNetwork #134
+! Flux pairs: HNO2(63), HONO(67); 
+HNO2(63)(+M)=HONO(67)(+M)                           1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ -1.447e+01   1.747e-01    -9.529e-03   8.036e-06   /
+    CHEB/ 2.022e+01    7.898e-02    3.015e-03    -3.302e-04  /
+    CHEB/ -3.109e-01   1.428e-02    1.906e-03    2.865e-05   /
+    CHEB/ -1.246e-01   7.924e-04    4.906e-04    5.218e-05   /
+    CHEB/ -4.802e-02   -1.627e-03   1.730e-04    2.824e-05   /
+    CHEB/ -3.583e-02   4.436e-03    -4.490e-05   -3.079e-05  /
+
+! Reaction index: Chemkin #335; RMG #1452
+! Template reaction: H_Abstraction
+! Flux pairs: OH(7), H2O(3); HNO2(63), NO2(45); 
+! Exact match found for rate rule [N5d/H/NonDeOO;O_pri_rad]
+OH(7)+HNO2(63)=H2O(3)+NO2(45)                       1.200e+06 2.000     -0.790   
+
+! Reaction index: Chemkin #336; RMG #1455
+! Template reaction: H_Abstraction
+! Flux pairs: O(6), OH(7); HNO2(63), NO2(45); 
+! Exact match found for rate rule [N5d/H/NonDeOO;O_atom_triplet]
+O(6)+HNO2(63)=OH(7)+NO2(45)                         1.700e+08 1.500     2.360    
+
+! Reaction index: Chemkin #337; RMG #1458
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), O2(2); NO2(45), HNO2(63); 
+! Estimated using template [Orad_O_H;Y_rad] for rate rule [Orad_O_H;N5d_rad]
+HO2(10)+NO2(45)=O2(2)+HNO2(63)                      1.750e+10 0.000     -3.275   
+
+! Reaction index: Chemkin #338; RMG #1459
+! Template reaction: Disproportionation
+! Flux pairs: HOSO2(103), SO3(95); NO2(45), HNO2(63); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_SradOdOd]
+HOSO2(103)+NO2(45)=SO3(95)+HNO2(63)                 2.112e+10 0.906     -0.214   
+
+! Reaction index: Chemkin #339; RMG #1466
+! Template reaction: Disproportionation
+! Flux pairs: HOSO(96), SO2(1); NO2(45), HNO2(63); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_SradOd]
+HOSO(96)+NO2(45)=SO2(1)+HNO2(63)                    2.112e+10 0.906     -0.214   
+
+! Reaction index: Chemkin #340; RMG #1471
+! Template reaction: H_Abstraction
+! Flux pairs: H(5), H2(8); HNO2(63), NO2(45); 
+! Exact match found for rate rule [N5d/H/NonDeOO;H_rad]
+H(5)+HNO2(63)=H2(8)+NO2(45)                         2.400e+08 1.500     4.160    
+
+! Reaction index: Chemkin #341; RMG #1474
+! Template reaction: H_Abstraction
+! Flux pairs: HO2(10), H2O2(11); HNO2(63), NO2(45); 
+! Estimated using template [N5d/H/NonDeOO;O_rad] for rate rule [N5d/H/NonDeOO;O_rad/NonDeO]
+HO2(10)+HNO2(63)=H2O2(11)+NO2(45)                   1.200e+06 2.000     -0.790   
+
+! Reaction index: Chemkin #342; RMG #1477
+! Template reaction: H_Abstraction
+! Flux pairs: N2O(160), NNOH(57); HNO2(63), NO2(45); 
+! Estimated using average of templates [X_H;O_rad/OneDeN] + [N5d/H/NonDeOO;O_rad] for rate rule [N5d/H/NonDeOO;O_rad/OneDeN]
+N2O(160)+HNO2(63)=NNOH(57)+NO2(45)                  1.978e+05 2.363     1.274    
+
+! Reaction index: Chemkin #343; RMG #1480
+! Template reaction: Disproportionation
+! Flux pairs: NNH(58), N2(4); NO2(45), HNO2(63); 
+! Estimated using an average for rate rule [Y_rad;N3d/H_d_Nrad]
+NNH(58)+NO2(45)=N2(4)+HNO2(63)                      9.411e+06 1.829     -1.086   
+
+! Reaction index: Chemkin #344; RMG #1481
+! Template reaction: H_Abstraction
+! Flux pairs: NNH(58), N2(159); NO2(45), HNO2(63); 
+! Estimated using template [N3_H;Y_rad] for rate rule [N3_H;N5d_rad]
+NNH(58)+NO2(45)=N2(159)+HNO2(63)                    1.609e+07 1.650     7.714    
+
+! Reaction index: Chemkin #345; RMG #1488
+! Template reaction: H_Abstraction
+! Flux pairs: HSO(98), OS(162); NO2(45), HNO2(63); 
+! Estimated using template [Xrad_H;Y_rad] for rate rule [Srad_H;N5d_rad]
+HSO(98)+NO2(45)=OS(162)+HNO2(63)                    1.719e+09 1.180     5.077    
+
+! Reaction index: Chemkin #346; RMG #1492
+! Template reaction: Disproportionation
+! Flux pairs: HOS(168), OS(177); NO2(45), HNO2(63); 
+! Estimated using template [Y_rad;O_Rrad] for rate rule [Y_rad;O_Srad]
+HOS(168)+NO2(45)=OS(177)+HNO2(63)                   2.112e+10 0.906     -0.214   
+
+! Reaction index: Chemkin #347; RMG #1493
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), SO(94); NO2(45), HNO2(63); 
+! Estimated using template [X_H;Y_rad] for rate rule [X_H;N5d_rad]
+HOS(168)+NO2(45)=SO(94)+HNO2(63)                    8.505e+04 2.309     9.118    
+
+! Reaction index: Chemkin #348; RMG #1498
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(168), OS(185); HNO2(63), NO2(45); 
+! Estimated using template [N5d/H/NonDeOO;Y_rad] for rate rule [N5d/H/NonDeOO;S_rad/NonDeO]
+HOS(168)+HNO2(63)=OS(185)+NO2(45)                   3.828e+06 1.828     2.270    
+
+! Reaction index: Chemkin #349; RMG #1499
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), OS(185); HNO2(63), NO2(45); 
+! Estimated using template [N5d/H/NonDeOO;O_rad] for rate rule [N5d/H/NonDeOO;O_sec_rad]
+HOS(167)+HNO2(63)=OS(185)+NO2(45)                   1.200e+06 2.000     -0.790   
+
+! Reaction index: Chemkin #350; RMG #1503
+! Template reaction: Disproportionation
+! Flux pairs: HOS(167), OS(177); NO2(45), HNO2(63); 
+! Estimated using an average for rate rule [Y_rad;XH_s_Rrad]
+HOS(167)+NO2(45)=OS(177)+HNO2(63)                   7.373e+10 0.566     0.419    
+
+! Reaction index: Chemkin #351; RMG #1504
+! Template reaction: H_Abstraction
+! Flux pairs: HOS(167), SO(94); NO2(45), HNO2(63); 
+! Estimated using template [X_H;Y_rad] for rate rule [X_H;N5d_rad]
+HOS(167)+NO2(45)=SO(94)+HNO2(63)                    8.505e+04 2.309     9.198    
+
+! Reaction index: Chemkin #352; RMG #1509
+! Template reaction: Disproportionation
+! Flux pairs: HO2S(157), SO2(1); NO2(45), HNO2(63); 
+! Estimated using an average for rate rule [Y_rad;XH_s_Rrad]
+HO2S(157)+NO2(45)=SO2(1)+HNO2(63)                   7.373e+10 0.566     0.419    
+
+! Reaction index: Chemkin #353; RMG #1513
+! Template reaction: H_Abstraction
+! Flux pairs: NO2(45), HONO(67); HNO2(63), NO2(45); 
+! Estimated using average of templates [X_H;O_rad/OneDeN] + [N5d/H/NonDeOO;O_rad] for rate rule [N5d/H/NonDeOO;O_rad/OneDeN]
+HNO2(63)+NO2(45)=HONO(67)+NO2(45)                   1.978e+05 2.363     1.787    
+
+! Reaction index: Chemkin #354; RMG #1692
+! Template reaction: H_Abstraction
+! Flux pairs: HNO2(63), NO2(45); N2O(160), HNNO(56); 
+! Estimated using an average for rate rule [N5d/H/NonDeOO;Y_1centerbirad]
+N2O(160)+HNO2(63)=HNNO(56)+NO2(45)                  1.700e+08 1.500     2.360    
+
+! Reaction index: Chemkin #355; RMG #1693
+! Template reaction: Disproportionation
+! Flux pairs: NO2(45), HNO2(63); HNNO(56), N2O(44); 
+! Estimated using an average for rate rule [Y_rad;N3d/H_d_Nrad]
+HNNO(56)+NO2(45)=HNO2(63)+N2O(44)                   9.411e+06 1.829     -1.086   
+
+! Reaction index: Chemkin #356; RMG #1923
+! Template reaction: H_Abstraction
+! Flux pairs: NO2(45), HNO2(63); HNO(48), NO(13); 
+! Estimated using template [N3d/H/NonDeO;Y_rad] for rate rule [N3d/H/NonDeO;N5d_rad]
+NO2(45)+HNO(48)=NO(13)+HNO2(63)                     1.929e+07 1.708     2.588    
+
+! Reaction index: Chemkin #357; RMG #1947
+! PDep reaction: PDepNetwork #83
+! Flux pairs: H(5), HNO2(63); NO2(45), HNO2(63); 
+H(5)+NO2(45)(+M)=HNO2(63)(+M)                       1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.300e+01    2.016e-01    -3.407e-03   -1.181e-04  /
+    CHEB/ -1.038e+00   4.322e-02    2.418e-04    3.680e-05   /
+    CHEB/ -3.199e-01   3.286e-03    5.739e-04    2.113e-05   /
+    CHEB/ -1.192e-01   2.578e-03    1.331e-04    4.184e-06   /
+    CHEB/ -4.452e-02   1.340e-03    -2.140e-06   5.588e-06   /
+    CHEB/ -1.641e-02   2.589e-04    3.612e-05    -2.087e-06  /
+
+! Reaction index: Chemkin #358; RMG #2056
+! PDep reaction: PDepNetwork #136
+! Flux pairs: NO2(203), NO2(45); 
+NO2(203)(+M)=NO2(45)(+M)                            1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 7.506e+00    1.609e-02    -2.351e-03   2.002e-04   /
+    CHEB/ 2.845e-01    -1.284e-02   1.776e-03    -1.300e-04  /
+    CHEB/ -2.718e-01   -3.484e-03   3.955e-04    -1.453e-05  /
+    CHEB/ 5.568e-02    7.286e-03    -8.296e-04   2.881e-05   /
+    CHEB/ -1.593e-01   -7.176e-04   3.018e-05    1.021e-05   /
+    CHEB/ 1.764e-01    -6.562e-03   7.725e-04    -3.203e-05  /
+
+! Reaction index: Chemkin #359; RMG #224
+! Library reaction: SOxNOx
+! Flux pairs: OH(7), HOONO(90); NO2(45), HOONO(90); 
+OH(7)+NO2(45)(+M)=HOONO(90)(+M)                     3.320e-06 -0.240    -0.200   
+
+    LOW/ 1.140e+50 -12.300   5.137    /
+    TROE/ 1.000e+00 1e-30     1e+30    /
+
+! Reaction index: Chemkin #360; RMG #1255
+! PDep reaction: PDepNetwork #62
+! Flux pairs: HO2(10), HOONO(90); NO(13), HOONO(90); 
+HO2(10)+NO(13)(+M)=HOONO(90)(+M)                    1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.195e+01    2.719e-01    -2.310e-03   -5.002e-05  /
+    CHEB/ -1.702e+00   3.351e-02    2.608e-03    3.813e-05   /
+    CHEB/ -3.928e-01   -1.654e-04   -2.946e-04   -9.241e-06  /
+    CHEB/ -5.479e-02   -4.989e-03   1.033e-04    1.362e-05   /
+    CHEB/ 1.051e-02    8.367e-05    -2.528e-04   4.816e-06   /
+    CHEB/ 2.604e-02    -3.015e-03   8.470e-05    2.347e-05   /
+
+! Reaction index: Chemkin #361; RMG #191
+! Library reaction: SOxNOx
+! Flux pairs: NO2(45), NO3(69); NO2(45), NO(13); 
+NO2(45)+NO2(45)=NO(13)+NO3(69)                      1.000e+13 0.000     25.800   
+
+! Reaction index: Chemkin #362; RMG #2088
+! PDep reaction: PDepNetwork #141
+! Flux pairs: NO3(69), NO2(45); NO(13), NO2(45); 
+NO(13)+NO3(69)(+M)=NO2(45)+NO2(45)(+M)              1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.311e+01    -4.863e-07   -8.263e-08   -9.451e-09  /
+    CHEB/ 2.610e-02    -7.617e-07   -1.294e-07   -1.480e-08  /
+    CHEB/ -3.288e-02   -5.210e-07   -8.852e-08   -1.013e-08  /
+    CHEB/ 2.941e-04    -2.869e-07   -4.875e-08   -5.576e-09  /
+    CHEB/ 3.953e-04    -1.093e-07   -1.857e-08   -2.124e-09  /
+    CHEB/ -1.252e-04   -3.370e-09   -5.726e-10   -6.547e-11  /
+
+! Reaction index: Chemkin #363; RMG #1714
+! PDep reaction: PDepNetwork #84
+! Flux pairs: O(6), NO3(69); NO2(45), NO3(69); 
+O(6)+NO2(45)(+M)=NO3(69)(+M)                        1.000e+00 0.000     0.000    
+    TCHEB/ 298.000   2000.000 /
+    PCHEB/ 0.493     1.974    /
+    CHEB/ 6 4/
+    CHEB/ 1.128e+01    1.733e-01    -3.987e-03   -4.367e-05  /
+    CHEB/ -6.244e-01   7.949e-02    1.634e-03    -2.194e-05  /
+    CHEB/ -3.114e-01   1.187e-02    6.703e-04    2.065e-05   /
+    CHEB/ -1.192e-01   1.483e-03    1.265e-04    5.027e-06   /
+    CHEB/ -4.326e-02   3.262e-04    6.653e-06    1.226e-06   /
+    CHEB/ -1.472e-02   -1.724e-04   2.059e-05    -1.206e-06  /
+
+END
+
